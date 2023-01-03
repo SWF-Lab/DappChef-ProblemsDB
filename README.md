@@ -1,44 +1,61 @@
 # DappChef-ProblemsDB
 
 ### Problems Metadata Template
-FileName: problem<No.>.json
+FileName: `problem<No.>.json` (e.g. `problem1.json`)
 ```json
 {
-    "number": <int.>
-    "difficulty": <int.>
-    "class": <class.>
-    "problemCodeBody": <code>
-    "problemStatement": <What user sholud do>
-    "tokenURI": <ipfsPrefix>
+    "number": "<int>, number of this problem"
+    "difficulty": "<int>, difficulty of this problem, ⭐~⭐⭐⭐"
+    "class": "<str>, class of this problem, see problems classification instructions part"
+    "problemCodeBody": "<str>, the whole code without empty"
+    "problemCodeBodyWithEmpty": "<str>, the whole code with empty field (problem)"
+    "problemStatement": "<str>, What user sholud do in this problem"
+    "tokenURI": "<str>, ipfsPrefix, which means the NFT image location"
     "solution": [
         {
-            "methodName": <MethodName>
-            "callData": <callData>
-            "expectReturn": <return>
+            "methodName": "<str>, MethodName"
+            "callData": "<any>, callData"
+            "expectReturn": "<any>, the return of calling the Method with the callData"
          }
         {
-            "methodName": <MethodName>
-            "callData": <callData>
-            "expectReturn": <return>
+            "methodName": "<str>, MethodName"
+            "callData": "<any>, callData"
+            "expectReturn": "<any>, the return of calling the Method with the callData"
          }
         {
-            "methodName": <MethodName>
-            "callData": <callData>
-            "expectReturn": <return>
+            "methodName": "<str>, MethodName"
+            "callData": "<any>, callData"
+            "expectReturn": "<any>, the return of calling the Method with the callData"
          }
         {
-            "methodName": <MethodName>
-            "callData": <callData>
-            "expectReturn": <return>
+            "methodName": "<str>, MethodName"
+            "callData": "<any>, callData"
+            "expectReturn": "<any>, the return of calling the Method with the callData"
          }
         {
-            "methodName": <MethodName>
-            "callData": <callData>
-            "expectReturn": <return>
+            "methodName": "<str>, MethodName"
+            "callData": "<any>, callData"
+            "expectReturn": "<any>, the return of calling the Method with the callData"
          }
     ]
 }
 ```
+
+### Problems Classification Instructions
+
+| Learning Roadmap | class | Statement | Level |
+| --- | --- | --- | --- |
+|Smart Contract Beginner Learning Plan | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
+|NFT Developer Learning Plan | NFT	| Complete NFT Construction & Dapp System Development	|⭐|
+|Web3 Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐|
+|Smart Contract Junior Learning Plan| DeFi	|	|⭐⭐|
+|Smart Contract Junior Learning Plan| GameFi	|	|⭐⭐|
+|Smart Contract Junior Learning Plan| Contract Design Pattern	| |⭐⭐|
+|Smart Contract Senior Learning Plan| 	Unit Testing | 	|⭐⭐⭐|
+|Smart Contract Senior Learning Plan| 	DSA | 	|⭐⭐⭐|
+|Smart Contract Senior Learning Plan| 	Gas Optimization | 	|⭐⭐⭐|
+|Theories Learning Roadmap|	Cryptography |	|⭐⭐⭐|
+|EVM Learning Roadmap|	Assembly |	|⭐⭐⭐|
 
 ### Problems Information
 
