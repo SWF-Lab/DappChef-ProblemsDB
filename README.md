@@ -45,15 +45,15 @@ FileName: `problem<No.>.json` (e.g. `problem1.json`)
 
 | Learning Roadmap | class | Statement | Level |
 | --- | --- | --- | --- |
-|Smart Contract Beginner Learning Plan | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
-|NFT Developer Learning Plan | NFT	| Complete NFT Construction & Dapp System Development	|⭐|
+|S.C Beginner Learning Plan | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
+|S.C Beginner Learning Plan | NFT	| Complete NFT Construction & Dapp System Development	|⭐|
+|S.C Junior Learning Plan| DeFi	|	|⭐⭐|
+|S.C Junior Learning Plan| GameFi	|	|⭐⭐|
+|S.C Junior Learning Plan| Contract Design Pattern	| |⭐⭐|
 |Web3 Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐|
-|Smart Contract Junior Learning Plan| DeFi	|	|⭐⭐|
-|Smart Contract Junior Learning Plan| GameFi	|	|⭐⭐|
-|Smart Contract Junior Learning Plan| Contract Design Pattern	| |⭐⭐|
-|Smart Contract Senior Learning Plan| 	Unit Testing | 	|⭐⭐⭐|
-|Smart Contract Senior Learning Plan| 	DSA | 	|⭐⭐⭐|
-|Smart Contract Senior Learning Plan| 	Gas Optimization | 	|⭐⭐⭐|
+|S.C Senior Learning Plan| 	Unit Testing | 	|⭐⭐⭐|
+|S.C Senior Learning Plan| 	DSA | 	|⭐⭐⭐|
+|S.C Senior Learning Plan| 	Gas Optimization | 	|⭐⭐⭐|
 |Theories Learning Roadmap|	Cryptography |	|⭐⭐⭐|
 |EVM Learning Roadmap|	Assembly |	|⭐⭐⭐|
 
