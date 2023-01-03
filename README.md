@@ -62,8 +62,8 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 |S.C Beginner L.R | NFT	| Complete NFT Construction & Dapp System Development	|⭐~⭐⭐|
 |S.C Junior L.R| GameFi	|	|⭐⭐|
 |S.C Junior L.R| DeFi	|	|⭐⭐~⭐⭐⭐|
-|S.C Junior L.R| Contract_Design_Pattern	| |⭐⭐~⭐⭐⭐|
-| Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐~⭐⭐⭐|
+|S.C Junior L.R| Design_Pattern	| Upgradable Contract, Contract Wallet, Auction Model | ⭐⭐~⭐⭐⭐ |
+| Interview Problems | Company	| Collected from lots of famous web3 company classical interview problem	|⭐⭐~⭐⭐⭐|
 |S.C Senior L.R| 	Unit_Testing | 	|⭐⭐⭐|
 |S.C Senior L.R| 	DSA | 	|⭐⭐⭐|
 |S.C Senior L.R| 	Gas_Optimization | 	|⭐⭐⭐|
