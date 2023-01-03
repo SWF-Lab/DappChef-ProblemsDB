@@ -1,5 +1,7 @@
 # DappChef-ProblemsDB
 
+## Rules
+
 ### Problems Metadata Template
 FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 ```json
@@ -68,11 +70,12 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 |Theories L.R |	Cryptography |	|⭐⭐⭐|
 |EVM L.R|	Assembly |	|⭐⭐⭐|
 
-### Problems Information
+## Problems Information
 
+### problemVersion1
 | No. | Class | Difficulty | Statement |
 | --- | --- | --- | --- |
-| 1. ||||
+| 1. ||⭐||
 | 2. ||||
 | 3. ||||
 | 4. ||||
@@ -112,7 +115,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 38. ||||
 | 39. ||||
 | 40. ||||
-| 41. ||||
+| 41. ||⭐⭐||
 | 42. ||||
 | 43. ||||
 | 44. ||||
@@ -151,7 +154,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 77. ||||
 | 78. ||||
 | 79. ||||
-| 80. ||||
+| 80. || ⭐⭐⭐ ||
 | 81. ||||
 | 82. ||||
 | 83. ||||
@@ -172,6 +175,40 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 98. ||||
 | 99. ||||
 | 100. ||||
+
+### problemVersion2
+
+> TBD
+> 
+---
+
+## Reference
+
+### Roadmap
+1. Build these contracts:
+    - Lending contract (Based on Aave)
+    - Staking contract (Based on Synthetix)
+    - AMM (Based on Uniswap v2)
+    - ERC20, ERC721, ERC1155
+    - Centralized Stable Coin - (Based on USDC)
+    - Governance contract (Based on Compound)
+    - Understand the architect of uniswap v3 and curve
+    - Example:
+        - Uniswap v2, v3, curve - https://lnkd.in/g_wmxTpm
+        - Compound Governance - https://lnkd.in/gzac5m34
+        - Other - https://lnkd.in/gnGNRx7C
+2. Make sure you know how to:
+    - write unit tests
+    - write mocks
+    - use Trail of Bits Toolbox
+    - use Hardhat + Foundry
+    - use SDKs
+    - leverage the console with Node
+    - check for sol coverage and gas reports
+    - integrate contracts with frontend
+3. Learn about solidity patterns - https://lnkd.in/gzRYy3t9
+4. Learn about attack vectors - https://lnkd.in/gSV_bj9R
+5. Learn about gas optimization - https://lnkd.in/gCM692mQ
 
 ### Collection Resource
 - [Solidity by Example](https://solidity-by-example.org/)
