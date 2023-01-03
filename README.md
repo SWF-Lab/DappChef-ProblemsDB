@@ -60,11 +60,11 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 |S.C Beginner Learning Plan | NFT	| Complete NFT Construction & Dapp System Development	|⭐|
 |S.C Junior Learning Plan| DeFi	|	|⭐⭐|
 |S.C Junior Learning Plan| GameFi	|	|⭐⭐|
-|S.C Junior Learning Plan| Contract Design Pattern	| |⭐⭐|
+|S.C Junior Learning Plan| Contract_Design_Pattern	| |⭐⭐|
 |Web3 Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐|
-|S.C Senior Learning Plan| 	Unit Testing | 	|⭐⭐⭐|
+|S.C Senior Learning Plan| 	Unit_Testing | 	|⭐⭐⭐|
 |S.C Senior Learning Plan| 	DSA | 	|⭐⭐⭐|
-|S.C Senior Learning Plan| 	Gas Optimization | 	|⭐⭐⭐|
+|S.C Senior Learning Plan| 	Gas_Optimization | 	|⭐⭐⭐|
 |Theories Learning Roadmap|	Cryptography |	|⭐⭐⭐|
 |EVM Learning Roadmap|	Assembly |	|⭐⭐⭐|
 
