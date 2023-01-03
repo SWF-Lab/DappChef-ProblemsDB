@@ -162,7 +162,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 83. ||||Dino|
 | 84. ||||Dino|
 | 85. ||||Dino|
-| 86. |||⭐⭐⭐|Dino|
+| 86. ||⭐⭐⭐||Dino|
 | 87. ||||Dino|
 | 88. ||||Dino|
 | 89. ||||FoodChain|
