@@ -10,8 +10,8 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
     "problemVersion": "<int>, support dappchef version of this problem",
     "description": "<str>, What user sholud do in this problem, which means problem statement",
     "problemInformation": {
-        "problemCodeBody": "<str>, the whole code without empty",
-        "problemCodeBodyWithEmpty": "<str>, the whole code with empty field (problem)",
+        "problemCodeBody": "<str>, the whole code without empty, which means the answer of this problem",
+        "problemCodeBodyWithEmpty": "<str>, the whole code with empty, which means the examination point of this problem",
     },
     "problemSolution": [
         {
@@ -53,6 +53,8 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
     "image": "<str>, ipfs://<ipfsPrefix>/<problemNumber>, which means the NFT image location",
 }
 ```
+
+> This metadata conforms to the [OpenSea Format](https://docs.opensea.io/docs/metadata-standards) which can show the attributes successfullty.
 
 ### Problems Classification Instructions
 
@@ -178,8 +180,8 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
 ### problemVersion2
 
-> TBD
-> 
+> TBD, these problems will be added after DappChef begins earning.
+
 ---
 
 ## Reference
