@@ -61,7 +61,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 |S.C Junior L.R| DeFi	|	|⭐⭐|
 |S.C Junior L.R| GameFi	|	|⭐⭐|
 |S.C Junior L.R| Contract_Design_Pattern	| |⭐⭐|
-|Web3 Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐|
+| Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐|
 |S.C Senior L.R| 	Unit_Testing | 	|⭐⭐⭐|
 |S.C Senior L.R| 	DSA | 	|⭐⭐⭐|
 |S.C Senior L.R| 	Gas_Optimization | 	|⭐⭐⭐|
