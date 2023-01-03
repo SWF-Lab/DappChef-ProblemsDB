@@ -57,13 +57,13 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 ### Problems Classification Instructions
 
 | Learning Roadmap(L.R) | Class | Statement | Difficulty |
-| --- | --- | --- | --- |
+| :---: | :---: | --- | :---: |
 |S.C Beginner L.R | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
-|S.C Beginner L.R | NFT	| Complete NFT Construction & Dapp System Development	|⭐|
-|S.C Junior L.R| DeFi	|	|⭐⭐|
+|S.C Beginner L.R | NFT	| Complete NFT Construction & Dapp System Development	|⭐~⭐⭐|
 |S.C Junior L.R| GameFi	|	|⭐⭐|
-|S.C Junior L.R| Contract_Design_Pattern	| |⭐⭐|
-| Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐|
+|S.C Junior L.R| DeFi	|	|⭐⭐~⭐⭐⭐|
+|S.C Junior L.R| Contract_Design_Pattern	| |⭐⭐~⭐⭐⭐|
+| Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐~⭐⭐⭐|
 |S.C Senior L.R| 	Unit_Testing | 	|⭐⭐⭐|
 |S.C Senior L.R| 	DSA | 	|⭐⭐⭐|
 |S.C Senior L.R| 	Gas_Optimization | 	|⭐⭐⭐|
