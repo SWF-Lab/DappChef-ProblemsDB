@@ -54,19 +54,19 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
 ### Problems Classification Instructions
 
-| Learning Roadmap | class | Statement | Level |
+| Learning Roadmap(L.R) | Class | Statement | Difficulty |
 | --- | --- | --- | --- |
-|S.C Beginner Learning Plan | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
-|S.C Beginner Learning Plan | NFT	| Complete NFT Construction & Dapp System Development	|⭐|
-|S.C Junior Learning Plan| DeFi	|	|⭐⭐|
-|S.C Junior Learning Plan| GameFi	|	|⭐⭐|
-|S.C Junior Learning Plan| Contract_Design_Pattern	| |⭐⭐|
+|S.C Beginner L.R | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
+|S.C Beginner L.R | NFT	| Complete NFT Construction & Dapp System Development	|⭐|
+|S.C Junior L.R| DeFi	|	|⭐⭐|
+|S.C Junior L.R| GameFi	|	|⭐⭐|
+|S.C Junior L.R| Contract_Design_Pattern	| |⭐⭐|
 |Web3 Company Classical Interview Problems| Company	| Collected from lots of famous web3 company interview problem	|⭐⭐|
-|S.C Senior Learning Plan| 	Unit_Testing | 	|⭐⭐⭐|
-|S.C Senior Learning Plan| 	DSA | 	|⭐⭐⭐|
-|S.C Senior Learning Plan| 	Gas_Optimization | 	|⭐⭐⭐|
-|Theories Learning Roadmap|	Cryptography |	|⭐⭐⭐|
-|EVM Learning Roadmap|	Assembly |	|⭐⭐⭐|
+|S.C Senior L.R| 	Unit_Testing | 	|⭐⭐⭐|
+|S.C Senior L.R| 	DSA | 	|⭐⭐⭐|
+|S.C Senior L.R| 	Gas_Optimization | 	|⭐⭐⭐|
+|Theories L.R |	Cryptography |	|⭐⭐⭐|
+|EVM L.R|	Assembly |	|⭐⭐⭐|
 
 ### Problems Information
 
