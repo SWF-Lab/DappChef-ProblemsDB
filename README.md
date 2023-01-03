@@ -152,3 +152,29 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 78. ||||
 | 79. ||||
 | 80. ||||
+| 81. ||||
+| 82. ||||
+| 83. ||||
+| 84. ||||
+| 85. ||||
+| 86. ||||
+| 87. ||||
+| 88. ||||
+| 89. ||||
+| 90. ||||
+| 91. ||||
+| 92. ||||
+| 93. ||||
+| 94. ||||
+| 95. ||||
+| 96. ||||
+| 97. ||||
+| 98. ||||
+| 99. ||||
+| 100. ||||
+
+### Collection Resource
+- [Solidity by Example](https://solidity-by-example.org/)
+- [Crypto Zombie](https://cryptozombies.io/)
+- [Appworks School Blockchain Program Resource](https://github.com/AppWorks-School/Blockchain-Resource)
+- [Ethernaut](https://ethernaut.openzeppelin.com/)
