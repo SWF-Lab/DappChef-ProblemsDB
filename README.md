@@ -60,13 +60,13 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | :---: | :---: | --- | :---: |
 |S.C Beginner L.R | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
 |S.C Beginner L.R | NFT	| Complete NFT Construction & Dapp System Development	|⭐~⭐⭐|
-|S.C Junior L.R| GameFi	|	|⭐⭐|
-|S.C Junior L.R| DeFi	|	|⭐⭐~⭐⭐⭐|
-|S.C Junior L.R| Design_Pattern	| Upgradable Contract, Contract Wallet, Auction Model | ⭐⭐~⭐⭐⭐ |
-| Interview Problems | Company	| Collected from lots of famous web3 company classical interview problem	|⭐⭐~⭐⭐⭐|
-|S.C Senior L.R| 	Unit_Testing | 	|⭐⭐⭐|
-|S.C Senior L.R| 	DSA | 	|⭐⭐⭐|
-|S.C Senior L.R| 	Gas_Optimization | 	|⭐⭐⭐|
+|S.C Junior L.R | GameFi	|	|⭐⭐|
+|S.C Junior L.R | DeFi	|	|⭐⭐|
+|S.C Junior L.R | Design_Pattern	| Upgradable Contract, Contract Wallet, Auction Model | ⭐⭐ |
+| Interview Problems | Company	| Collected from lots of famous web3 company classical interview problem	|⭐⭐|
+|S.C Senior L.R | Testing | 	|⭐⭐|
+|S.C Senior L.R | DSA | 	|⭐⭐⭐|
+|S.C Senior L.R | Gas_Optim | 	|⭐⭐⭐|
 |Theories L.R |	Cryptography |	|⭐⭐⭐|
 |EVM L.R|	Assembly |	|⭐⭐⭐|
 
