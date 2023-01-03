@@ -1,43 +1,54 @@
 # DappChef-ProblemsDB
 
 ### Problems Metadata Template
-FileName: `problem<No.>.json` (e.g. `problem1.json`)
+FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 ```json
 {
-    "number": "<int>, number of this problem"
-    "difficulty": "<int>, difficulty of this problem, ⭐~⭐⭐⭐"
-    "class": "<str>, class of this problem, see problems classification instructions part"
-    "problemCodeBody": "<str>, the whole code without empty"
-    "problemCodeBodyWithEmpty": "<str>, the whole code with empty field (problem)"
-    "problemStatement": "<str>, What user sholud do in this problem"
-    "tokenURI": "<str>, ipfsPrefix, which means the NFT image location"
-    "solution": [
+    "problemNumber": "<int>, number of this problem",
+    "problemVersion": "<int>, support dappchef version of this problem",
+    "description": "<str>, What user sholud do in this problem, which means problem statement",
+    "problemInformation": {
+        "problemCodeBody": "<str>, the whole code without empty",
+        "problemCodeBodyWithEmpty": "<str>, the whole code with empty field (problem)",
+    },
+    "problemSolution": [
         {
             "methodName": "<str>, MethodName"
             "callData": "<any>, callData"
             "expectReturn": "<any>, the return of calling the Method with the callData"
-         }
+         },
         {
             "methodName": "<str>, MethodName"
             "callData": "<any>, callData"
             "expectReturn": "<any>, the return of calling the Method with the callData"
-         }
+         },
         {
             "methodName": "<str>, MethodName"
             "callData": "<any>, callData"
             "expectReturn": "<any>, the return of calling the Method with the callData"
-         }
+         },
         {
             "methodName": "<str>, MethodName"
             "callData": "<any>, callData"
             "expectReturn": "<any>, the return of calling the Method with the callData"
-         }
+         },
         {
             "methodName": "<str>, MethodName"
             "callData": "<any>, callData"
             "expectReturn": "<any>, the return of calling the Method with the callData"
-         }
+         },
+    ],
+    "attributes": [
+        {
+          "trait_type": "difficulty", 
+          "value": "<int>, difficulty of this problem, 1~3",
+        },
+        {
+          "trait_type": "class", 
+          "value": "<str>, class of this problem, see problems classification instructions part",
+        }, 
     ]
+    "image": "<str>, ipfs://<ipfsPrefix>/<problemNumber>, which means the NFT image location",
 }
 ```
 
