@@ -3,14 +3,14 @@
     "problemVersion": 1,
     "description": "Hello World! The reserved word 'pragma' specifies the compiler version of Solidity.",
     "problemInformation": {
-        "problemCodeBody": "pragma solidity ^0.8.17; contract HelloWorld { string public greet = "Hello World!";}",
-        "problemCodeBodyWithEmpty": "contract HelloWorld { string public greet = "Hello World!"; }",
+        "problemCodeBody": "pragma solidity ^0.8.17; contract HelloWorld { string public greet = \"Hello World!\";}",
+        "problemCodeBodyWithEmpty": "contract HelloWorld { string public greet = \"Hello World!\"; }",
     },
     "problemSolution": [
         {
             "methodName": "getGreet()"
             "callData": ""
-            "expectReturn": "Hello World!
+            "expectReturn": "Hello World!"
          }
     ],
     "attributes": [
