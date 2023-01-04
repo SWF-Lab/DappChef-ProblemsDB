@@ -1,0 +1,27 @@
+{
+    "problemNumber": 0,
+    "problemVersion": 1,
+    "description": "Hello World! The reserved word 'pragma' specifies the compiler version of Solidity.",
+    "problemInformation": {
+        "problemCodeBody": "pragma solidity ^0.8.17; contract HelloWorld { string public greet = "Hello World!";}",
+        "problemCodeBodyWithEmpty": "contract HelloWorld { string public greet = "Hello World!"; }",
+    },
+    "problemSolution": [
+        {
+            "methodName": "getGreet()"
+            "callData": ""
+            "expectReturn": "Hello World!
+         }
+    ],
+    "attributes": [
+        {
+          "trait_type": "difficulty", 
+          "value": 1,
+        },
+        {
+          "trait_type": "class", 
+          "value": "Beginner",
+        }, 
+    ]
+    "image": "ipfs://<ipfsPrefix>/<problemNumber>",
+}
