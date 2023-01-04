@@ -54,7 +54,8 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 }
 ```
 
-> This metadata conforms to the [OpenSea Format](https://docs.opensea.io/docs/metadata-standards) which can show the attributes successfullty.
+> 1. The num of operations in the `problemSolution` is unlimited, if the problem is very complicated, the length of `problemSolution: Array` could be very long.
+> 1. This metadata conforms to the [OpenSea Format](https://docs.opensea.io/docs/metadata-standards) which can show the attributes successfullty.
 
 ### Problems Classification Instructions
 
