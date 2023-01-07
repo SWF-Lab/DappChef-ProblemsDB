@@ -33,33 +33,34 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
     "problemVersion": "<int>, support dappchef version of this problem",
     "description": "<str>, What user sholud do in this problem, which means problem statement",
     "problemInformation": {
+        "constructorCallData": "<array>, calldata",
         "problemCodeBody": "<str>, the whole code without empty, which means the answer of this problem",
         "problemCodeBodyWithEmpty": "<str>, the whole code with empty, which means the examination point of this problem",
     },
     "problemSolution": [
         {
-            "methodName": "<str>, MethodName"
-            "callData": "<any>, callData"
+            "methodName": "<str>, MethodName",
+            "callData": "<array>, callData",
             "expectReturn": "<any>, the return of calling the Method with the callData"
          },
         {
-            "methodName": "<str>, MethodName"
-            "callData": "<any>, callData"
+            "methodName": "<str>, MethodName",
+            "callData": "<array>, callData",
             "expectReturn": "<any>, the return of calling the Method with the callData"
          },
         {
-            "methodName": "<str>, MethodName"
-            "callData": "<any>, callData"
+            "methodName": "<str>, MethodName",
+            "callData": "<array>, callData",
             "expectReturn": "<any>, the return of calling the Method with the callData"
          },
         {
-            "methodName": "<str>, MethodName"
-            "callData": "<any>, callData"
+            "methodName": "<str>, MethodName",
+            "callData": "<array>, callData",
             "expectReturn": "<any>, the return of calling the Method with the callData"
          },
         {
-            "methodName": "<str>, MethodName"
-            "callData": "<any>, callData"
+            "methodName": "<str>, MethodName",
+            "callData": "<array>, callData",
             "expectReturn": "<any>, the return of calling the Method with the callData"
          },
     ],
