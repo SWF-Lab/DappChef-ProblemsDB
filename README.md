@@ -2,6 +2,27 @@
 
 ## Rules
 
+### Start the Journey
+
+1. Clone the repo
+```bash
+$ git clone https://github.com/SWF-Lab/DappChef-Core-Contract.git
+```
+2. Create new branch, reference with SWF-Lab/github_practice:
+```bash
+$ git checkout main # Change to the main branch
+$ git pull # Make sure the local code is same with the remote
+$ git checkout -b add-my-context # Create new branch
+```
+3. Put your problems to the folder `problemVersion1` with template [below](#problems-metadata-template).
+4. Write your problems statement [below](#problemversion1)...
+5. Push the code to remote repo:
+```bash
+$ git add .
+$ git commit -m "add new problems from x to y"
+$ git push
+```
+
 ### Problems Metadata Template
 FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 ```json
