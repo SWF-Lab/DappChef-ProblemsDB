@@ -23,6 +23,8 @@ $ git commit -m "add new problems from x to y"
 $ git push
 ```
 
+> When you wrute your problems' JSON file, you should make sure the `"` symbol of the `string` in contract may conflit with the string symbol of `json`. Hence, you should add the `\`
+
 ### Problems Metadata Template
 FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 ```json
