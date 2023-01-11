@@ -90,6 +90,9 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 {
     "name": "DappChef Rewards NFT #<problemNumber>",
     "description": "DappChef is a Ethereum Smart Contract Development Learning platform. Solve the coding problem, then you can mint the Reward NFT!",
+    "solver": "<address>, the problem solve",
+    "approver": "<address>, the key address storing in the server to sign(approve) minting request now",
+    "problemSolvedTimestamp": "<int>, the timestamp which user solved the problem",
     "attributes": [
         {
           "display_type": "number", 
