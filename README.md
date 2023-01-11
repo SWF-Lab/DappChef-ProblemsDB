@@ -1,4 +1,8 @@
-# DappChef-ProblemsDB
+<p align="center">
+    <h1 align="center">
+        🍩 DappChef-ProblemsDB
+    </h1>
+</p>
 
 ## Rules
 
@@ -73,13 +77,37 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
           "trait_type": "class", 
           "value": "<str>, class of this problem, see problems classification instructions part",
         }, 
-    ]
+    ],
     "image": "<str>, ipfs://<ipfsPrefix>/<problemNumber>, which means the NFT image location",
 }
 ```
 
 > 1. The num of operations in the `problemSolution` is unlimited, if the problem is very complicated, the length of `problemSolution: Array` could be very long.
 > 1. This metadata conforms to the [OpenSea Format](https://docs.opensea.io/docs/metadata-standards) which can show the attributes successfullty.
+
+### Reward NFT Metadata
+```JSON
+{
+    "name": "DappChef Rewards NFT #<problemNumber>",
+    "description": "DappChef is a Ethereum Smart Contract Development Learning platform. Solve the coding problem, then you can mint the Reward NFT!",
+    "attributes": [
+        {
+          "display_type": "number", 
+          "trait_type": "problemNumber", 
+          "value": "<int>, number of this problem",
+        },
+        {
+          "trait_type": "difficulty", 
+          "value": "<int>, difficulty of this problem, 1~3",
+        },
+        {
+          "trait_type": "class", 
+          "value": "<str>, class of this problem, see problems classification instructions part",
+        }, 
+    ],
+    "image": "<str>, ipfs://<ipfsPrefix>/<problemNumber>, which means the NFT image location",
+}
+```
 
 ### Problems Classification Instructions
 
