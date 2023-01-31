@@ -127,7 +127,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 ### problemVersion1
 | No. | Class | Difficulty | Statement | Setter |
 | --- | --- | :---: | --- | :---: |
-| 0. |Beginner|⭐| Version Declaration |Mur** ✅|
+| 0. |Beginner|⭐| Compiler Version Declaration |Mur** ✅|
 | 1. |Beginner|⭐||Dino|
 | 2. |Beginner|⭐||Dino|
 | 3. |Beginner|⭐||Dino|
