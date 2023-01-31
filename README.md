@@ -36,11 +36,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
     "problemNumber": "<int>, number of this problem",
     "problemVersion": "<int>, support dappchef version of this problem",
     "description": "<str>, What user sholud do in this problem, which means problem statement",
-    "problemInformation": {
-        "constructorCallData": "<array>, calldata",
-        "problemCodeBody": "<str>, the whole code without empty, which means the answer of this problem",
-        "problemCodeBodyWithEmpty": "<str>, the whole code with empty, which means the examination point of this problem",
-    },
+    "constructorCallData": "<array>, calldata",
     "problemSolution": [
         {
             "methodName": "<str>, MethodName",
@@ -121,7 +117,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 |S.C Junior L.R | DeFi	|	|⭐⭐|
 |S.C Junior L.R | Design_Pattern	| Upgradable Contract, Contract Wallet, Auction Model | ⭐⭐ |
 | Interview Problems | Company	| Collected from lots of famous web3 company classical interview problem	|⭐⭐|
-|S.C Senior L.R | DSA | 	|⭐⭐⭐|
+|S.C Senior L.R | DSA | 	|⭐⭐~⭐⭐⭐|
 |S.C Senior L.R | Gas_Optim | 	|⭐⭐⭐|
 |Theories L.R |	Cryptography |	|⭐⭐⭐|
 |EVM L.R| Assembly |	|⭐⭐⭐|
@@ -178,7 +174,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 45. |Company|||Mur**|
 | 46. |Company|||Mur**|
 | 47. |Company|||Mur**|
-| 48. ||||Mur**|
+| 48. |DSA|| Merkle Tree |Mur**|
 | 49. ||||Mur**|
 | 50. ||||Mur**|
 | 51. ||||Mur**|
