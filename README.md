@@ -127,7 +127,8 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 ### problemVersion1
 | No. | Class | Difficulty | Statement | Setter |
 | --- | --- | --- | --- | --- |
-| 1. |Beginner|⭐||Dino|
+| 0. |Beginner|⭐| Version Declaration |Mur** ✅|
+| 1. |Beginner|||Dino|
 | 2. |Beginner|||Dino|
 | 3. |Beginner|||Dino|
 | 4. |Beginner|||Dino|
@@ -167,14 +168,14 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 38. |Token|||FoodChain|
 | 39. |Token|||FoodChain|
 | 40. |Token|||FoodChain|
-| 41. |Company|⭐⭐|Signature && EIP-1271|Mur**|
+| 41. |Company|⭐⭐|Signature && EIP-1271|Mur** ✅|
 | 42. |Company|||Mur**|
 | 43. |Company|||Mur**|
 | 44. |Company|||Mur**|
 | 45. |Company|||Mur**|
 | 46. |Company|||Mur**|
 | 47. |Company|||Mur**|
-| 48. |DSA|| Merkle Tree |Mur**|
+| 48. |DSA|| Merkle Tree |Mur** ✅|
 | 49. ||||Mur**|
 | 50. ||||Mur**|
 | 51. ||||Mur**|
