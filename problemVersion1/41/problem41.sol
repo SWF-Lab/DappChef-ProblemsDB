@@ -1,0 +1,68 @@
+// SPDX-License-Identifier: Apache License
+pragma solidity ^0.8.17;
+
+contract ConsumeMsg {
+
+    function getMessageHash(
+        address _solver,
+        uint256 _problemNumber,
+        uint256 _timestamp,
+        address _approverKeyAddr,
+        uint8 _approverIndex,
+        uint256 _nonce
+    ) public pure returns (bytes32) {
+        return keccak256(
+            abi.encodePacked(
+                _solver, 
+                _problemNumber, 
+                _timestamp, 
+                _approverKeyAddr,
+                _approverIndex,
+                _nonce
+        ));
+    }
+
+    function getEthSignedMessageHash(bytes32 _messageHash)
+        public
+        pure
+        returns (bytes32)
+    {
+        /*
+        Signature is produced by signing a keccak256 hash with the following format:
+        "\x19Ethereum Signed Message\n" + len(msg) + msg
+        */
+        return
+            keccak256(
+                abi.encodePacked(
+                    "\x19Ethereum Signed Message:\n32",
+                    _messageHash
+                )
+            );
+    }
+
+    function getHash(uint _input) public pure returns (bytes32) {
+        return keccak256(abi.encodePacked(_input));
+    }
+
+    function VerifySignature(
+        address _solver,
+        uint256 _problemNumber,
+        uint256 _timestamp,
+        address _approverKeyAddr,
+        uint8 _approverIndex,
+        uint256 _nonce,
+        bytes memory _signature
+    ) public pure returns (bool) {
+        bytes32 messageHash = getMessageHash(_solver, _problemNumber, _timestamp, _approverKeyAddr, _approverIndex, _nonce);
+        bytes32 ethSignedMessageHash = getEthSignedMessageHash(messageHash);
+
+        return (recoverSigner(ethSignedMessageHash, _signature) == _approverKeyAddr);
+    }
+
+    function recoverSigner(
+        bytes32 _ethSignedMessageHash,
+        bytes memory _signature
+    ) public pure returns (address) {
+       // TODO: you should use the ecrecover to recover, and return the address which is used to check matching the signing key or not.
+    }
+}

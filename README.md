@@ -167,7 +167,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 38. |Token|||FoodChain|
 | 39. |Token|||FoodChain|
 | 40. |Token|||FoodChain|
-| 41. |Company|⭐⭐||Mur**|
+| 41. |Company|⭐⭐|Signature && EIP-1271|Mur**|
 | 42. |Company|||Mur**|
 | 43. |Company|||Mur**|
 | 44. |Company|||Mur**|
