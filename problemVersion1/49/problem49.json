@@ -1,0 +1,77 @@
+{
+  "problemNumber": 49,
+  "problemVersion": 1,
+  "description": "Simple Staking DeFi Protocol",
+  "constructorCallData": [],
+  "problemSolution": [
+    {
+      "methodName": "approveDAITransferFrom()",
+      "callData": [
+        100
+      ],
+      "expectReturn": ""
+    },
+    {
+      "methodName": "getAllowance()",
+      "callData": [],
+      "expectReturn": 100
+    },
+    {
+      "methodName": "approveDAITransferFrom()",
+      "callData": [
+        100
+      ],
+      "expectReturn": ""
+    },
+    {
+      "methodName": "getAllowance()",
+      "callData": [],
+      "expectReturn": 200
+    },
+    {
+      "methodName": "stakeTokens()",
+      "callData": [
+        100
+      ],
+      "expectReturn": ""
+    },
+    {
+      "methodName": "getClientStakingBalance()",
+      "callData": [],
+      "expectReturn": 100
+    },
+    {
+      "methodName": "unstakeTokens()",
+      "callData": [],
+      "expectReturn": ""
+    },
+    {
+      "methodName": "getClientStakingBalance()",
+      "callData": [],
+      "expectReturn": 0
+    },
+    {
+      "methodName": "stakeTokens()",
+      "callData": [
+        100
+      ],
+      "expectReturn": ""
+    },
+    {
+      "methodName": "getClientStakingBalance()",
+      "callData": [],
+      "expectReturn": 100
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "difficulty",
+      "value": 2
+    },
+    {
+      "trait_type": "class",
+      "value": "DeFi"
+    }
+  ],
+  "image": "ipfs://<ipfsPrefix>/49"
+}

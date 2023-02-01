@@ -81,6 +81,20 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 > 1. The num of operations in the `problemSolution` is unlimited, if the problem is very complicated, the length of `problemSolution: Array` could be very long.
 > 1. This metadata conforms to the [OpenSea Format](https://docs.opensea.io/docs/metadata-standards) which can show the attributes successfullty.
 
+### Special Operation
+
+#### MSG_SENDER / TX_ORIGIN
+
+Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will give the **Address of the User(Problem Solver)** to target method.
+
+```
+{
+    "methodName": "...",
+    "callData": "["MSG_SENDER", "TX_ORIGIN"]",
+    "expectReturn": "..."
+},
+```
+
 ### Reward NFT Metadata
 ```JSON
 {
@@ -176,7 +190,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 | 46. |Company|⭐⭐||Mur**|
 | 47. |Company|⭐⭐||Mur**|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
-| 49. ||⭐⭐||Mur**|
+| 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur**|
 | 50. ||⭐⭐||Mur**|
 | 51. ||⭐⭐||Mur**|
 | 52. ||⭐⭐||Dino|
