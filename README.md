@@ -34,19 +34,24 @@ $ git clone https://github.com/SWF-Lab/DappChef-Core-Contract.git
 ```
 $ cp .env.example .env
 ```
-3. Compile the contract:
+
+3. Prepare the node_modules
 ```
-$ yarn compile --force
+$ yarn install
 ```
-4. Create new branch, reference with SWF-Lab/github_practice:
+4. Compile the contract:
+```
+$ yarn install & yarn compile --force
+```
+5. Create new branch, reference with SWF-Lab/github_practice:
 ```bash
 $ git checkout main # Change to the main branch
 $ git pull # Make sure the local code is same with the remote
 $ git checkout -b add-my-context # Create new branch
 ```
-5. Put your problems to the folder `problemVersion1` with template [below](#problems-metadata-template).
-6. Write your problems statement [below](#problemversion1)...
-7. Push the code to remote repo:
+6. Put your problems to the folder `problemVersion1` with template [below](#problems-metadata-template).
+7. Write your problems statement [below](#problemversion1)...
+8. Push the code to remote repo:
 ```bash
 $ git add .
 $ git commit -m "add new problems from x to y"
@@ -62,6 +67,8 @@ Use the Judge Script to test your problem in Goerli.
 > Make sure the problem contract has been compiled, and the private key in the `.env` is as your image.
 
 ```
+yarn execute scripts/judgeGoerli.ts --network goerli
+>
 yarn run v1.22.18
 $ node -r ts-node/register -r tsconfig-paths/register hardhatRunWithArgs.ts scripts/judgeGoerli.ts --network goerli
 √ Please enter the problemNumber you want to judge: ... 41
