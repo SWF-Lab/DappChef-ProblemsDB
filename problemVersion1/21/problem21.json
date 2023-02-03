@@ -1,0 +1,61 @@
+{
+    "problemNumber": 21,
+    "problemVersion": 1,
+    "description": "Change Values of Global Variables",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "ChangeValue()",
+            "callData": [
+                "0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7",
+                "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+                "340282366920938463463374607431768211455",
+                "2147483647",
+                "127",
+                "true",
+                "0x12"
+            ],
+            "expectReturn": [
+                "0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7",
+                "115792089237316195423570985008687907853269984665640564039457584007913129639935",
+                "340282366920938463463374607431768211455",
+                "2147483647",
+                "127",
+                "true",
+                "0x12"
+            ]
+        },
+        {
+            "methodName": "ChangeValue",
+            "callData": [
+                "0x0000000000000000000000000000000000000000",
+                "0",
+                "0",
+                "-2147483648",
+                "-128",
+                "false",
+                "0x00"
+            ],
+            "expectReturn": [
+                "0x0000000000000000000000000000000000000000",
+                "0",
+                "0",
+                "-2147483648",
+                "-128",
+                "false",
+                "0x00"
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/21"
+}
