@@ -44,7 +44,7 @@ contract problem48 is ERC721, ERC721Storage {
 }
 ```
 
-2. problemSolution.methodName 後的 () 中要有參數型別，以逗號隔開，不得有空格，例如以下的 `VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)`：
+2. `problem<number>.json` 中 `problemSolution.methodName` 後的 `()` 中要有參數型別，以逗號隔開，不得有空格。例如以下的 `VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)`：
 ```
 "problemSolution": [
     {
@@ -63,7 +63,7 @@ contract problem48 is ERC721, ERC721Storage {
 ]
 ```
 
-3. 區塊鏈是沒辦法直接回傳 return 給鏈下世界的，所以必須寫一個 getFunction (Read Function) 去讀你要檢查的值。
+3. 區塊鏈是沒辦法直接回傳 write function 的 return 給鏈下世界的，所以必須寫一個 getFunction (Read Function) 去讀你要檢查的值。
 
 以下為錯誤題目出法：
 ```solidity
