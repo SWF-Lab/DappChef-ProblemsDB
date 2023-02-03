@@ -8,6 +8,7 @@
 ## Table of Contents
 
 - [Rules](#rules)
+    - [Important Announcement](#important-announcement)
     - [Start the Journey](#start-the-journey)
     - [Judge](#judge)
 - [Problems](#problems)
@@ -20,9 +21,89 @@
     - [Problemversion2](#problemversion2)
 - [Reference](#reference)
 
+
+
 ---
 
 ## Rules
+
+### Important Announcement
+
+1. 檔案名稱必須要跟最終繼承合約（主合約）的 Contract 變數名稱一致，例如第 48 題：
+
+`answer48.sol` 的 contract 必須為 `answer48`：
+```solidity
+contract answer48 is ERC721, ERC721Storage {
+    // ...
+}
+```
+`problem48.sol` 的 contract 必須為 `problem48`：
+```solidity
+contract problem48 is ERC721, ERC721Storage {
+    // ...
+}
+```
+
+2. problemSolution.methodName 後的 () 中要有參數型別，以逗號隔開，不得有空格，例如以下的 `VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)`：
+```
+"problemSolution": [
+    {
+        "methodName": "VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)",
+        "callData": [
+                "0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba",
+                "997",
+                "1673070083",
+                "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec",
+                "0",
+                "0",
+                "0xf48090ed731d9b3c956b9ee9843fd96d845879fc22763be659f2fb6f8229b52c245e72e3fb3540e969970333d52fa307b80cb3a04d088364f26c527c4767cb681b"
+            ],
+        "expectReturn": "true"
+    }
+]
+```
+
+3. 區塊鏈是沒辦法直接回傳 return 給鏈下世界的，所以必須寫一個 getFunction (Read Function) 去讀你要檢查的值。
+
+以下為錯誤題目出法：
+```solidity
+address public a;
+function changeValue(address inputAddr) public returns (address) {  
+    a = inputAddr;
+    return a;
+}
+```
+
+正確出法為：
+```solidity
+address public a;
+function changeValue(address inputAddr) public{  
+    a = inputAddr;
+}
+
+function get_a() public view returns(address){
+    return a
+}
+```
+
+在 `problem<number>.json` 中正確出法為：
+```
+"problemSolution": [
+        {
+            "methodName": "changeValue(address)",
+            "callData": [
+                "0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"
+            ],
+            "expectReturn": []
+        },
+        {
+            "methodName": "get_a()",
+            "callData": [],
+            "expectReturn": ["0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"]
+        },
+]
+```
+
 
 ### Start the Journey
 
@@ -58,8 +139,6 @@ $ git commit -m "add new problems from x to y"
 $ git push
 ```
 
-> When you wrute your problems' JSON file, you should make sure the `"` symbol of the `string` in contract may conflit with the string symbol of `json`. Hence, you should add the `\`
-
 ### Judge 
 
 Use the Judge Script to test your problem in Goerli.
@@ -67,7 +146,7 @@ Use the Judge Script to test your problem in Goerli.
 > Make sure the problem contract has been compiled, and the private key in the `.env` is as your image.
 
 ```
-yarn execute scripts/judgeGoerli.ts --network goerli
+$ yarn execute scripts/judgeGoerli.ts --network goerli
 >
 yarn run v1.22.18
 $ node -r ts-node/register -r tsconfig-paths/register hardhatRunWithArgs.ts scripts/judgeGoerli.ts --network goerli
@@ -95,6 +174,7 @@ Done in 22.65s.
 ## Problems
 
 ### Problems Metadata Template
+
 FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 ```json
 {
