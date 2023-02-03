@@ -4,6 +4,24 @@
     </h1>
 </p>
 
+
+## Table of Contents
+
+- [Rules](#rules)
+    - [Start the Journey](#start-the-journey)
+    - [Judge](#judge)
+- [Problems](#problems)
+    - [Problems Metadata Template](#problems-metadata-template)
+    - [Special Operation](#special-operation)
+    - [Reward NFT Metadata](#reward-nft-metadata)
+    - [Problems Classification Instructions](#problems-classification-instructions)
+- [Problems Information](#problems-information)
+    - [problemVersion1](#problemversion1)
+    - [Problemversion2](#problemversion2)
+- [Reference](#reference)
+
+---
+
 ## Rules
 
 ### Start the Journey
@@ -12,15 +30,23 @@
 ```bash
 $ git clone https://github.com/SWF-Lab/DappChef-Core-Contract.git
 ```
-2. Create new branch, reference with SWF-Lab/github_practice:
+2. Make sure the `.env` arguments are same as your image. (add your private key of account which has enough goerliEther).
+```
+$ cp .env.example .env
+```
+3. Compile the contract:
+```
+$ yarn compile --force
+```
+4. Create new branch, reference with SWF-Lab/github_practice:
 ```bash
 $ git checkout main # Change to the main branch
 $ git pull # Make sure the local code is same with the remote
 $ git checkout -b add-my-context # Create new branch
 ```
-3. Put your problems to the folder `problemVersion1` with template [below](#problems-metadata-template).
-4. Write your problems statement [below](#problemversion1)...
-5. Push the code to remote repo:
+5. Put your problems to the folder `problemVersion1` with template [below](#problems-metadata-template).
+6. Write your problems statement [below](#problemversion1)...
+7. Push the code to remote repo:
 ```bash
 $ git add .
 $ git commit -m "add new problems from x to y"
@@ -28,6 +54,38 @@ $ git push
 ```
 
 > When you wrute your problems' JSON file, you should make sure the `"` symbol of the `string` in contract may conflit with the string symbol of `json`. Hence, you should add the `\`
+
+### Judge 
+
+Use the Judge Script to test your problem in Goerli.
+
+> Make sure the problem contract has been compiled, and the private key in the `.env` is as your image.
+
+```
+yarn run v1.22.18
+$ node -r ts-node/register -r tsconfig-paths/register hardhatRunWithArgs.ts scripts/judgeGoerli.ts --network goerli
+√ Please enter the problemNumber you want to judge: ... 41
+Trying to deploy problem 41 with Deployer Contract:
+    Tx successful with hash: 0x6bdc811145a9ec9b5588287632961bde53f6dd0f3569e59ad35af7182bf5cea0
+    Deployed contract address is 0xE2AB961DEdbAfDa645139D3DAcaf57700dE2C88d
+
+Begin the Judging...
+
+Testing 0: VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)
+    - Sameple Input: 0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba,997,1673070083,0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec,0,0,0xf48090ed731d9b3c956b9ee9843fd96d845879fc22763be659f2fb6f8229b52c245e72e3fb3540e969970333d52fa307b80cb3a04d088364f26c527c4767cb681b
+    - Sameple Output: true
+    - Your Output: true
+    ...Accepted!
+
+Testing 1: VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)
+    - Sameple Input: 0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba,999,1673070083,0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec,1,0,0xf48090ed731d9b3c956b9ee9843fd96d845879fc22763be659f2fb6f8229b52c245e72e3fb3540e969970333d52fa307b80cb3a04d088364f26c527c4767cb681b
+    - Sameple Output: false
+    - Your Output: false
+    ...Accepted!
+Done in 22.65s.
+```
+
+## Problems
 
 ### Problems Metadata Template
 FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
@@ -190,7 +248,7 @@ Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will 
 | 46. |Company|⭐⭐||Mur**|
 | 47. |Company|⭐⭐||Mur**|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
-| 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur**|
+| 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
 | 50. ||⭐⭐||Mur**|
 | 51. ||⭐⭐||Mur**|
 | 52. ||⭐⭐||Dino|

@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache License
 pragma solidity ^0.8.13;
 
-contract MerkleTree {
+contract problem48 {
 
     function verify(
         bytes32[] memory proof,

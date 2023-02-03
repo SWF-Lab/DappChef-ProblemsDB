@@ -5,23 +5,27 @@
     "constructorCallData": [],
     "problemSolution": [
         {
-            "methodName": "verify()",
-            "callData": ["0xe2de7e936cd2e3b398a5b5b89726a8d72148b93050d271cf91ffec3cc5598577", [
+            "methodName": "verify(bytes32[],bytes32,bytes32)",
+            "callData": [[
                     "0x2098ddd01d6035049de112333af26442bb3009ea06b6df66fccfadf8adee9914",
                     "0xb4435d3d2bb4863bffe2dd7c4a217641efe9da99b177cef8693fe26910a2bf04",
                     "0x7c8d8e6486e95d2eaff942ec8eb9b732d53596cb06548b62ff4841438a25a5d4"
-                ]],
+                ],
+                "0xe2de7e936cd2e3b398a5b5b89726a8d72148b93050d271cf91ffec3cc5598577",
+                "0x760785a457f46af4582b62962c4d96be98c68df9619556fa20af3c286343bf81"
+            ],
             "expectReturn": "true"
         },
         {
-            "methodName": "verify()",
+            "methodName": "verify(bytes32[],bytes32,bytes32)",
             "callData": [
-                "0xe2de7e936cd2e3b398a5b5b89726a8d72148b93050d271cf91ffec3cc559857a",
                 [
-                    "0x2098ddd01d6035049de112333af26442bb3009ea06b6df66fccfadf8adee991d",
-                    "0xb4435d3d2bb4863bffe2dd7c4a217641efe9da99b177cef8693fe26910a2bf0f",
-                    "0x7c8d8e6486e95d2eaff942ec8eb9b732d53596cb06548b62ff4841438a25a5dq"
-                ]
+                    "0x2098ddd01d6035049de112333af26442bb3009ea06b6df66fccfadf8adee9915",
+                    "0xb4435d3d2bb4863bffe2dd7c4a217641efe9da99b177cef8693fe26910a2bf05",
+                    "0x7c8d8e6486e95d2eaff942ec8eb9b732d53596cb06548b62ff4841438a25a5d5"
+                ],
+                "0xe2de7e936cd2e3b398a5b5b89726a8d72148b93050d271cf91ffec3cc5598575",
+                "0x760785a457f46af4582b62962c4d96be98c68df9619556fa20af3c286343bf85"
             ],
             "expectReturn": "false"
         }

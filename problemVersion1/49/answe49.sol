@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract Farm {
+contract answer41 {
     LP public holdToken;
     StableCoin public dai;
 

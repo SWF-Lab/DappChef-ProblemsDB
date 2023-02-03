@@ -5,7 +5,7 @@
     "constructorCallData": [],
     "problemSolution": [
         {
-            "methodName": "VerifySignature()",
+            "methodName": "VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)",
             "callData": [
                     "0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba",
                     "997",
@@ -18,7 +18,7 @@
             "expectReturn": "true"
         },
         {
-            "methodName": "VerifySignature()",
+            "methodName": "VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)",
             "callData": [
                 "0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba",
                 "999",

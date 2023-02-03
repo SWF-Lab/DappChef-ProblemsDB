@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache License
 pragma solidity ^0.8.17;
 
-contract globalVariables {
+contract answer21 {
 
     address public a;
     uint256 public b;
@@ -36,7 +36,29 @@ contract globalVariables {
         e = inputInt8;
         f = inputBool;
         g = inputBytes1;
-        return ( a, b, c, d, e, f, g);
+        return (a, b, c, d, e, f, g);
+    }
+
+    function get_a() public view returns(address) {
+        return a;
+    }
+    function get_b() public view returns(uint256) {
+        return b;
+    }
+    function get_c() public view returns(uint128) {
+        return c;
+    }
+    function get_d() public view returns(int32) {
+        return d;
+    }
+    function get_e() public view returns(int8) {
+        return e;
+    }
+    function get_f() public view returns(bool) {
+        return f;
+    }
+    function get_g() public view returns(bytes1) {
+        return g;
     }
 
 }

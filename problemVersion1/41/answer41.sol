@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache License
 pragma solidity ^0.8.17;
 
-contract ConsumeMsg {
+contract answer41 {
 
     function getMessageHash(
         address _solver,
