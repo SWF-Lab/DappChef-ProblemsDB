@@ -217,7 +217,20 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
 ### Special Operation
 
-> This funcationality is constructing, don't use these operations in your problem!!
+> **This funcationality is constructing, don't use these operations in your problem!!**
+
+#### CALL_WITH_ETHER
+
+Use the `CALL_WITH_ETHER` as the methodName and `<etherInWei>` will transfer specify smount of goerliEther from user to the contract. Which means contract can use `msg.value` and `receive()` or `fallback()` to know the amount of ether-transfer.
+
+```JSON
+{
+    "methodName": "CALL_WITH_ETHER",
+    "callData": "1000000000000000000",
+    "expectReturn": "[]"
+}
+```
+> Above example is send 1 ether (10*18 Wei) to the contract.
 
 #### MSG_SENDER / TX_ORIGIN
 
@@ -226,7 +239,7 @@ Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will 
 ```JSON
 {
     "methodName": "...",
-    "callData": "[\"MSG_SENDER\", \"TX_ORIGIN\"]",
+    "callData": ["MSG_SENDER", "TX_ORIGIN"],
     "expectReturn": "..."
 }
 ```
@@ -242,6 +255,8 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
     "expectReturn": "[]"
 }
 ```
+> Above example is Wait for 10 Block mined.
+
 
 ### Reward NFT Metadata
 ```JSON
@@ -339,7 +354,7 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 | 47. |Company|⭐⭐||Mur**|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
 | 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
-| 50. ||⭐⭐||Mur**|
+| 50. |Design_Pattern|⭐⭐| Advanced Withdraw |Mur**|
 | 51. ||⭐⭐||Mur**|
 | 52. ||⭐⭐||Dino|
 | 53. ||⭐⭐||Dino|
