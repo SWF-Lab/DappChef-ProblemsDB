@@ -4,7 +4,6 @@
     </h1>
 </p>
 
-
 ## Table of Contents
 
 - [Rules](#rules)
@@ -20,8 +19,6 @@
     - [problemVersion1](#problemversion1)
     - [Problemversion2](#problemversion2)
 - [Reference](#reference)
-
-
 
 ---
 
@@ -86,7 +83,7 @@ function get_a() public view returns(address){
 }
 ```
 
-在 `problem<number>.json` 中正確出法為：
+對應上方的正確合約出法，在 `problem<number>.json` 中正確批改方法為：
 ```JSON
 "problemSolution": [
         {
@@ -111,7 +108,7 @@ function get_a() public view returns(address){
 ```bash
 $ git clone https://github.com/SWF-Lab/DappChef-Core-Contract.git
 ```
-2. Make sure the `.env` arguments are same as your image. (add your private key of account which has enough goerliEther).
+2. Make sure the `.env` arguments are same as your image. (add your private key of account which **has enough goerliEther**).
 ```bash
 $ cp .env.example .env
 ```
@@ -142,7 +139,7 @@ $ git push
 
 Use the Judge Script to test your problem in Goerli.
 
-> Make sure the problem contract has been compiled, and the private key in the `.env` is as your image.
+> Make sure the problem contract **has been compiled** (`$ yarn compile`), and the private key in the `.env` is as your image.
 
 ```
 $ yarn execute scripts/judgeGoerli.ts --network goerli
@@ -176,7 +173,7 @@ Done in 22.65s.
 
 FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
-> If your function is Write Function (calling this function will change the state), your `expectReturn` should be `[]` (empty array).
+> If your function is **Write Function** (calling this function will change the state), your `expectReturn` should be `[]` (empty array).
 
 ```json
 {
@@ -215,10 +212,12 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 }
 ```
 
-> 1. The num of operations in the `problemSolution` is unlimited, if the problem is very complicated, the length of `problemSolution: Array` could be very long.
+> 1. The num of operations in the `problemSolution` is unlimited, if the problem is very complicated, the length of `problemSolution: Array.length` could be very long.
 > 1. This metadata conforms to the [OpenSea Format](https://docs.opensea.io/docs/metadata-standards) which can show the attributes successfullty.
 
 ### Special Operation
+
+> This funcationality is constructing, don't use these operations in your problem!!
 
 #### MSG_SENDER / TX_ORIGIN
 
@@ -283,7 +282,7 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 |S.C Senior L.R | DSA | 	|⭐⭐~⭐⭐⭐|
 |S.C Senior L.R | Gas_Optim | 	|⭐⭐⭐|
 |Theories L.R |	Cryptography | ZKP, Hash, Signature	|⭐⭐⭐|
-|EVM L.R| EVM |Assembly, precompiled	|⭐⭐⭐|
+|EVM L.R| EVM | Assembly, precompiled	|⭐⭐⭐|
 
 ## Problems Information
 
