@@ -7,6 +7,7 @@
 ## Table of Contents
 
 - [Rules](#rules)
+    - [TODO Functionality](#todo-functionality)
     - [Important Announcement](#important-announcement)
     - [Start the Journey](#start-the-journey)
     - [Judge](#judge)
@@ -23,6 +24,15 @@
 ---
 
 ## Rules
+
+### TODO Functionality
+
+**目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
+- [] Constructor
+- [] Event Judge
+- [] WITH_ETHER: Send Ether to Contract
+- [] MSG_SENDER: Use User's Address to be expectReturn or callData
+- [] WAIT: Wait for few blocks
 
 ### Important Announcement
 
@@ -100,12 +110,7 @@ function get_a() public view returns(address){
         }
 ]
 ```
-4. **目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
-    - Constructor
-    - Event Judge
-    - Send Ether to Contract
-    - Use User's Address to be expectReturn or callData
-    - Wait for few blocks
+
 
 ### Start the Journey
 
@@ -224,30 +229,31 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
 > **This funcationality is constructing, don't use these operations in your problem!!**
 
-#### CALL_WITH_ETHER
+#### WITH_ETHER
 
-Use the `CALL_WITH_ETHER` as the methodName and `<etherInWei>` will transfer specify smount of goerliEther from user to the contract. Which means contract can use `msg.value` and `receive()` or `fallback()` to know the amount of ether-transfer.
+Use the `WITH_ETHER` as the methodName and `<etherInWei>` will transfer specify smount of goerliEther from user to the contract. Which means contract can use `msg.value` and `receive()` or `fallback()` to know the amount of ether-transfer.
 
 ```JSON
 {
-    "methodName": "CALL_WITH_ETHER",
-    "callData": "1000000000000000000",
-    "expectReturn": "[]"
+    "methodName": "WITH_ETHER",
+    "callData": [1000000000000000000],
+    "expectReturn": []
 }
 ```
-> Above example is send 1 ether (10*18 Wei) to the contract.
+> Above example is send 1 ether (10*18 wei) to the contract.
 
-#### MSG_SENDER / TX_ORIGIN
+#### MSG_SENDER
 
-Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will give the **Address of the User(Problem Solver)** to target method.
+Use the `MSG_SENDER` as the callData (Function Input Params) will give the **Address of the User(Problem Solver)** to target method.
 
 ```JSON
 {
     "methodName": "...",
-    "callData": ["MSG_SENDER", "TX_ORIGIN"],
-    "expectReturn": "..."
+    "callData": ["MSG_SENDER"],
+    "expectReturn": []
 }
 ```
+> In the above example, if the user's address is `0x123`, the string `"MSG_SENDER"` in the `callData` array will be replaced to `0x123`.
 
 #### WAIT
 
@@ -256,8 +262,8 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 ```JSON
 {
     "methodName": "WAIT",
-    "callData": "[10]",
-    "expectReturn": "[]"
+    "callData": [10],
+    "expectReturn": []
 }
 ```
 > Above example is Wait for 10 Block mined.
