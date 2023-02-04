@@ -100,7 +100,12 @@ function get_a() public view returns(address){
         }
 ]
 ```
-4. **目前還不支援 Constructor，過一陣子我會處理這個問題，請大家先避開**
+4. **目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
+    - Constructor
+    - Event Judge
+    - Send Ether to Contract
+    - Use User's Address to be expectReturn or callData
+    - Wait for few blocks
 
 ### Start the Journey
 
