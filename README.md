@@ -45,7 +45,7 @@ contract problem48 is ERC721, ERC721Storage {
 ```
 
 2. `problem<number>.json` 中 `problemSolution.methodName` 後的 `()` 中要有參數型別，以逗號隔開，不得有空格。例如以下的 `VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)`：
-```
+```JSON
 "problemSolution": [
     {
         "methodName": "VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)",
@@ -57,7 +57,7 @@ contract problem48 is ERC721, ERC721Storage {
                 "0",
                 "0",
                 "0xf48090ed731d9b3c956b9ee9843fd96d845879fc22763be659f2fb6f8229b52c245e72e3fb3540e969970333d52fa307b80cb3a04d088364f26c527c4767cb681b"
-            ],
+            ]
         "expectReturn": "true"
     }
 ]
@@ -87,7 +87,7 @@ function get_a() public view returns(address){
 ```
 
 在 `problem<number>.json` 中正確出法為：
-```
+```JSON
 "problemSolution": [
         {
             "methodName": "changeValue(address)",
@@ -100,7 +100,7 @@ function get_a() public view returns(address){
             "methodName": "get_a()",
             "callData": [],
             "expectReturn": ["0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"]
-        },
+        }
 ]
 ```
 
@@ -112,16 +112,15 @@ function get_a() public view returns(address){
 $ git clone https://github.com/SWF-Lab/DappChef-Core-Contract.git
 ```
 2. Make sure the `.env` arguments are same as your image. (add your private key of account which has enough goerliEther).
-```
+```bash
 $ cp .env.example .env
 ```
-
 3. Prepare the node_modules
-```
+```bash
 $ yarn install
 ```
 4. Compile the contract:
-```
+```bash
 $ yarn install & yarn compile --force
 ```
 5. Create new branch, reference with SWF-Lab/github_practice:
@@ -176,6 +175,9 @@ Done in 22.65s.
 ### Problems Metadata Template
 
 FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
+
+> If your function is Write Function (calling this function will change the state), your `expectReturn` should be `[]` (empty array).
+
 ```json
 {
     "problemNumber": "<int>, number of this problem",
@@ -197,17 +199,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
             "methodName": "<str>, MethodName",
             "callData": "<array>, callData",
             "expectReturn": "<any>, the return of calling the Method with the callData"
-         },
-        {
-            "methodName": "<str>, MethodName",
-            "callData": "<array>, callData",
-            "expectReturn": "<any>, the return of calling the Method with the callData"
-         },
-        {
-            "methodName": "<str>, MethodName",
-            "callData": "<array>, callData",
-            "expectReturn": "<any>, the return of calling the Method with the callData"
-         },
+         }
     ],
     "attributes": [
         {
@@ -217,7 +209,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
         {
           "trait_type": "class", 
           "value": "<str>, class of this problem, see problems classification instructions part",
-        }, 
+        } 
     ],
     "image": "<str>, ipfs://<ipfsPrefix>/<problemNumber>, which means the NFT image location",
 }
@@ -232,12 +224,24 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
 Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will give the **Address of the User(Problem Solver)** to target method.
 
-```
+```JSON
 {
     "methodName": "...",
     "callData": "["MSG_SENDER", "TX_ORIGIN"]",
     "expectReturn": "..."
-},
+}
+```
+
+#### WAIT
+
+Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific block amount.
+
+```JSON
+{
+    "methodName": "WAIT",
+    "callData": "[10]",
+    "expectReturn": "[]"
+}
 ```
 
 ### Reward NFT Metadata
@@ -278,8 +282,8 @@ Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will 
 | Interview Problems | Company	| Collected from lots of famous web3 company classical interview problem	|⭐⭐|
 |S.C Senior L.R | DSA | 	|⭐⭐~⭐⭐⭐|
 |S.C Senior L.R | Gas_Optim | 	|⭐⭐⭐|
-|Theories L.R |	Cryptography |	|⭐⭐⭐|
-|EVM L.R| Assembly |	|⭐⭐⭐|
+|Theories L.R |	Cryptography | ZKP, Hash, Signature	|⭐⭐⭐|
+|EVM L.R| EVM |Assembly, precompiled	|⭐⭐⭐|
 
 ## Problems Information
 
@@ -307,7 +311,7 @@ Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will 
 | 18. |Token|⭐||Dino|
 | 19. |Token|⭐||Dino|
 | 20. |Token|⭐||Dino|
-| 21. |Beginner|⭐||FoodChain|
+| 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
 | 22. |Beginner|⭐||FoodChain|
 | 23. |Beginner|⭐||FoodChain|
 | 24. |Beginner|⭐||FoodChain|
