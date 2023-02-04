@@ -226,7 +226,7 @@ Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will 
 ```JSON
 {
     "methodName": "...",
-    "callData": "["MSG_SENDER", "TX_ORIGIN"]",
+    "callData": "[\"MSG_SENDER\", \"TX_ORIGIN\"]",
     "expectReturn": "..."
 }
 ```
