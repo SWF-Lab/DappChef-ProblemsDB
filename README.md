@@ -27,12 +27,13 @@
 
 ### TODO Functionality
 
-**目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
-- [] Constructor
-- [] Event Judge
-- [] WITH_ETHER: Send Ether to Contract
-- [] MSG_SENDER: Use User's Address to be expectReturn or callData
-- [] WAIT: Wait for few blocks
+**有些目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
+- ✅ Basic Judging System Core
+- ⬜️ Constructor: Deploy the contract with constructor call data
+- ⬜️ Event: Expect the specify events to be emmited
+- ⬜️ WITH_ETHER: Send Ether to Contract
+- ⬜️ MSG_SENDER: Use User's Address to be expectReturn or callData
+- ⬜️ WAIT: Wait for few blocks
 
 ### Important Announcement
 
