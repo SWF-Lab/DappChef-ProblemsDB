@@ -293,6 +293,8 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 ## Problems Information
 
 ### problemVersion1
+✅ - tested and passed.
+🚩 - haven't passed.
 | No. | Class | Difficulty | Statement | Setter |
 | --- | --- | :---: | --- | :---: |
 | 0. |Beginner|⭐| Compiler Version Declaration |Mur** ✅|
@@ -317,8 +319,8 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 | 19. |Token|⭐||Dino|
 | 20. |Token|⭐||Dino|
 | 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
-| 22. |Beginner|⭐|Immutable and Constant|FoodChain✅|
-| 23. |Beginner|⭐||FoodChain|
+| 22. |Beginner|⭐|Immutable and Constant|FoodChain🚩|
+| 23. |Beginner|⭐|Hash In Order|FoodChain✅|
 | 24. |Beginner|⭐||FoodChain|
 | 25. |Beginner|⭐||FoodChain|
 | 26. |Beginner|⭐||FoodChain|
