@@ -1,0 +1,29 @@
+{
+    "problemNumber": 22,
+    "problemVersion": 1,
+    "description": "Immutable and Constant",
+    "constructorCallData": ["0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"],
+    "problemSolution": [
+        {
+            "methodName": "get_caller1()",
+            "callData": [],
+            "expectReturn": "0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"
+        },
+        {
+            "methodName": "get_caller2()",
+            "callData": [],
+            "expectReturn": "0x0000000000000000000000000000000000000000"
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/22"
+}

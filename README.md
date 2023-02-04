@@ -6,19 +6,25 @@
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Rules](#rules)
-    - [Important Announcement](#important-announcement)
-    - [Start the Journey](#start-the-journey)
-    - [Judge](#judge)
+  - [Important Announcement](#important-announcement)
+  - [Start the Journey](#start-the-journey)
+  - [Judge](#judge)
 - [Problems](#problems)
-    - [Problems Metadata Template](#problems-metadata-template)
-    - [Special Operation](#special-operation)
-    - [Reward NFT Metadata](#reward-nft-metadata)
-    - [Problems Classification Instructions](#problems-classification-instructions)
+  - [Problems Metadata Template](#problems-metadata-template)
+  - [Special Operation](#special-operation)
+    - [MSG\_SENDER / TX\_ORIGIN](#msg_sender--tx_origin)
+    - [WAIT](#wait)
+  - [Reward NFT Metadata](#reward-nft-metadata)
+  - [Problems Classification Instructions](#problems-classification-instructions)
 - [Problems Information](#problems-information)
-    - [problemVersion1](#problemversion1)
-    - [Problemversion2](#problemversion2)
+  - [problemVersion1](#problemversion1)
+  - [problemVersion2](#problemversion2)
 - [Reference](#reference)
+  - [Roadmap](#roadmap)
+  - [Learnging Resource](#learnging-resource)
+  - [Vulnerability Resource](#vulnerability-resource)
 
 ---
 
@@ -311,7 +317,7 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 | 19. |Token|⭐||Dino|
 | 20. |Token|⭐||Dino|
 | 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
-| 22. |Beginner|⭐||FoodChain|
+| 22. |Beginner|⭐|Immutable and Constant|FoodChain✅|
 | 23. |Beginner|⭐||FoodChain|
 | 24. |Beginner|⭐||FoodChain|
 | 25. |Beginner|⭐||FoodChain|
