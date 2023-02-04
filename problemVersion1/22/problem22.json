@@ -5,12 +5,12 @@
     "constructorCallData": ["0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"],
     "problemSolution": [
         {
-            "methodName": "get_caller1()",
+            "methodName": "get_CALLER_1()",
             "callData": [],
             "expectReturn": "0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"
         },
         {
-            "methodName": "get_caller2()",
+            "methodName": "get_CALLER_2()",
             "callData": [],
             "expectReturn": "0x0000000000000000000000000000000000000000"
         }

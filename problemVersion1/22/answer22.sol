@@ -2,18 +2,18 @@
 pragma solidity ^0.8.17;
 
 contract answer22 {
-    address public immutable caller1;
-    address public constant caller2 = address(0);
+    address public immutable CALLER_1;
+    address public constant CALLER_2 = address(0);
     
     constructor(address _caller) {
-        caller1 = _caller;
+        CALLER_1 = _caller;
     }
 
-    function get_caller1() public view returns (address) {
-        return (caller1);
+    function get_CALLER_1() public view returns (address) {
+        return (CALLER_1);
     }
 
-    function get_caller2() public pure returns (address) {
-        return (caller2);
+    function get_CALLER_2() public pure returns (address) {
+        return (CALLER_2);
     }
 }
