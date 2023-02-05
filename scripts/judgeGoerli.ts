@@ -72,7 +72,7 @@ async function main() {
         
         try{
             // If this methodName is Check Event Emitted
-            if ((solution[i].methodName).substring(0, 1) == "$"){
+            if ((solution[i].methodName).substring(0, 1) == "#"){
                 
                 // Get expectReturn
                 const topics0 = ethers.utils.id((solution[i].methodName).substring(1))

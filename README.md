@@ -118,7 +118,7 @@ function get_a() public view returns(address){
 ],
 ```
 
-5. Event Usage: use `$` in fornt of the event name, and use two array to represent `topics` and `data`.
+5. Event Usage: use `#` in fornt of the event name, and use two array to represent `topics` and `data`.
 ```JSON
 "problemSolution": [
     {
@@ -127,7 +127,7 @@ function get_a() public view returns(address){
         "expectReturn": []
     },
     {
-        "methodName": "$Calling(address,uint256,bool,string,string)",
+        "methodName": "#Calling(address,uint256,bool,string,string)",
         "callData": [],
         "expectReturn": [
             ["0xdCca4cE55773359E191110Eeb21E0413f770032B",7,"true"],
@@ -258,15 +258,40 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
 #### WITH_ETHER
 
-Use the `WITH_ETHER` as the methodName and `<etherInWei>` will transfer specify smount of goerliEther from user to the contract. Which means contract can use `msg.value` and `receive()` or `fallback()` to know the amount of ether-transfer.
+Use the `$` in front of the methodName and the first element of `callData` will become the `<etherInWei>`, which will transfer specify amount of goerliEther from user to the contract when call the function. 
 
+If you have a function like below:
+```solidity
+function deposit(uint256 amount, address recipient) public payable {
+    // need msg.value == amount
+}
+```
+You can use this in the `problem<number>.json`:
 ```JSON
 {
-    "methodName": "WITH_ETHER",
-    "callData": [1000000000000000000],
+    "methodName": "$deposit",
+    "callData": ["1000000000000000000", ["1000000000000000000", ""]],
     "expectReturn": []
 }
 ```
+
+If you want to "only transfer ether without calling any function", which means using `receive()` or `fallback()` to get the amount of ether-transfer. 
+
+```solidity
+fallback(string memory data) external payable returns (uint256, string memory) {
+    return (uint256(msg.value), data);
+}
+```
+
+You can use this in the `problem<number>.json`:
+```JSON
+{
+    "methodName": "$",
+    "callData": ["1000000000000000000", ["Hi!"]],
+    "expectReturn": ["1000000000000000000", "Hi!"]
+}
+```
+
 > Above example is send 1 ether (10*18 wei) to the contract.
 
 #### MSG_SENDER
