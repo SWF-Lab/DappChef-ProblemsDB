@@ -27,6 +27,15 @@ async function main() {
     const rawJudgeInfo = fs.readFileSync(path.join(__dirname, `../problemVersion1/${problemNumber}/problem${problemNumber}.json`))
     const JudgeInfo = JSON.parse(rawJudgeInfo.toString());
     const solution = JudgeInfo.problemSolution
+
+    const constructorCode = ethers.utils.defaultAbiCoder.encode(
+        JudgeInfo.constructorCallData.map((e: any) => e[0]),
+        JudgeInfo.constructorCallData.map((e: any) => e[1])
+    )
+    const bytecode = ethers.utils.solidityPack(
+        ["bytes", "bytes"],
+        [creationCode, constructorCode]
+    )
    
     /** ---------------------------------------------------------------------------
      * User deploer contract to deploy the answer contract 
@@ -39,14 +48,6 @@ async function main() {
     )
 
     console.log(`Trying to deploy problem ${problemNumber} with Deployer Contract:`)
-    const constructorCode = ethers.utils.defaultAbiCoder.encode(
-        JudgeInfo.constructorCallData.map((e: any) => e[0]),
-        JudgeInfo.constructorCallData.map((e: any) => e[1])
-    )
-    const bytecode = ethers.utils.solidityPack(
-        ["bytes", "bytes"],
-        [creationCode, constructorCode]
-    )
     
     const tx = await DeployerContract.deploy(bytecode, wallet.address, problemNumber)
     const receipt = await tx.wait()
