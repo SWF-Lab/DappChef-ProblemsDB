@@ -1,5 +1,11 @@
 # Problems Information & Metadata
 
+### Table of Contents
+- [Reward NFT Metadata](#reward-nft-metadata)
+- [Problems Classification Instructions](#problems-classification-instructions)
+- [problemVersion1](#problemVersion1)
+- [problemVersion2 (TBD)](#problemVersion2)
+
 ### Reward NFT Metadata
 ```JSON
 {
@@ -26,6 +32,20 @@
     "image": "<str>, ipfs://<ipfsPrefix>/<problemNumber>, which means the NFT image location",
 }
 ```
+
+### Problems Classification Instructions
+
+| Learning Roadmap(L.R) | Class | Statement | Difficulty |
+| :---: | :---: | --- | :---: |
+|S.C Beginner L.R | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
+|S.C Beginner L.R | Token	| Complete ERC-20/721 Construction	|⭐~⭐⭐|
+|S.C Junior L.R | DeFi	|	|⭐⭐|
+|S.C Junior L.R | Design_Pattern	| Upgradable Contract, Contract Wallet, Auction Model | ⭐⭐ |
+| Interview Problems | Company	| Collected from lots of famous web3 company classical interview problem	|⭐⭐|
+|S.C Senior L.R | DSA | 	|⭐⭐~⭐⭐⭐|
+|S.C Senior L.R | Gas_Optim | 	|⭐⭐⭐|
+|Theories L.R |	Cryptography | ZKP, Hash, Signature	|⭐⭐⭐|
+|EVM L.R| EVM | Assembly, precompiled	|⭐⭐⭐|
 
 ### problemVersion1
 | No. | Class | Difficulty | Statement | Setter |

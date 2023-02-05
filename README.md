@@ -14,7 +14,6 @@
 - [Problems](#problems)
     - [Problems Template](#problems-template)
     - [Special Operation](#special-operation)
-    - [Problems Classification Instructions](#problems-classification-instructions)
 - [Problems Information & Metadata](/Metadata)
 - [Reference](#reference)
 
@@ -340,20 +339,6 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 }
 ```
 > Above example is Wait for 10 Block mined.
-
-### Problems Classification Instructions
-
-| Learning Roadmap(L.R) | Class | Statement | Difficulty |
-| :---: | :---: | --- | :---: |
-|S.C Beginner L.R | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
-|S.C Beginner L.R | Token	| Complete ERC-20/721 Construction	|⭐~⭐⭐|
-|S.C Junior L.R | DeFi	|	|⭐⭐|
-|S.C Junior L.R | Design_Pattern	| Upgradable Contract, Contract Wallet, Auction Model | ⭐⭐ |
-| Interview Problems | Company	| Collected from lots of famous web3 company classical interview problem	|⭐⭐|
-|S.C Senior L.R | DSA | 	|⭐⭐~⭐⭐⭐|
-|S.C Senior L.R | Gas_Optim | 	|⭐⭐⭐|
-|Theories L.R |	Cryptography | ZKP, Hash, Signature	|⭐⭐⭐|
-|EVM L.R| EVM | Assembly, precompiled	|⭐⭐⭐|
 
 ---
 
