@@ -5,10 +5,8 @@ contract problem15 {
     uint public foo;
 
     // TODO: Declare a constructor to get 2 input parameters (first is for owner, second is for foo)
-    // And in the constructor, you should give 2 input parameters to the owner and foo respectively
     constructor() payable {
-        owner = _owner;
-        foo = _foo;
+        // TODO: And in the constructor, you should give 2 input parameters to the owner and foo respectively
     }
 
     function getOwner() public view returns (address) {

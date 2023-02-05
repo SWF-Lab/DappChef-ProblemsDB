@@ -63,36 +63,68 @@ async function main() {
     const AnswerContract = await ethers.getContractAt(AnswerABI, _deployAddr, wallet)
     console.log(`\nBegin the Judging...`)
 
+    let pastTXInfo: any
+
     for (let i = 0; i < solution.length; i++) {
 
         console.log(`    \nTesting ${i}: ${solution[i].methodName}`)
         console.log(`    - Sameple Input: ${solution[i].callData}`)
         
         try{
-            const _return = await AnswerContract[solution[i].methodName](
-                ...solution[i].callData
-            )
+            // If this methodName is Check Event Emitted
+            if ((solution[i].methodName).substring(0, 1) == "$"){
+                
+                // Get expectReturn
+                const topics0 = ethers.utils.id((solution[i].methodName).substring(1))
+                const indexedValue = solution[i].expectReturn[0]
+                const nonIndexedValue = solution[i].expectReturn[1]
+                console.log(`    - Sameple Output: ${topics0},${indexedValue},${nonIndexedValue}`)
 
-            if (solution[i].expectReturn.length == 0){
-                await _return.wait()
-                console.log(`    ...Write Function Finished!`)
+                // Get the Transaction Log
+                const log = AnswerContract.interface.parseLog(pastTXInfo["events"][0])
+                const id = (log.topic).toString()
+                const eventTopics = (log.args.slice(0, indexedValue.length)).toString()
+                const eventData = (log.args.slice(indexedValue.length, indexedValue.length + nonIndexedValue.length)).toString()
+                console.log(`    - Your Output: ${id},${eventTopics},${eventData}`)
+                
+                // Comparing
+                if (id == topics0 && eventTopics == indexedValue && eventData == nonIndexedValue) {
+                    console.log(`    ...Accepted!`)
+                }
+                else {
+                    console.log(`    ...Wrong Answer!`)
+                    return
+                }
                 continue
             }
+            // Write Function / Get Function
+            else { 
+                const _return = await AnswerContract[solution[i].methodName](
+                    ...solution[i].callData
+                )
 
-            console.log(`    - Sameple Output: ${solution[i].expectReturn}`)
-            console.log(`    - Your Output: ${_return}`)
-            if (_return.toString() == solution[i].expectReturn.toString()) {
-                console.log(`    ...Accepted!`)
-            }
-            else{
-                console.log(`    ...Wrong Answer!`)
-                return
+                if (solution[i].expectReturn.length == 0){
+                    pastTXInfo = await _return.wait()
+                    console.log(`    ...Write Function Finished!`)
+                    continue
+                }
+
+                console.log(`    - Sameple Output: ${solution[i].expectReturn}`)
+                console.log(`    - Your Output: ${_return}`)
+                if (_return.toString() == solution[i].expectReturn.toString()) {
+                    console.log(`    ...Accepted!`)
+                }
+                else{
+                    console.log(`    ...Wrong Answer!`)
+                    return
+                }
             }
         } catch (e: any) {
             console.log(e)
             return
         }
     }
+    console.log("\nAll Accepted!")
 }
 
 async function promptProblem() {

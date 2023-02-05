@@ -1,5 +1,5 @@
 {
-    "problemNumber": 50,
+    "problemNumber": 47,
     "problemVersion": 1,
     "description": "Advanced Withdraw with Function Polymorphism & Function Overloading.",
     "constructorCallData": [],
@@ -60,8 +60,8 @@
         },
         {
             "trait_type": "class",
-            "value": "Design_Pattern"
+            "value": "Company"
         }
     ],
-    "image": "ipfs://<ipfsPrefix>/50"
+    "image": "ipfs://<ipfsPrefix>/47"
 }
