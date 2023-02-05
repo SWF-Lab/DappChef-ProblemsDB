@@ -165,26 +165,26 @@ Use the Judge Script to test your problem in Goerli.
 $ yarn execute scripts/judgeGoerli.ts --network goerli
 >
 yarn run v1.22.18
-$ node -r ts-node/register -r tsconfig-paths/register hardhatRunWithArgs.ts scripts/judgeGoerli.ts --network goerli
-√ Please enter the problemNumber you want to judge: ... 41
-Trying to deploy problem 41 with Deployer Contract:
-    Tx successful with hash: 0x6bdc811145a9ec9b5588287632961bde53f6dd0f3569e59ad35af7182bf5cea0
-    Deployed contract address is 0xE2AB961DEdbAfDa645139D3DAcaf57700dE2C88d
+$ node -r ts-node/register -r tsconfig-paths/register hardhatRunWithArgs.ts scripts/judgeGoerli.ts --network goerli       
+√ Please enter the problemNumber you want to judge: ... 15
+Trying to deploy problem 15 with Deployer Contract:
+    Tx successful with hash: 0x50b030a415414ddd13b4c0b6c5bd5f2455e8523581baac79d8906caf393f9de3
+    Deployed contract address is 0x7E6E88f73C8A4caFBbfa0cDBe27b0c016Ae2ACBC
 
 Begin the Judging...
-
-Testing 0: VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)
-    - Sameple Input: 0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba,997,1673070083,0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec,0,0,0xf48090ed731d9b3c956b9ee9843fd96d845879fc22763be659f2fb6f8229b52c245e72e3fb3540e969970333d52fa307b80cb3a04d088364f26c527c4767cb681b
-    - Sameple Output: true
-    - Your Output: true
+    
+Testing 0: getOwner()
+    - Sameple Input: 
+    - Sameple Output: 0xdCca4cE55773359E191110Eeb21E0413f770032B
+    - Your Output: 0xdCca4cE55773359E191110Eeb21E0413f770032B
     ...Accepted!
-
-Testing 1: VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)
-    - Sameple Input: 0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba,999,1673070083,0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec,1,0,0xf48090ed731d9b3c956b9ee9843fd96d845879fc22763be659f2fb6f8229b52c245e72e3fb3540e969970333d52fa307b80cb3a04d088364f26c527c4767cb681b
-    - Sameple Output: false
-    - Your Output: false
+    
+Testing 1: getFoo()
+    - Sameple Input:
+    - Sameple Output: 321
+    - Your Output: 321
     ...Accepted!
-Done in 22.65s.
+Done in 25.09s.
 ```
 
 ## Problems
@@ -200,7 +200,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
     "problemNumber": "<int>, number of this problem",
     "problemVersion": "<int>, support dappchef version of this problem",
     "description": "<str>, What user sholud do in this problem, which means problem statement",
-    "constructorCallData": "<array>, calldata",
+    "constructorCallData": "<array <array>>, calldata types and value",
     "problemSolution": [
         {
             "methodName": "<str>, MethodName",
@@ -340,7 +340,7 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 | 12. |Beginner|⭐||Dino|
 | 13. |Beginner|⭐||Dino|
 | 14. |Beginner|⭐||Dino|
-| 15. |Beginner|⭐||Dino|
+| 15. |Beginner|⭐| Constructor|Mur** ✅|
 | 16. |Token|⭐||Dino|
 | 17. |Token|⭐||Dino|
 | 18. |Token|⭐||Dino|
