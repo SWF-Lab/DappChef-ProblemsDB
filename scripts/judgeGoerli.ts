@@ -21,7 +21,7 @@ async function main() {
     
     const rawContractInstance = fs.readFileSync(path.join(__dirname, `../artifacts/problemVersion1/${problemNumber}/answer${problemNumber}.sol/answer${problemNumber}.json`))
     const contractInstance = JSON.parse(rawContractInstance.toString());
-    const AnswerBytecode = contractInstance.bytecode
+    const creationCode = contractInstance.bytecode
     const AnswerABI = contractInstance.abi
     
     const rawJudgeInfo = fs.readFileSync(path.join(__dirname, `../problemVersion1/${problemNumber}/problem${problemNumber}.json`))
@@ -39,7 +39,16 @@ async function main() {
     )
 
     console.log(`Trying to deploy problem ${problemNumber} with Deployer Contract:`)
-    const tx = await DeployerContract.deploy(AnswerBytecode, wallet.address, problemNumber)
+    const constructorCode = ethers.utils.defaultAbiCoder.encode(
+        JudgeInfo.constructorCallData.map((e: any) => e[0]),
+        JudgeInfo.constructorCallData.map((e: any) => e[1])
+    )
+    const bytecode = ethers.utils.solidityPack(
+        ["bytes", "bytes"],
+        [creationCode, constructorCode]
+    )
+    
+    const tx = await DeployerContract.deploy(bytecode, wallet.address, problemNumber)
     const receipt = await tx.wait()
     const event = receipt.events.find((e: any) => e.event === "Deploy")
     const [_deployAddr, _solver, _problemNum] = event.args

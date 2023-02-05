@@ -29,7 +29,7 @@
 
 **有些目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
 - ✅ Basic Judging System Core
-- ⬜️ Constructor: Deploy the contract with constructor call data
+- ✅ Constructor: Deploy the contract with constructor call data
 - ⬜️ Event: Expect the specify events to be emmited
 - ⬜️ WITH_ETHER: Send Ether to Contract
 - ⬜️ MSG_SENDER: Use User's Address to be expectReturn or callData
@@ -112,6 +112,15 @@ function get_a() public view returns(address){
 ]
 ```
 
+4. Constructor Usage: use array to include the arguments's type and the value.
+
+```JSON
+"constructorCallData": [
+    ["address", "0xdCca4cE55773359E191110Eeb21E0413f770032B"],
+    ["uint256", 321]
+],
+```
+
 
 ### Start the Journey
 
@@ -129,7 +138,7 @@ $ yarn install
 ```
 4. Compile the contract:
 ```bash
-$ yarn install & yarn compile --force
+$ yarn compile --force
 ```
 5. Create new branch, reference with SWF-Lab/github_practice:
 ```bash
