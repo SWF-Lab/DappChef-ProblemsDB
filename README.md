@@ -26,11 +26,11 @@
 
 **有些目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
 - ✅ Basic Judging System Core
-- ✅ Constructor: Deploy the contract with constructor call data
-- ✅ Event: Expect the specify events to be emitted
-- ⬜️ WITH_ETHER: Send Ether to Contract
-- ⬜️ USER_ADDRESS: Use User's Address to be expectReturn or callData
-- ⬜️ WAIT: Wait for few blocks
+- ✅ [Constructor](#constructor): Deploy the contract with constructor call data
+- ✅ [Event](#event): Expect the specify events to be emitted
+- ⬜️ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
+- ⬜️ [USER_ADDRESS](#user_address): Use User's Address to be expectReturn or callData
+- ⬜️ [WAIT](#wait): Wait for few blocks
 
 ### Important Announcement
 
@@ -241,7 +241,7 @@ Constructor Usage: use array to include the arguments's type and the value.
 ],
 ```
 
-#### Event: `#`
+#### Event
 
 Event Usage: use `#` in fornt of the event name, and use two array to represent `topics` and `data`.
 
@@ -263,7 +263,7 @@ Event Usage: use `#` in fornt of the event name, and use two array to represent 
 ],
 ```
 
-#### WITH_ETHER: `$`
+#### WITH_ETHER
 
 Use the `$` in front of the methodName and the first element of `callData` will become the `<etherInWei>`, which will transfer specify amount of goerliEther from user to the contract when call the function. 
 
