@@ -29,7 +29,7 @@
 - ✅ Constructor: Deploy the contract with constructor call data
 - ✅ Event: Expect the specify events to be emitted
 - ⬜️ WITH_ETHER: Send Ether to Contract
-- ⬜️ MSG_SENDER: Use User's Address to be expectReturn or callData
+- ⬜️ USER_ADDRESS: Use User's Address to be expectReturn or callData
 - ⬜️ WAIT: Wait for few blocks
 
 ### Important Announcement
@@ -109,33 +109,7 @@ function get_a() public view returns(address){
 ]
 ```
 
-4. Constructor Usage: use array to include the arguments's type and the value.
 
-```JSON
-"constructorCallData": [
-    ["address", "0xdCca4cE55773359E191110Eeb21E0413f770032B"],
-    ["uint256", 321]
-],
-```
-
-5. Event Usage: use `#` in fornt of the event name, and use two array to represent `topics` and `data`.
-```JSON
-"problemSolution": [
-    {
-        "methodName": "emitCalling(address,uint256,bool,string)",
-        "callData": ["0xdCca4cE55773359E191110Eeb21E0413f770032B", 7, "true", "Hello World!"],
-        "expectReturn": []
-    },
-    {
-        "methodName": "#Calling(address,uint256,bool,string,string)",
-        "callData": [],
-        "expectReturn": [
-            ["0xdCca4cE55773359E191110Eeb21E0413f770032B",7,"true"],
-            ["Hello World!", "Meow"]
-        ]
-    }
-],
-```
 
 ### Start the Journey
 
@@ -254,9 +228,42 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
 ### Special Operation
 
-> **This funcationality is constructing, don't use these operations in your problem!!**
+> **If the funcationality is constructing, don't use these operations in your problem!!**
 
-#### WITH_ETHER
+#### Constructor
+
+Constructor Usage: use array to include the arguments's type and the value.
+
+```JSON
+"constructorCallData": [
+    ["address", "0xdCca4cE55773359E191110Eeb21E0413f770032B"],
+    ["uint256", 321]
+],
+```
+
+#### Event: `#`
+
+Event Usage: use `#` in fornt of the event name, and use two array to represent `topics` and `data`.
+
+```JSON
+"problemSolution": [
+    {
+        "methodName": "emitCalling(address,uint256,bool,string)",
+        "callData": ["0xdCca4cE55773359E191110Eeb21E0413f770032B", 7, "true", "Hello World!"],
+        "expectReturn": []
+    },
+    {
+        "methodName": "#Calling(address,uint256,bool,string,string)",
+        "callData": [],
+        "expectReturn": [
+            ["0xdCca4cE55773359E191110Eeb21E0413f770032B",7,"true"],
+            ["Hello World!", "Meow"]
+        ]
+    }
+],
+```
+
+#### WITH_ETHER: `$`
 
 Use the `$` in front of the methodName and the first element of `callData` will become the `<etherInWei>`, which will transfer specify amount of goerliEther from user to the contract when call the function. 
 
@@ -269,8 +276,13 @@ function deposit(uint256 amount, address recipient) public payable {
 You can use this in the `problem<number>.json`:
 ```JSON
 {
-    "methodName": "$deposit",
-    "callData": ["1000000000000000000", ["1000000000000000000", ""]],
+    "methodName": "$deposit(uint256,address)",
+    "callData": ["1000000000000000000", 
+        [
+            "1000000000000000000", 
+            "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec"
+        ]
+    ],
     "expectReturn": []
 }
 ```
@@ -294,18 +306,27 @@ You can use this in the `problem<number>.json`:
 
 > Above example is send 1 ether (10*18 wei) to the contract.
 
-#### MSG_SENDER
+#### USER_ADDRESS
 
-Use the `MSG_SENDER` as the callData (Function Input Params) will give the **Address of the User(Problem Solver)** to target method.
+Use the `USER_ADDRESS` as the callData (Function Input Params) will give the **Address of the User(now Problem Solver)** to target method.
 
-```JSON
-{
-    "methodName": "...",
-    "callData": ["MSG_SENDER"],
-    "expectReturn": []
+If you have this function in the Contract:
+
+```solidity
+function getBalance(address account) public view returns(uint256){
+    return Balance(account);
 }
 ```
-> In the above example, if the user's address is `0x123`, the string `"MSG_SENDER"` in the `callData` array will be replaced to `0x123`.
+
+You can judge it like:
+```JSON
+{
+    "methodName": "getBalance(address)",
+    "callData": ["USER_ADDRESS"],
+    "expectReturn": ["..."]
+}
+```
+> In the above example, if the user's address is `0x123`, the string `"USER_ADDRESS"` in the `callData` array will be replaced to `0x123`.
 
 #### WAIT
 
