@@ -162,7 +162,7 @@ $ git pull # Make sure the local code is same with the remote
 $ git checkout -b add-my-context # Create new branch
 ```
 6. Put your problems to the folder `problemVersion1` with template [below](#problems-metadata-template).
-7. Write your problems statement [below](#problemversion1)...
+7. Write your problems statement and its **Token Metadata** in [Metadata Folder](/Metadata)...
 8. Push the code to remote repo:
 ```bash
 $ git add .

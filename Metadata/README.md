@@ -44,7 +44,7 @@
 | 11. |Beginner|⭐||Dino|
 | 12. |Beginner|⭐||Dino|
 | 13. |Beginner|⭐||Dino|
-| 14. |Beginner|⭐| Event |Mur** |
+| 14. |Beginner|⭐| Event |Mur** ✅|
 | 15. |Beginner|⭐| Constructor |Mur** ✅|
 | 16. |Token|⭐||Dino|
 | 17. |Token|⭐||Dino|
