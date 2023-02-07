@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract answer41 {
+contract answer49 {
     LP public holdToken;
     StableCoin public dai;
 
@@ -13,9 +13,9 @@ contract answer41 {
     /** Constructs the Data Structures */
 
     struct ClientInfo {
-        uint startTime;
-        uint stakingBalance;
-        uint yieldBalance;
+        uint256 startTime;
+        uint256 stakingBalance;
+        uint256 yieldBalance;
         bool isStaking;
     }
 
@@ -23,13 +23,13 @@ contract answer41 {
 
     /** Getter Function */
 
-    function getClientStartTime(address _addr) view public returns(uint){
+    function getClientStartTime(address _addr) view public returns(uint256){
         return ClientList[_addr].startTime;
     }
-    function getClientStakingBalance(address _addr) view public returns(uint){
+    function getClientStakingBalance(address _addr) view public returns(uint256){
         return ClientList[_addr].stakingBalance;
     }
-    function getClientYieldBalance(address _addr) view public returns(uint){
+    function getClientYieldBalance(address _addr) view public returns(uint256){
         return ClientList[_addr].yieldBalance;
     }
     function getClientIsStaking(address _addr) view public returns(bool){
@@ -38,19 +38,19 @@ contract answer41 {
 
     /** Algorithms */
 
-    function approveDAITransferFrom(uint _amount) public {
-        uint old_allowance = dai.allowance(msg.sender, address(this));
+    function approveDAITransferFrom(uint256 _amount) public {
+        uint256 old_allowance = dai.allowance(msg.sender, address(this));
         dai.approve(address(this), _amount + old_allowance);
     }
 
-    function getAllowance() public view returns(uint) {
+    function getAllowance() public view returns(uint256) {
         return dai.allowance(msg.sender, address(this));
     }
 
-    function stakeTokens(uint _amount) public {
+    function stakeTokens(uint256 _amount) public {
         require(_amount > 0, 'You cannot stake 0 tokens');
 
-        uint oldDaiBal = dai.balanceOf(msg.sender);
+        uint256 oldDaiBal = dai.balanceOf(msg.sender);
         require( oldDaiBal > _amount, "insufficient DAI!");
 
         uint256 allowance = dai.allowance(msg.sender, address(this));
@@ -58,7 +58,7 @@ contract answer41 {
         
         dai.transferFrom(msg.sender, address(this), _amount);
 
-        uint oldBalance = ClientList[msg.sender].stakingBalance;
+        uint256 oldBalance = ClientList[msg.sender].stakingBalance;
         ClientList[msg.sender].stakingBalance = SafeMath.add(ClientList[msg.sender].stakingBalance, _amount);
         require(ClientList[msg.sender].stakingBalance > oldBalance, "Staking Bug!");
 
@@ -66,20 +66,20 @@ contract answer41 {
         ClientList[msg.sender].isStaking = true;
     }
 
-    function calYield(address _address) public view returns(uint){
-        uint end = block.timestamp;
-        uint totalTime = SafeMath.sub(end, ClientList[_address].startTime);
+    function calYield(address _address) public view returns(uint256){
+        uint256 end = block.timestamp;
+        uint256 totalTime = SafeMath.sub(end, ClientList[_address].startTime);
         return SafeMath.div(totalTime, 60);
         // Yield Per Minute
     }
 
     function withdrawYield() public {
 
-        uint profit = calYield(msg.sender);
-        uint withdraw = SafeMath.div(SafeMath.mul(ClientList[msg.sender].stakingBalance, profit), 100);
+        uint256 profit = calYield(msg.sender);
+        uint256 withdraw = SafeMath.div(SafeMath.mul(ClientList[msg.sender].stakingBalance, profit), 100);
 
         if(ClientList[msg.sender].yieldBalance > 0){
-            uint originalYBal = ClientList[msg.sender].yieldBalance;
+            uint256 originalYBal = ClientList[msg.sender].yieldBalance;
             ClientList[msg.sender].yieldBalance = 0;
             withdraw = SafeMath.add(withdraw, originalYBal);
         }
@@ -95,7 +95,7 @@ contract answer41 {
     function unstakeTokens() public {
         require(ClientList[msg.sender].isStaking, 'You are not staker!');
         
-        uint balance = ClientList[msg.sender].stakingBalance;
+        uint256 balance = ClientList[msg.sender].stakingBalance;
         require(balance > 0, "There is no fund in your staking account!");
 
         ClientList[msg.sender].stakingBalance = 0;

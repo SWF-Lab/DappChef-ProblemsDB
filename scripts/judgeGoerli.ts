@@ -32,7 +32,6 @@ async function main() {
     const stringified = JSON.stringify(originalSolution);
     const replaced = stringified.replace(/"MSG_SENDER"/g, `"${wallet.address.toString()}"`);
     const solution = JSON.parse(replaced);
-    // const solution = JudgeInfo.problemSolution
 
     const constructorCode = ethers.utils.defaultAbiCoder.encode(
         JudgeInfo.constructorCallData.map((e: any) => e[0]),
@@ -70,12 +69,13 @@ async function main() {
     console.log(`\nBegin the Judging...`)
 
     let pastTXInfo: any
+    let totalGas = ethers.BigNumber.from("0")
 
     for (let i = 0; i < solution.length; i++) {
 
         console.log(`    \nTesting ${i}: ${solution[i].methodName}`)
         console.log(`    - Sameple Input: ${solution[i].callData}`)
-
+    
         try{
             // If this methodName is Check Event Emitted
             if ((solution[i].methodName).substring(0, 1) == "#"){
@@ -136,7 +136,8 @@ async function main() {
                             value: (solution[i].callData)[0] 
                         }
                         _return = await wallet.sendTransaction(tx);
-                        await _return.wait()
+                        pastTXInfo = await _return.wait()
+                        totalGas = totalGas.add(pastTXInfo.gasUsed)
                         console.log(`    ...Fallback/Receive Function Finished!`)
                         continue
                     }
@@ -155,6 +156,7 @@ async function main() {
                 
                 if (solution[i].expectReturn.length == 0){
                     pastTXInfo = await _return.wait()
+                    totalGas = totalGas.add(pastTXInfo.gasUsed)
                     console.log(`    ...Write Function Finished!`)
                     continue
                 }
@@ -175,6 +177,7 @@ async function main() {
         }
     }
     console.log("\nAll Accepted!")
+    console.log(`Total Used Gas: ${totalGas.toString()}`)
 }
 
 async function promptProblem() {
