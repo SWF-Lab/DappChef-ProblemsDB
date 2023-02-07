@@ -1,0 +1,50 @@
+{
+  "problemNumber": 4,
+  "problemVersion": 1,
+  "description": "Mapping! This is how we record balance.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+          "methodName": "setBalanceOf(address,uint256)",
+          "callData": [
+            "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac",
+            10
+          ],
+          "expectReturn": []
+      },
+      {
+        "methodName": "setAddressOwnNFT(address,uint256)",
+        "callData": [
+          "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac",
+          1
+        ],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getBalanceOf(address)",
+        "callData": [
+          "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"
+        ],
+        "expectReturn": [10]
+      },
+      {
+        "methodName": "getAddressOwnNum(address,uint256)",
+        "callData": [
+          "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac",
+          1
+        ],
+        "expectReturn": [true]
+      }
+  ],
+  "attributes": [
+      {
+        "trait_type": "difficulty", 
+        "value": 1
+      },
+      {
+        "trait_type": "class", 
+        "value": "Beginner"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/4"
+}

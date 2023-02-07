@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: Apache License
+pragma solidity ^0.8.17; 
+
+contract answer4 {
+    // imagine we can record that an address own how much token
+    // TODO: declare a mapping mapping from an address to an uint256 named `balanceOf`
+    
+    // imagine we can record that whether an address owns a NFT with a serial number
+    // TODO: declare a nested mapping mapping from an address to a mapping which maps from a uint256 to a boolean named `AddressOwnNFT`
+    
+    function setBalanceOf(address _user, uint256 _balance) public {
+      // TODO: set the balanceOf _user to _balance
+      
+    }
+
+    function setAddressOwnNFT(address _user, uint256 _num) public {
+      //TODO: set the address _user to own NFT with serial number _num 
+      
+    }
+
+    function getBalanceOf(address _user) public view returns (uint256) {
+      return balanceOf[_user];
+    }
+
+    function getAddressOwnNum(address _user, uint256 _num) public view returns (bool) {
+      return AddressOwnNum[_user][_num];
+    }
+}

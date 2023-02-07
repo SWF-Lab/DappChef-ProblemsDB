@@ -1,23 +1,23 @@
 {
-  "name": "DappChef Rewards NFT #<problemNumber>",
+  "name": "DappChef Rewards NFT #1",
   "description": "DappChef is a Ethereum Smart Contract Development Learning platform. Solve the coding problem, then you can mint the Reward NFT!",
-  "solver": "<0x123>",
-  "approver": "<0x123>",
+  "solver": "0x123",
+  "approver": "0x123",
   "problemSolvedTimestamp": "123",
   "attributes": [
       {
         "display_type": "number", 
         "trait_type": "problemNumber", 
-        "value": "<int>"
+        "value": 1
       },
       {
         "trait_type": "difficulty", 
-        "value": "<int>, 1~3"
+        "value": 1
       },
       {
         "trait_type": "class", 
-        "value": "<str>"
+        "value": "Beginner"
       }
   ],
-  "image": "ipfs://<ipfsPrefix>/<problemNumber>"
+  "image": "ipfs://<ipfsPrefix>/1"
 }

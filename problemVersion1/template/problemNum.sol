@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache License
+pragma solidity ^0.8.17;
 
-// TODO: You should declare the compiler version here with the reserved word "pragma"
 contract problem0 { 
     string public greet = "Hello World!";
 }
