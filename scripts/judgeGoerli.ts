@@ -97,6 +97,20 @@ async function main() {
                 }
                 continue
             }
+            // expect the calling failed and match the error msg.
+            else if ((solution[i].methodName).substring(0, 1) == "%") {
+                console.log(`    - Expect Error Msg: ${(solution[i].expectReturn)}`)
+                try{
+                    const _return = await AnswerContract[(solution[i].methodName).substring(1)](
+                        ...solution[i].callData
+                    )
+                    pastTXInfo = await _return.wait()
+                    console.log(`    ...Wrong Answer!`)
+                    return
+                } catch (e: any){
+                    console.log(`    ...Accepted!`)
+                }
+            }
             // Write Function / Get Function
             else { 
                 const _return = await AnswerContract[solution[i].methodName](

@@ -27,6 +27,7 @@
 - ✅ Basic Judging System Core
 - ✅ [Constructor](#constructor): Deploy the contract with constructor call data
 - ✅ [Event](#event): Expect the specify events to be emitted
+- ✅ [EXPECT_ERROR](#expect_error): expect the `require`, `revert`, `assert` to be triggered.
 - ⬜️ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
 - ⬜️ [USER_ADDRESS](#user_address): Use User's Address to be expectReturn or callData
 - ⬜️ [WAIT](#wait): Wait for few blocks
@@ -260,6 +261,25 @@ Event Usage: use `#` in fornt of the event name, and use two array to represent 
         ]
     }
 ],
+```
+
+#### EXPECT_ERROR
+
+Use the `%` in front of the methodName and the first element of `callData` will become the `<error_msg>`, which will expect the calling failed and match the error msg.
+
+```solidity
+function testRequire(uint256 _i) public pure {
+    require(_i > 10, "Input must be greater than 10");
+}
+```
+
+You can use this in the `problem<number>.json`:
+```JSON
+{
+    "methodName": "%testRequire(uint256)",
+    "callData": ["9"],
+    "expectReturn": ["Input must be greater than 10"]
+}
 ```
 
 #### WITH_ETHER
