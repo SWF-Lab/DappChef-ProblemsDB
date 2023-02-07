@@ -28,8 +28,8 @@
 - ✅ [Constructor](#constructor): Deploy the contract with constructor call data
 - ✅ [Event](#event): Expect the specify events to be emitted
 - ✅ [EXPECT_ERROR](#expect_error): expect the `require`, `revert`, `assert` to be triggered.
-- ⬜️ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
-- ⬜️ [USER_ADDRESS](#user_address): Use User's Address to be expectReturn or callData
+- ✅ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
+- ✅ [USER_ADDRESS](#user_address): Use User's Address to be expectReturn or callData
 - ⬜️ [WAIT](#wait): Wait for few blocks
 
 ### Important Announcement
@@ -324,6 +324,15 @@ You can use this in the `problem<number>.json`:
 ```
 
 > Above example is send 1 ether (10*18 wei) to the contract.
+
+**The second element of `callData` should be an array, which means the calldata when invoking the function. In another word, if you want just call the fallback/receive function without any input, you should use:**
+```JSON
+{
+    "methodName": "$",
+    "callData": ["400000000000",[]],
+    "expectReturn": []
+},
+```
 
 #### USER_ADDRESS
 
