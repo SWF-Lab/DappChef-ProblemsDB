@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: Apache License
+pragma solidity ^0.8.17;
+
+// Declare public state variables as command, then assign the default value of that type.
+contract problem1 {
+    // TODO: declare a uint variable named myUint
+    
+    // TODO: declare a boolean variable named myBool
+
+    // TODO: declare a address variable named myAddress
+  
+    // TODO: declare a string variable named myString
+
+
+    function getUint() public view returns (uint) {
+      return myUint;
+    }
+    function getBool() public view returns (bool) {
+      return myBool;
+    }
+    function getAddress() public view returns (address) {
+      return myAddress;
+    }
+    function getString() public view returns (string memory) {
+      return myString;
+    }
+}
