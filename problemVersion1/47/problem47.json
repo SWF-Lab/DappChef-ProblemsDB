@@ -1,0 +1,67 @@
+{
+    "problemNumber": 47,
+    "problemVersion": 1,
+    "description": "Advanced Withdraw with Function Polymorphism & Function Overloading.",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "deposit(uint256)",
+            "callData": ["400000000000000"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getNowStake()",
+            "callData": [],
+            "expectReturn": [
+                "400000000000000"
+            ]
+        },
+        {
+            "methodName": "deposit(uint256,address)",
+            "callData": [
+                "600000000000000","MSG_SENDER"
+            ],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getNowStake()",
+            "callData": [],
+            "expectReturn": [
+                "1000000000000000"
+            ]
+        },
+        {
+            "methodName": "withdraw(uint256)",
+            "callData": ["600000000000000"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getNowStake()",
+            "callData": [],
+            "expectReturn": ["400000000000000"]
+        },
+        {
+            "methodName": "withdraw(uint256,address)",
+            "callData": ["400000000000000", "MSG_SENDER"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getNowStake()",
+            "callData": [],
+            "expectReturn": [
+                "0"
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Company"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/47"
+}

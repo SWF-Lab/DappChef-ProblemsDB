@@ -8,6 +8,7 @@
 
 - [Table of Contents](#table-of-contents)
 - [Rules](#rules)
+<<<<<<< HEAD
   - [Important Announcement](#important-announcement)
   - [Start the Journey](#start-the-journey)
   - [Judge](#judge)
@@ -21,6 +22,16 @@
 - [Problems Information](#problems-information)
   - [problemVersion1](#problemversion1)
   - [problemVersion2](#problemversion2)
+=======
+    - [TODO Functionality](#todo-functionality)
+    - [Important Announcement](#important-announcement)
+    - [Start the Journey](#start-the-journey)
+    - [Judge](#judge)
+- [Problems](#problems)
+    - [Problems Template](#problems-template)
+    - [Special Operation](#special-operation)
+- [Problems Information & Metadata](/Metadata)
+>>>>>>> main
 - [Reference](#reference)
   - [Roadmap](#roadmap)
   - [Learnging Resource](#learnging-resource)
@@ -29,6 +40,16 @@
 ---
 
 ## Rules
+
+### TODO Functionality
+
+**有些目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
+- ✅ Basic Judging System Core
+- ✅ [Constructor](#constructor): Deploy the contract with constructor call data
+- ✅ [Event](#event): Expect the specify events to be emitted
+- ⬜️ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
+- ⬜️ [USER_ADDRESS](#user_address): Use User's Address to be expectReturn or callData
+- ⬜️ [WAIT](#wait): Wait for few blocks
 
 ### Important Announcement
 
@@ -106,7 +127,8 @@ function get_a() public view returns(address){
         }
 ]
 ```
-4. **目前還不支援 Constructor，過一陣子我會處理這個問題，請大家先避開**
+
+
 
 ### Start the Journey
 
@@ -122,9 +144,9 @@ $ cp .env.example .env
 ```bash
 $ yarn install
 ```
-4. Compile the contract:
+4. Compile the contract (**If the `problem<number>.sol` compiled failed is normal**):
 ```bash
-$ yarn install & yarn compile --force
+$ yarn compile --force
 ```
 5. Create new branch, reference with SWF-Lab/github_practice:
 ```bash
@@ -133,7 +155,7 @@ $ git pull # Make sure the local code is same with the remote
 $ git checkout -b add-my-context # Create new branch
 ```
 6. Put your problems to the folder `problemVersion1` with template [below](#problems-metadata-template).
-7. Write your problems statement [below](#problemversion1)...
+7. Write your problems statement and its **Token Metadata** in [Metadata Folder](/Metadata)...
 8. Push the code to remote repo:
 ```bash
 $ git add .
@@ -152,30 +174,32 @@ $ yarn execute scripts/judgeGoerli.ts --network goerli
 >
 yarn run v1.22.18
 $ node -r ts-node/register -r tsconfig-paths/register hardhatRunWithArgs.ts scripts/judgeGoerli.ts --network goerli
-√ Please enter the problemNumber you want to judge: ... 41
-Trying to deploy problem 41 with Deployer Contract:
-    Tx successful with hash: 0x6bdc811145a9ec9b5588287632961bde53f6dd0f3569e59ad35af7182bf5cea0
-    Deployed contract address is 0xE2AB961DEdbAfDa645139D3DAcaf57700dE2C88d
+√ Please enter the problemNumber you want to judge: ... 15
+Trying to deploy problem 15 with Deployer Contract:
+    Tx successful with hash: 0xaaa0917f1d4fc2f78760167e5fe1e2055d88aebeea2ca09e661c0910dc748043
+    Deployed contract address is 0xC9f1e159fD3fA27B8a3e235947d499A01579E3A9
 
 Begin the Judging...
 
-Testing 0: VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)
-    - Sameple Input: 0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba,997,1673070083,0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec,0,0,0xf48090ed731d9b3c956b9ee9843fd96d845879fc22763be659f2fb6f8229b52c245e72e3fb3540e969970333d52fa307b80cb3a04d088364f26c527c4767cb681b
-    - Sameple Output: true
-    - Your Output: true
+Testing 0: getOwner()
+    - Sameple Input:
+    - Sameple Output: 0xdCca4cE55773359E191110Eeb21E0413f770032B
+    - Your Output: 0xdCca4cE55773359E191110Eeb21E0413f770032B
     ...Accepted!
 
-Testing 1: VerifySignature(address,uint256,uint256,address,uint8,uint256,bytes)
-    - Sameple Input: 0xDEcf23CbB14972F2e9f91Ce30515ee955a124Cba,999,1673070083,0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec,1,0,0xf48090ed731d9b3c956b9ee9843fd96d845879fc22763be659f2fb6f8229b52c245e72e3fb3540e969970333d52fa307b80cb3a04d088364f26c527c4767cb681b
-    - Sameple Output: false
-    - Your Output: false
+Testing 1: getFoo()
+    - Sameple Input:
+    - Sameple Output: 321
+    - Your Output: 321
     ...Accepted!
-Done in 22.65s.
+
+All Accepted!
+Done in 18.75s.
 ```
 
 ## Problems
 
-### Problems Metadata Template
+### Problems Template
 
 FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
@@ -186,7 +210,7 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
     "problemNumber": "<int>, number of this problem",
     "problemVersion": "<int>, support dappchef version of this problem",
     "description": "<str>, What user sholud do in this problem, which means problem statement",
-    "constructorCallData": "<array>, calldata",
+    "constructorCallData": "<array <array>>, calldata types and value",
     "problemSolution": [
         {
             "methodName": "<str>, MethodName",
@@ -223,19 +247,105 @@ FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
 
 ### Special Operation
 
-> This funcationality is constructing, don't use these operations in your problem!!
+> **If the funcationality is constructing, don't use these operations in your problem!!**
 
-#### MSG_SENDER / TX_ORIGIN
+#### Constructor
 
-Use the `MSG_SENDER` / `TX_ORIGIN` as the callData (Function Input Params) will give the **Address of the User(Problem Solver)** to target method.
+Constructor Usage: use array to include the arguments's type and the value.
 
 ```JSON
-{
-    "methodName": "...",
-    "callData": "[\"MSG_SENDER\", \"TX_ORIGIN\"]",
-    "expectReturn": "..."
+"constructorCallData": [
+    ["address", "0xdCca4cE55773359E191110Eeb21E0413f770032B"],
+    ["uint256", 321]
+],
+```
+
+#### Event
+
+Event Usage: use `#` in fornt of the event name, and use two array to represent `topics` and `data`.
+
+```JSON
+"problemSolution": [
+    {
+        "methodName": "emitCalling(address,uint256,bool,string)",
+        "callData": ["0xdCca4cE55773359E191110Eeb21E0413f770032B", 7, "true", "Hello World!"],
+        "expectReturn": []
+    },
+    {
+        "methodName": "#Calling(address,uint256,bool,string,string)",
+        "callData": [],
+        "expectReturn": [
+            ["0xdCca4cE55773359E191110Eeb21E0413f770032B",7,"true"],
+            ["Hello World!", "Meow"]
+        ]
+    }
+],
+```
+
+#### WITH_ETHER
+
+Use the `$` in front of the methodName and the first element of `callData` will become the `<etherInWei>`, which will transfer specify amount of goerliEther from user to the contract when call the function. 
+
+If you have a function like below:
+```solidity
+function deposit(uint256 amount, address recipient) public payable {
+    // need msg.value == amount
 }
 ```
+You can use this in the `problem<number>.json`:
+```JSON
+{
+    "methodName": "$deposit(uint256,address)",
+    "callData": ["1000000000000000000", 
+        [
+            "1000000000000000000", 
+            "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec"
+        ]
+    ],
+    "expectReturn": []
+}
+```
+
+If you want to "only transfer ether without calling any function", which means using `receive()` or `fallback()` to get the amount of ether-transfer. 
+
+```solidity
+fallback(string memory data) external payable returns (uint256, string memory) {
+    return (uint256(msg.value), data);
+}
+```
+
+You can use this in the `problem<number>.json`:
+```JSON
+{
+    "methodName": "$",
+    "callData": ["1000000000000000000", ["Hi!"]],
+    "expectReturn": ["1000000000000000000", "Hi!"]
+}
+```
+
+> Above example is send 1 ether (10*18 wei) to the contract.
+
+#### USER_ADDRESS
+
+Use the `USER_ADDRESS` as the callData (Function Input Params) will give the **Address of the User(now Problem Solver)** to target method.
+
+If you have this function in the Contract:
+
+```solidity
+function getBalance(address account) public view returns(uint256){
+    return Balance(account);
+}
+```
+
+You can judge it like:
+```JSON
+{
+    "methodName": "getBalance(address)",
+    "callData": ["USER_ADDRESS"],
+    "expectReturn": ["..."]
+}
+```
+> In the above example, if the user's address is `0x123`, the string `"USER_ADDRESS"` in the `callData` array will be replaced to `0x123`.
 
 #### WAIT
 
@@ -244,10 +354,11 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 ```JSON
 {
     "methodName": "WAIT",
-    "callData": "[10]",
-    "expectReturn": "[]"
+    "callData": [10],
+    "expectReturn": []
 }
 ```
+<<<<<<< HEAD
 
 ### Reward NFT Metadata
 ```JSON
@@ -402,6 +513,9 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 ### problemVersion2
 
 > TBD, these problems will be added after DappChef begins earning.
+=======
+> Above example is Wait for 10 Block mined.
+>>>>>>> main
 
 ---
 

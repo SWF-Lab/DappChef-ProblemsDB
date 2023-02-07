@@ -7,7 +7,7 @@
         {
             "methodName": "getGreet()",
             "callData": [],
-            "expectReturn": "Hello World!"
+            "expectReturn": ["Hello World!"]
          }
     ],
     "attributes": [
