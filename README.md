@@ -26,11 +26,12 @@
 **有些目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
 - ✅ Basic Judging System Core
 - ✅ [Constructor](#constructor): Deploy the contract with constructor call data
-- ✅ [Event](#event): Expect the specify events to be emitted
-- ✅ [EXPECT_ERROR](#expect_error): expect the `require`, `revert`, `assert` to be triggered.
+- ✅ [Event](#event): Expect the specific events to be emitted
+- ✅ [EXPECT_ERROR](#expect_error): Expect the `require`, `revert`, `assert` to be triggered.
 - ✅ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
 - ✅ [USER_ADDRESS](#user_address): Use User's Address to be expectReturn or callData
 - ⬜️ [WAIT](#wait): Wait for few blocks
+- ⬜️ [GAS_USED_LESS](#GAS_USED_LESS): Expect the total gas used less than specific amount.
 
 ### Important Announcement
 
@@ -284,7 +285,7 @@ You can use this in the `problem<number>.json`:
 
 #### WITH_ETHER
 
-Use the `$` in front of the methodName and the first element of `callData` will become the `<etherInWei>`, which will transfer specify amount of goerliEther from user to the contract when call the function. 
+Use the `$` in front of the methodName and the first element of `callData` will become the `<etherInWei>`, which will transfer specific amount of goerliEther from user to the contract when call the function. 
 
 If you have a function like below:
 ```solidity
@@ -368,6 +369,9 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 }
 ```
 > Above example is Wait for 10 Block mined.
+
+#### GAS_USED_LESS
+TBD
 
 ---
 
