@@ -97,7 +97,7 @@
 | 44. |Company|⭐⭐||Mur**|
 | 45. |Company|⭐⭐||Mur**|
 | 46. |Company|⭐⭐||Mur**|
-| 47. |Company|⭐⭐|Advanced Withdraw |Mur**|
+| 47. |Company|⭐⭐|Advanced Withdraw |Mur** ✅|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
 | 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** |
 | 50. ||⭐⭐||Dino|

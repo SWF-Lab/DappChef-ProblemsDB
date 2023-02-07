@@ -5,21 +5,22 @@
     "constructorCallData": [],
     "problemSolution": [
         {
-            "methodName": "deposit(uint256)",
-            "callData": ["400000000000000"],
+            "methodName": "$",
+            "callData": ["400000000000",[]],
             "expectReturn": []
         },
         {
             "methodName": "getNowStake()",
             "callData": [],
             "expectReturn": [
-                "400000000000000"
+                "400000000000"
             ]
         },
         {
-            "methodName": "deposit(uint256,address)",
+            "methodName": "$deposit(address)",
             "callData": [
-                "600000000000000","MSG_SENDER"
+                "600000000000",
+                ["MSG_SENDER"]
             ],
             "expectReturn": []
         },
@@ -27,22 +28,22 @@
             "methodName": "getNowStake()",
             "callData": [],
             "expectReturn": [
-                "1000000000000000"
+                "1000000000000"
             ]
         },
         {
             "methodName": "withdraw(uint256)",
-            "callData": ["600000000000000"],
+            "callData": ["600000000000"],
             "expectReturn": []
         },
         {
             "methodName": "getNowStake()",
             "callData": [],
-            "expectReturn": ["400000000000000"]
+            "expectReturn": ["400000000000"]
         },
         {
             "methodName": "withdraw(uint256,address)",
-            "callData": ["400000000000000", "MSG_SENDER"],
+            "callData": ["400000000000", "MSG_SENDER"],
             "expectReturn": []
         },
         {
