@@ -2,7 +2,9 @@
     "problemNumber": 22,
     "problemVersion": 1,
     "description": "Immutable and Constant",
-    "constructorCallData": ["0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"],
+    "constructorCallData": [
+        ["address","0x90A1ad9E7c86590Fb8eD813bA7f93a6799fBF8b7"]
+    ],
     "problemSolution": [
         {
             "methodName": "get_CALLER_1()",
