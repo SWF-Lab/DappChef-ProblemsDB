@@ -321,7 +321,7 @@ Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific bl
 | 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
 | 22. |Beginner|⭐|Immutable and Constant|FoodChain🚩|
 | 23. |Beginner|⭐|Hash In Order|FoodChain✅|
-| 24. |Beginner|⭐||FoodChain|
+| 24. |Beginner|⭐|Inheritance|FoodChain✅|
 | 25. |Beginner|⭐||FoodChain|
 | 26. |Beginner|⭐||FoodChain|
 | 27. |Beginner|⭐||FoodChain|
