@@ -1,11 +1,11 @@
 {
-    "problemNumber": 24,
+    "problemNumber": 25,
     "problemVersion": 1,
     "description": "Inheritance and Override",
     "constructorCallData": [],
     "problemSolution": [
         {
-            "methodName": "returnGreeting()",
+            "methodName": "returnGreeting(string)",
             "callData": ["Suprise! I'm back!"],
             "expectReturn": ["Suprise! I'm back!"]
         }
