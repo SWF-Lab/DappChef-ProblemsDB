@@ -1,0 +1,24 @@
+{
+    "problemNumber": 24,
+    "problemVersion": 1,
+    "description": "Inheritance and Override",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "returnGreeting()",
+            "callData": ["Suprise! I'm back!"],
+            "expectReturn": ["Suprise! I'm back!"]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/25"
+}
