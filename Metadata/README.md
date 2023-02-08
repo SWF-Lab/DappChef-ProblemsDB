@@ -55,7 +55,7 @@
 | 2. |Beginner|⭐||Dino|
 | 3. |Beginner|⭐||Dino|
 | 4. |Beginner|⭐||Dino|
-| 5. |Beginner|⭐||Dino|
+| 5. |Beginner|⭐| Modifier |Dino|
 | 6. |Beginner|⭐||Dino|
 | 7. |Beginner|⭐||Dino|
 | 8. |Beginner|⭐||Dino|
@@ -99,7 +99,7 @@
 | 46. |Company|⭐⭐||Mur**|
 | 47. |Company|⭐⭐|Advanced Withdraw |Mur** ✅|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
-| 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** |
+| 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
 | 50. ||⭐⭐||Dino|
 | 51. ||⭐⭐||Dino|
 | 52. ||⭐⭐||Dino|

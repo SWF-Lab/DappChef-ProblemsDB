@@ -89,7 +89,7 @@ contract problem49 {
 
         ClientList[msg.sender].stakingBalance = 0;
         ClientList[msg.sender].isStaking = false;
-        dai.transfer(msg.sender, balance);
+        // TODO: Transfer all dai of msg.sender from the contract to msg.sender
     }
 }
 
