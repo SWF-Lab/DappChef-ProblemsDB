@@ -87,7 +87,7 @@ async function main() {
                 console.log(`    - Sameple Output: ${topics0},${indexedValue},${nonIndexedValue}`)
 
                 // Get the Transaction Log
-                const log = AnswerContract.interface.parseLog(pastTXInfo["events"][0])
+                const log = AnswerContract.interface.parseLog(pastTXInfo["logs"][0])
                 const id = (log.topic).toString()
                 const eventTopics = (log.args.slice(0, indexedValue.length)).toString()
                 const eventData = (log.args.slice(indexedValue.length, indexedValue.length + nonIndexedValue.length)).toString()
@@ -132,7 +132,7 @@ async function main() {
                         } : 
                         {
                             to: _deployAddr,
-                            data: (solution[i].callData)[1],
+                            data: ethers.utils.solidityPack(["bytes"], [(solution[i].callData)[1][0]]),
                             value: (solution[i].callData)[0] 
                         }
                         _return = await wallet.sendTransaction(tx);
