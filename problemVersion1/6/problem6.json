@@ -12,7 +12,7 @@
       {
         "methodName": "#Log(string,uint256)",
         "callData": [],
-        "expectReturn": [[],["fallback", 10000]]
+        "expectReturn": [[],["fallback", 100000000000]]
       },
       {
         "methodName": "$",
@@ -22,7 +22,7 @@
       {
         "methodName": "#Log(string,uint256)",
         "callData": [],
-        "expectReturn": [[],["recieve", 10000]]
+        "expectReturn": [[],["recieve", 100000000000]]
       }
   ],
   "attributes": [
