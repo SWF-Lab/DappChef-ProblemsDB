@@ -1,0 +1,29 @@
+{
+  "problemNumber": 6,
+  "problemVersion": 1,
+  "description": "Function Overload ! Your functions can have the same name with different inputs.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "add(uint256,uint256)",
+        "callData": [20,40],
+        "expectReturn": [60]
+      },
+      {
+        "methodName": "add(uint256,uint256,uint256)",
+        "callData": [20,40,60],
+        "expectReturn": [120]
+      }
+  ],
+  "attributes": [
+      {
+        "trait_type": "difficulty", 
+        "value": 1
+      },
+      {
+        "trait_type": "class", 
+        "value": "Beginner"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/7"
+}

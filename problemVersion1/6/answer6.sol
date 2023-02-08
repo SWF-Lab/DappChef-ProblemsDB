@@ -12,4 +12,7 @@ contract answer6 {
       emit Log("recieve", msg.value);
     }
 
+    // function emitLog() external {
+    //   emit Log("test",1000000);
+    // }
 }
