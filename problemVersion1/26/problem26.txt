@@ -2,16 +2,17 @@
 pragma solidity ^0.8.17;
 
 contract Greeting {
-    string constant private GREETING = "Hello, My Name is Coco";  
-    function returnGreeting(string memory _input) public virtual pure returns(string memory) {
-        return GREETING;
+    string internal name = "Elizabeth";
+
+    function getName() public view returns (string memory) {
+        string memory output = string.concat("Hi, my name is ", name);
+        return output;
     }
 }
 
-// TODO: you should inherit Greeting and complete the following function.
-contract answer25 {
-    // TODO: you should inherit and override returnGreeting from Greeting and convert the return value into the parameter: _input.
-    function returnGreeting() {
-        // TODO: complete this function.
+// TODO: you should inherit Greeting and override the state variable, `name`, converting it into a input value in the constructor.
+contract problem26 {
+    constructor(string memory _name) {
+
     }
 }

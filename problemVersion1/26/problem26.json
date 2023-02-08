@@ -1,13 +1,13 @@
 {
-    "problemNumber": 24,
+    "problemNumber": 26,
     "problemVersion": 1,
-    "description": "Inheritance and Override",
-    "constructorCallData": [],
+    "description": "Inheritance and Override the state variable",
+    "constructorCallData": [["string", "Jackson"]],
     "problemSolution": [
         {
-            "methodName": "returnGreeting()",
-            "callData": ["Suprise! I'm back!"],
-            "expectReturn": ["Suprise! I'm back!"]
+            "methodName": "getName()",
+            "callData": [],
+            "expectReturn": ["Hi, my name is Jackson"]
         }
     ],
     "attributes": [
@@ -20,5 +20,5 @@
             "value": "Beginner"
         }
     ],
-    "image": "ipfs://<ipfsPrefix>/25"
+    "image": "ipfs://<ipfsPrefix>/26"
 }

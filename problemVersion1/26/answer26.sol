@@ -2,14 +2,16 @@
 pragma solidity ^0.8.17;
 
 contract Greeting {
-    string constant private GREETING = "Hello, My Name is Coco";  
-    function returnGreeting(string memory _input) public virtual pure returns(string memory) {
-        return GREETING;
+    string internal name = "Elizabeth";
+
+    function getName() public view returns (string memory) {
+        string memory output = string.concat("Hi, my name is ", name);
+        return output;
     }
 }
 
-contract answer25 is Greeting {
-    function returnGreeting(string memory _input) public virtual override pure returns(string memory) {
-        return _input;
-    } 
+contract answer26 is Greeting {
+    constructor(string memory _name) {
+        name = _name;
+    }
 }
