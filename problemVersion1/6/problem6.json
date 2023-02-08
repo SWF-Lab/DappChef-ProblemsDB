@@ -6,8 +6,8 @@
   "problemSolution": [
       {
         "methodName": "$",
-        "callData": ["100000000000",["0x123123"]],
-        "expectReturn": ["0x123123"]
+        "callData": ["100000000000",["0x2098ddd01d6035049de112333af26442bb3009ea06b6df66fccfadf8adee9914"]],
+        "expectReturn": []
       },
       {
         "methodName": "#Log(string,uint256)",

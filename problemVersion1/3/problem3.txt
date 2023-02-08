@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17; 
 
 // complete the function below
-contract answer3 { 
+contract problem3 { 
     function biggerThanTen(uint256 num) public pure returns (bool) {
         // if the input is bigger than ten, return true, else return false
 

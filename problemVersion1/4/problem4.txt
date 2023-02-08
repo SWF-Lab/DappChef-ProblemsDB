@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: Apache License
 pragma solidity ^0.8.17; 
 
-contract answer4 {
+contract problem4 {
     // imagine we can record that an address own how much token
     // TODO: declare a mapping mapping from an address to an uint256 named `balanceOf`
     
