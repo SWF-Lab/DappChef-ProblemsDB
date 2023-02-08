@@ -26,7 +26,12 @@ async function main() {
     
     const rawJudgeInfo = fs.readFileSync(path.join(__dirname, `../problemVersion1/${problemNumber}/problem${problemNumber}.json`))
     const JudgeInfo = JSON.parse(rawJudgeInfo.toString());
-    const solution = JudgeInfo.problemSolution
+
+    // Replace the MSG_SENDER
+    const originalSolution = JudgeInfo.problemSolution
+    const stringified = JSON.stringify(originalSolution);
+    const replaced = stringified.replace(/"MSG_SENDER"/g, `"${wallet.address.toString()}"`);
+    const solution = JSON.parse(replaced);
 
     const constructorCode = ethers.utils.defaultAbiCoder.encode(
         JudgeInfo.constructorCallData.map((e: any) => e[0]),
@@ -64,12 +69,13 @@ async function main() {
     console.log(`\nBegin the Judging...`)
 
     let pastTXInfo: any
+    let totalGas = ethers.BigNumber.from("0")
 
     for (let i = 0; i < solution.length; i++) {
 
         console.log(`    \nTesting ${i}: ${solution[i].methodName}`)
         console.log(`    - Sameple Input: ${solution[i].callData}`)
-        
+    
         try{
             // If this methodName is Check Event Emitted
             if ((solution[i].methodName).substring(0, 1) == "#"){
@@ -81,7 +87,7 @@ async function main() {
                 console.log(`    - Sameple Output: ${topics0},${indexedValue},${nonIndexedValue}`)
 
                 // Get the Transaction Log
-                const log = AnswerContract.interface.parseLog(pastTXInfo["events"][0])
+                const log = AnswerContract.interface.parseLog(pastTXInfo["logs"][0])
                 const id = (log.topic).toString()
                 const eventTopics = (log.args.slice(0, indexedValue.length)).toString()
                 const eventData = (log.args.slice(indexedValue.length, indexedValue.length + nonIndexedValue.length)).toString()
@@ -97,14 +103,60 @@ async function main() {
                 }
                 continue
             }
+            // expect the calling failed and match the error msg.
+            else if ((solution[i].methodName).substring(0, 1) == "%") {
+                console.log(`    - Expect Error Msg: ${(solution[i].expectReturn)}`)
+                try{
+                    const _return = await AnswerContract[(solution[i].methodName).substring(1)](
+                        ...solution[i].callData
+                    )
+                    pastTXInfo = await _return.wait()
+                    console.log(`    ...Wrong Answer!`)
+                    return
+                } catch (e: any){
+                    console.log(`    ...Accepted!`)
+                }
+            }
             // Write Function / Get Function
             else { 
-                const _return = await AnswerContract[solution[i].methodName](
-                    ...solution[i].callData
-                )
+                let _return: any
 
+                // call with ether
+                if ((solution[i].methodName).substring(0, 1) == "$"){
+                    // call the fallback or receive function
+                    if ((solution[i].methodName).length == 1){
+                        const tx = (solution[i].callData)[1].length == 0 ?
+                        {
+                            to: _deployAddr,
+                            value: (solution[i].callData)[0] 
+                        } : 
+                        {
+                            to: _deployAddr,
+                            data: ethers.utils.solidityPack(["bytes"], [(solution[i].callData)[1][0]]),
+                            value: (solution[i].callData)[0] 
+                        }
+                        _return = await wallet.sendTransaction(tx);
+                        pastTXInfo = await _return.wait()
+                        totalGas = totalGas.add(pastTXInfo.gasUsed)
+                        console.log(`    ...Fallback/Receive Function Finished!`)
+                        continue
+                    }
+                    else{
+                        _return = await AnswerContract[(solution[i].methodName).substring(1)](
+                            ...(solution[i].callData)[1], { value: (solution[i].callData)[0] }
+                        )
+                    }
+                    
+                }
+                else{
+                    _return = await AnswerContract[solution[i].methodName](
+                        ...solution[i].callData
+                    )
+                }
+                
                 if (solution[i].expectReturn.length == 0){
                     pastTXInfo = await _return.wait()
+                    totalGas = totalGas.add(pastTXInfo.gasUsed)
                     console.log(`    ...Write Function Finished!`)
                     continue
                 }
@@ -125,6 +177,7 @@ async function main() {
         }
     }
     console.log("\nAll Accepted!")
+    console.log(`Total Used Gas: ${totalGas.toString()}`)
 }
 
 async function promptProblem() {

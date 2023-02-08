@@ -5,62 +5,54 @@
   "constructorCallData": [],
   "problemSolution": [
     {
-      "methodName": "approveDAITransferFrom(uint)",
-      "callData": [
-        100
-      ],
-      "expectReturn": ""
+      "methodName": "approveDAITransferFrom(uint256)",
+      "callData": ["100"],
+      "expectReturn": []
     },
     {
       "methodName": "getAllowance()",
       "callData": [],
-      "expectReturn": 100
+      "expectReturn": ["100"]
     },
     {
-      "methodName": "approveDAITransferFrom(uint)",
-      "callData": [
-        100
-      ],
-      "expectReturn": ""
+      "methodName": "approveDAITransferFrom(uint256)",
+      "callData": ["100"],
+      "expectReturn": []
     },
     {
       "methodName": "getAllowance()",
       "callData": [],
-      "expectReturn": 200
+      "expectReturn": ["200"]
     },
     {
-      "methodName": "stakeTokens(uint)",
-      "callData": [
-        100
-      ],
-      "expectReturn": ""
+      "methodName": "stakeTokens(uint256)",
+      "callData": ["100"],
+      "expectReturn": []
     },
     {
       "methodName": "getClientStakingBalance(address)",
-      "callData": [],
-      "expectReturn": 100
+      "callData": ["MSG_SENDER"],
+      "expectReturn": ["100"]
     },
     {
       "methodName": "unstakeTokens()",
       "callData": [],
-      "expectReturn": ""
+      "expectReturn": []
     },
     {
       "methodName": "getClientStakingBalance(address)",
-      "callData": [],
-      "expectReturn": 0
+      "callData": ["MSG_SENDER"],
+      "expectReturn": ["0"]
     },
     {
-      "methodName": "stakeTokens()",
-      "callData": [
-        100
-      ],
-      "expectReturn": ""
+      "methodName": "stakeTokens(uint256)",
+      "callData": ["100"],
+      "expectReturn": []
     },
     {
       "methodName": "getClientStakingBalance(address)",
-      "callData": [],
-      "expectReturn": 100
+      "callData": ["MSG_SENDER"],
+      "expectReturn": ["100"]
     }
   ],
   "attributes": [
