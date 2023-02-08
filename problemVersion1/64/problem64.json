@@ -1,0 +1,24 @@
+{
+    "problemNumber": 64,
+    "problemVersion": 1,
+    "description": "Prime",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "areThesePrime(uint256[])",
+            "callData": [[3, 5, 7, 9, 49, 35, 67, 103, 109]],
+            "expectReturn": [["true","true","true","false","false","false","true","true","true"]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/64"
+}
