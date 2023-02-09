@@ -1,0 +1,29 @@
+{
+  "problemNumber": 12,
+  "problemVersion": 1,
+  "description": "Call ! Call other contracts functions by using call.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "$",
+        "callData": [60000,[]],
+        "expectReturn": []
+      },
+      {
+        "methodName": "deployContract()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "callSetGreet(string)",
+        "callData": ["hello"],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getGreet()",
+        "callData": [],
+        "expectReturn": ["hello"]
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/12"
+}
