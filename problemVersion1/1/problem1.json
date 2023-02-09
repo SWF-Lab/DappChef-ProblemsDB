@@ -1,0 +1,39 @@
+{
+  "problemNumber": 1,
+  "problemVersion": 1,
+  "description": "State Variables and its default value.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+          "methodName": "getUint()",
+          "callData": [],
+          "expectReturn": [0]
+      },
+      {
+          "methodName": "getBool()",
+          "callData": [],
+          "expectReturn": [false]
+      },
+      {
+          "methodName": "getAddress()",
+          "callData": [],
+          "expectReturn": ["0x0000000000000000000000000000000000000000"]
+      },
+      {
+          "methodName": "getString()",
+          "callData": [],
+          "expectReturn": [""]
+      }
+  ],
+  "attributes": [
+      {
+        "trait_type": "difficulty", 
+        "value": 1
+      },
+      {
+        "trait_type": "class", 
+        "value": "Beginner"
+      } 
+  ],
+  "image": "ipfs://<ipfsPrefix>/1"
+}

@@ -1,0 +1,39 @@
+{
+  "problemNumber": 6,
+  "problemVersion": 1,
+  "description": "Fallback and Receive, get your ethers with no reasons, good job.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "$",
+        "callData": ["100000000000",["0x2098ddd01d6035049de112333af26442bb3009ea06b6df66fccfadf8adee9914"]],
+        "expectReturn": []
+      },
+      {
+        "methodName": "#Log(string,uint256)",
+        "callData": [],
+        "expectReturn": [[],["fallback", 100000000000]]
+      },
+      {
+        "methodName": "$",
+        "callData": ["100000000000",[]],
+        "expectReturn": []
+      },
+      {
+        "methodName": "#Log(string,uint256)",
+        "callData": [],
+        "expectReturn": [[],["recieve", 100000000000]]
+      }
+  ],
+  "attributes": [
+      {
+        "trait_type": "difficulty", 
+        "value": 1
+      },
+      {
+        "trait_type": "class", 
+        "value": "Beginner"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/6"
+}

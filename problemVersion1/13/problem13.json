@@ -1,0 +1,19 @@
+{
+  "problemNumber": 13,
+  "problemVersion": 1,
+  "description": "Struct ! Define your own type.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "createFood(string,uint256)",
+        "callData": ["pineapple",100],
+        "expectReturn": []
+      },
+      {
+        "methodName": "checkAns()",
+        "callData": [],
+        "expectReturn": ["pineapple",100]
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/13"
+}

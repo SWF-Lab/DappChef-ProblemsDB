@@ -1,0 +1,54 @@
+{
+  "problemNumber": 8,
+  "problemVersion": 1,
+  "description": "Assert, Require, Revert ! Do something to prevent bad things from happening.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "%testAssert",
+        "callData": [],
+        "expectReturn": ["assert"]
+      },
+      {
+        "methodName": "%testRequire",
+        "callData": [],
+        "expectReturn": ["Required"]
+      },
+      {
+        "methodName": "%testRevert",
+        "callData": [],
+        "expectReturn": ["Reverted"]
+      },
+      {
+        "methodName": "addNumByOne()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%testRequire",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%testRevert",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%testAssert",
+        "callData": [],
+        "expectReturn": []
+      }
+  ],
+  "attributes": [
+      {
+        "trait_type": "difficulty", 
+        "value": 1
+      },
+      {
+        "trait_type": "class", 
+        "value": "Beginner"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/8"
+}

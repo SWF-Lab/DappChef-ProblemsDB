@@ -1,0 +1,18 @@
+// SPDX-License-Identifier: Apache License
+pragma solidity ^0.8.17; 
+contract problem5 { 
+    address public owner;
+
+    constructor(address _owner) {
+        owner = _owner;
+    }
+
+    // TODO: declare a function modifier named `onlyOwner` which restrict that only the owner can call the modified function. 
+
+    // TODO: declare a function named `changeOwner` which takes an address as an input, this function assigns the input address to `owner`. Don't forget to use the modifier `onlyOwner` to restrict the caller of this function.
+
+
+    function getowner() external view returns (address) {
+        return owner;
+    }
+}

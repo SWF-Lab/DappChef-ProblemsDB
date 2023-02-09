@@ -1,0 +1,29 @@
+{
+  "problemNumber": 2,
+  "problemVersion": 1,
+  "description": "Functions! View functions do only readings of the state on blockchain, and pure functions do no readings.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+          "methodName": "addNumWithX(uint256)",
+          "callData": [1000],
+          "expectReturn": [1001]
+      },
+      {
+          "methodName": "addTwoNum(uint256,uint256)",
+          "callData": [20,64],
+          "expectReturn": [84]
+      }
+  ],
+  "attributes": [
+      {
+        "trait_type": "difficulty", 
+        "value": 1
+      },
+      {
+        "trait_type": "class", 
+        "value": "Beginner"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/2"
+}

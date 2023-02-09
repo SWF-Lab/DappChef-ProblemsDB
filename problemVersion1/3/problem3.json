@@ -1,0 +1,34 @@
+{
+  "problemNumber": 3,
+  "problemVersion": 1,
+  "description": "If Else! as simple as it is in other language.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "biggerThanTen(uint256)",
+        "callData": [2],
+        "expectReturn": [false]
+      },
+      {
+        "methodName": "biggerThanTen(uint256)",
+        "callData": [10],
+        "expectReturn": [false]
+      },
+      {
+        "methodName": "biggerThanTen(uint256)",
+        "callData": [15],
+        "expectReturn": [true]
+      }
+  ],
+  "attributes": [
+      {
+        "trait_type": "difficulty", 
+        "value": 1
+      },
+      {
+        "trait_type": "class", 
+        "value": "Beginner"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/3"
+}

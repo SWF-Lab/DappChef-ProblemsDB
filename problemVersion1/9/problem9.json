@@ -1,0 +1,14 @@
+{
+  "problemNumber": 9,
+  "problemVersion": 1,
+  "description": "Deploy another contract ! Use your contract to deploy a contract.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "checkAns()",
+        "callData": [],
+        "expectReturn": [true]
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/9"
+}

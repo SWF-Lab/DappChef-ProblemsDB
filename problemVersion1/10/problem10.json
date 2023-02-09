@@ -1,0 +1,19 @@
+{
+  "problemNumber": 10,
+  "problemVersion": 1,
+  "description": "Interface ! Call other functions with interface.",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "setCalled()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "checkAns()",
+        "callData": [],
+        "expectReturn": [true]
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/10"
+}
