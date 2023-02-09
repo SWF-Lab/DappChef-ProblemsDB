@@ -1,37 +1,4 @@
-# Problems Information & Metadata
-
-### Table of Contents
-- [Reward NFT Metadata](#reward-nft-metadata)
-- [Problems Classification Instructions](#problems-classification-instructions)
-- [problemVersion1](#problemVersion1)
-- [problemVersion2 (TBD)](#problemVersion2)
-
-### Reward NFT Metadata
-```JSON
-{
-    "name": "DappChef Rewards NFT #<problemNumber>",
-    "description": "DappChef is a Ethereum Smart Contract Development Learning platform. Solve the coding problem, then you can mint the Reward NFT!",
-    "solver": "<address>, the problem solve",
-    "approver": "<address>, the key address storing in the server to sign(approve) minting request now",
-    "problemSolvedTimestamp": "<int>, the timestamp which user solved the problem",
-    "attributes": [
-        {
-          "display_type": "number", 
-          "trait_type": "problemNumber", 
-          "value": "<int>, number of this problem",
-        },
-        {
-          "trait_type": "difficulty", 
-          "value": "<int>, difficulty of this problem, 1~3",
-        },
-        {
-          "trait_type": "class", 
-          "value": "<str>, class of this problem, see problems classification instructions part",
-        }, 
-    ],
-    "image": "<str>, ipfs://<ipfsPrefix>/<problemNumber>, which means the NFT image location",
-}
-```
+# Problems Information
 
 ### Problems Classification Instructions
 
