@@ -51,14 +51,14 @@
 | No. | Class | Difficulty | Statement | Setter |
 | --- | --- | :---: | --- | :---: |
 | 0. |Beginner|⭐| Compiler Version Declaration |Mur** ✅|
-| 1. |Beginner|⭐||Dino|
-| 2. |Beginner|⭐||Dino|
-| 3. |Beginner|⭐||Dino|
-| 4. |Beginner|⭐||Dino|
+| 1. |Beginner|⭐| State Variable |Dino|
+| 2. |Beginner|⭐| Functions ( pure/ view ) |Dino|
+| 3. |Beginner|⭐| If/ Else |Dino|
+| 4. |Beginner|⭐| Mapping |Dino|
 | 5. |Beginner|⭐| Modifier |Dino|
-| 6. |Beginner|⭐||Dino|
-| 7. |Beginner|⭐||Dino|
-| 8. |Beginner|⭐||Dino|
+| 6. |Beginner|⭐| Fallback and Receive |Dino|
+| 7. |Beginner|⭐| Function overload |Dino|
+| 8. |Beginner|⭐| Revert, Require, Assert |Dino|
 | 9. |Beginner|⭐||Dino|
 | 10. |Beginner|⭐||Dino|
 | 11. |Beginner|⭐||Dino|
@@ -74,9 +74,9 @@
 | 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
 | 22. |Beginner|⭐||FoodChain|
 | 23. |Beginner|⭐||FoodChain|
-| 24. |Beginner|⭐||FoodChain|
-| 25. |Beginner|⭐||FoodChain|
-| 26. |Beginner|⭐||FoodChain|
+| 24. |Beginner|⭐| Inheritance |FoodChain|
+| 25. |Beginner|⭐| Inheritance and Override |FoodChain|
+| 26. |Beginner|⭐| Inheritance and Override the state variable |FoodChain|
 | 27. |Beginner|⭐||FoodChain|
 | 28. |Beginner|⭐||FoodChain|
 | 29. |Beginner|⭐||FoodChain|
@@ -114,7 +114,7 @@
 | 61. ||⭐⭐||Dino|
 | 62. |Token|⭐⭐||FoodChain|
 | 63. |Token|⭐⭐||FoodChain|
-| 64. ||⭐⭐||FoodChain|
+| 64. ||⭐⭐| Prime |FoodChain|
 | 65. ||⭐⭐||FoodChain|
 | 66. ||⭐⭐||FoodChain|
 | 67. ||⭐⭐||FoodChain|
@@ -142,10 +142,10 @@
 | 89. ||⭐⭐⭐||FoodChain|
 | 90. ||⭐⭐⭐||FoodChain|
 | 91. ||⭐⭐⭐||FoodChain|
-| 92. |Company|⭐⭐⭐||Mur**|
+| 92. |Company|⭐⭐⭐|Gnosis - MultiSigWallet|Mur**|
 | 93. |Company|⭐⭐⭐||Mur**|
 | 94. |Company|⭐⭐⭐||Mur**|
-| 95. ||⭐⭐⭐||Mur**|
+| 95. |DSA|⭐⭐⭐|Floating Point Division|Mur**✅|
 | 96. ||⭐⭐⭐||Mur**|
 | 97. ||⭐⭐⭐||Mur**|
 | 98. ||⭐⭐⭐||Mur**|
