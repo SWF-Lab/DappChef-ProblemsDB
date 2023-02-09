@@ -118,9 +118,9 @@ You can use this in the `problem<number>.json`:
 },
 ```
 
-### USER_ADDRESS
+### MSG_SENDER
 
-Use the `USER_ADDRESS` as the callData (Function Input Params) will give the **Address of the User(now Problem Solver)** to target method.
+Use the `MSG_SENDER` as the callData (Function Input Params) will give the **Address of the User(now Problem Solver)** to target method.
 
 If you have this function in the Contract:
 
