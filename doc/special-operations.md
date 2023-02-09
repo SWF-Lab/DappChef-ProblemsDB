@@ -10,7 +10,7 @@
 - ✅ [Event](#event): Expect the specific events to be emitted
 - ✅ [EXPECT_ERROR](#expect_error): Expect the `require`, `revert`, `assert` to be triggered.
 - ✅ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
-- ✅ [USER_ADDRESS](#user_address): Use User's Address to be expectReturn or callData
+- ✅ [MSG_SENDER](#MSG_SENDER): Use User's Address to be expectReturn or callData
 - ⬜️ [WAIT](#wait): Wait for few blocks
 - ⬜️ [GAS_USED_LESS](#GAS_USED_LESS): Expect the total gas used less than specific amount.
 
@@ -134,11 +134,11 @@ You can judge it like:
 ```JSON
 {
     "methodName": "getBalance(address)",
-    "callData": ["USER_ADDRESS"],
+    "callData": ["MSG_SENDER"],
     "expectReturn": ["..."]
 }
 ```
-> In the above example, if the user's address is `0x123`, the string `"USER_ADDRESS"` in the `callData` array will be replaced to `0x123`.
+> In the above example, if the user's address is `0x123`, the string `"MSG_SENDER"` in the `callData` array will be replaced to `0x123`.
 
 ### WAIT
 
