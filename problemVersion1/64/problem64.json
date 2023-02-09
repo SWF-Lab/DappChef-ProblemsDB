@@ -13,11 +13,11 @@
     "attributes": [
         {
             "trait_type": "difficulty",
-            "value": 1
+            "value": 2
         },
         {
             "trait_type": "class",
-            "value": "Beginner"
+            "value": "DSA"
         }
     ],
     "image": "ipfs://<ipfsPrefix>/64"
