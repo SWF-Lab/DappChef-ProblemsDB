@@ -33,19 +33,10 @@ contract answer95 {
    
 }
 
-
-// OpenZeppelin Contracts (last updated v4.8.0) (utils/Strings.sol)
-
-/**
- * @dev String operations.
- */
 library Strings {
     bytes16 private constant _SYMBOLS = "0123456789abcdef";
     uint8 private constant _ADDRESS_LENGTH = 20;
 
-    /**
-     * @dev Converts a `uint256` to its ASCII `string` decimal representation.
-     */
     function toString(uint256 value) internal pure returns (string memory) {
         unchecked {
             uint256 length = Math.log10(value) + 1;
@@ -68,25 +59,16 @@ library Strings {
         }
     }
 
-    /**
-     * @dev Converts a `int256` to its ASCII `string` decimal representation.
-     */
     function toString(int256 value) internal pure returns (string memory) {
         return string(abi.encodePacked(value < 0 ? "-" : "", toString(SignedMath.abs(value))));
     }
 
-    /**
-     * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation.
-     */
     function toHexString(uint256 value) internal pure returns (string memory) {
         unchecked {
             return toHexString(value, Math.log256(value) + 1);
         }
     }
 
-    /**
-     * @dev Converts a `uint256` to its ASCII `string` hexadecimal representation with fixed length.
-     */
     function toHexString(uint256 value, uint256 length) internal pure returns (string memory) {
         bytes memory buffer = new bytes(2 * length + 2);
         buffer[0] = "0";
@@ -99,9 +81,6 @@ library Strings {
         return string(buffer);
     }
 
-    /**
-     * @dev Converts an `address` with fixed length of 20 bytes to its not checksummed ASCII `string` hexadecimal representation.
-     */
     function toHexString(address addr) internal pure returns (string memory) {
         return toHexString(uint256(uint160(addr)), _ADDRESS_LENGTH);
     }
@@ -114,9 +93,7 @@ library Strings {
     }
 }
 
-/**
- * @dev Standard math utilities missing in the Solidity language.
- */
+
 library Math {
     enum Rounding {
         Down, // Toward negative infinity
@@ -124,45 +101,24 @@ library Math {
         Zero // Toward zero
     }
 
-    /**
-     * @dev Returns the largest of two numbers.
-     */
     function max(uint256 a, uint256 b) internal pure returns (uint256) {
         return a > b ? a : b;
     }
 
-    /**
-     * @dev Returns the smallest of two numbers.
-     */
     function min(uint256 a, uint256 b) internal pure returns (uint256) {
         return a < b ? a : b;
     }
 
-    /**
-     * @dev Returns the average of two numbers. The result is rounded towards
-     * zero.
-     */
     function average(uint256 a, uint256 b) internal pure returns (uint256) {
         // (a + b) / 2 can overflow.
         return (a & b) + (a ^ b) / 2;
     }
 
-    /**
-     * @dev Returns the ceiling of the division of two numbers.
-     *
-     * This differs from standard division with `/` in that it rounds up instead
-     * of rounding down.
-     */
     function ceilDiv(uint256 a, uint256 b) internal pure returns (uint256) {
         // (a + b - 1) / b can overflow on addition, so we distribute.
         return a == 0 ? 0 : (a - 1) / b + 1;
     }
 
-    /**
-     * @notice Calculates floor(x * y / denominator) with full precision. Throws if result overflows a uint256 or denominator == 0
-     * @dev Original credit to Remco Bloemen under MIT license (https://xn--2-umb.com/21/muldiv)
-     * with further edits by Uniswap Labs also under MIT license.
-     */
     function mulDiv(uint256 x, uint256 y, uint256 denominator) internal pure returns (uint256 result) {
         unchecked {
             // 512-bit multiply [prod1 prod0] = x * y. Compute the product mod 2^256 and mod 2^256 - 1, then use
@@ -199,7 +155,8 @@ library Math {
                 prod0 := sub(prod0, remainder)
             }
 
-            // Factor powers of two out of denominator and compute largest power of two divisor of denominator. Always >= 1.
+            // Factor powers of two out of denominator and compute largest power of two divisor of denominator. 
+            // Always >= 1.
             // See https://cs.stackexchange.com/q/138556/92363.
 
             // Does not overflow because the denominator cannot be zero at this stage in the function.
@@ -223,7 +180,8 @@ library Math {
             // four bits. That is, denominator * inv = 1 mod 2^4.
             uint256 inverse = (3 * denominator) ^ 2;
 
-            // Use the Newton-Raphson iteration to improve the precision. Thanks to Hensel's lifting lemma, this also works
+            // Use the Newton-Raphson iteration to improve the precision. 
+            // Thanks to Hensel's lifting lemma, this also works
             // in modular arithmetic, doubling the correct bits in each step.
             inverse *= 2 - denominator * inverse; // inverse mod 2^8
             inverse *= 2 - denominator * inverse; // inverse mod 2^16

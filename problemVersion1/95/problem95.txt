@@ -1,12 +1,11 @@
 // SPDX-License-Identifier: MIT
 // Reference: https://levelup.gitconnected.com/simulating-floating-point-division-in-solidity-35b56d2b597e
+// The only thing you should do is completing the division(), and make the quotient, remainder and result return the correct value.
 pragma solidity ^0.8.17;
 
 contract answer95 {
     using Strings for uint256;
-
-
-    // The only thing you should do is completing the division(), and make the quotient, remainder and result return the correct value.
+    
     function division(
         uint256 decimalPlaces, 
         uint256 numerator, 
@@ -14,9 +13,7 @@ contract answer95 {
     ) public pure returns(uint256 quotient, uint256 remainder, string memory result) {
 
         quotient  = 
-        
         remainder = 
-
         result = string(abi.encodePacked(quotient.toString(), '.', numToFixedLengthStr(decimalPlaces, remainder)));
     }
 
