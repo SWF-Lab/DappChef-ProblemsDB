@@ -1,0 +1,24 @@
+{
+    "problemNumber": 0,
+    "problemVersion": 1,
+    "description": "Hello World! The reserved word 'pragma' specifies the compiler version of Solidity.",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "getGreet()",
+            "callData": [],
+            "expectReturn": ["Hello World!"]
+         }
+    ],
+    "attributes": [
+        {
+          "trait_type": "difficulty", 
+          "value": 1
+        },
+        {
+          "trait_type": "class", 
+          "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/0"
+}

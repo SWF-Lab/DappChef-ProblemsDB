@@ -1,0 +1,38 @@
+{
+    "problemNumber": 5,
+    "problemVersion": 1,
+    "description": "Modifier! Use modifier to modify functions with repeated steps.",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "changeOwner(address)",
+            "callData": [
+                "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"
+            ],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getOwner()",
+            "callData": [],
+            "expectReturn": [
+                "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"
+            ]
+        },
+        {
+            "methodName": "%changeOwner(address)",
+            "callData": ["0xdCca4cE55773359E191110Eeb21E0413f770032B"],
+            "expectReturn": ["Caller is not owner"]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/5"
+}

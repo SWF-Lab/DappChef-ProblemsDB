@@ -1,0 +1,32 @@
+{
+    "problemNumber": 15,
+    "problemVersion": 1,
+    "description": "Use Constructor to initialize your contract.",
+    "constructorCallData": [
+        ["address", "0xdCca4cE55773359E191110Eeb21E0413f770032B"],
+        ["uint256", 321]
+    ],
+    "problemSolution": [
+        {
+            "methodName": "getOwner()",
+            "callData": [],
+            "expectReturn": ["0xdCca4cE55773359E191110Eeb21E0413f770032B"]
+        },
+        {
+            "methodName": "getFoo()",
+            "callData": [],
+            "expectReturn": [321]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/15"
+}

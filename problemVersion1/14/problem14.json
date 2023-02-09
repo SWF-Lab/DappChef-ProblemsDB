@@ -1,0 +1,32 @@
+{
+    "problemNumber": 14,
+    "problemVersion": 1,
+    "description": "Creat Event and emit it!",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "emitCalling(address,uint256,bool,string)",
+            "callData": ["0xdCca4cE55773359E191110Eeb21E0413f770032B", 7, "true", "Hello World!"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#Calling(address,uint256,bool,string,string)",
+            "callData": [],
+            "expectReturn": [
+                ["0xdCca4cE55773359E191110Eeb21E0413f770032B",7,"true"],
+                ["Hello World!", "Meow"]
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/14"
+}
