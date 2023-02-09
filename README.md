@@ -6,42 +6,18 @@
 
 ## Table of Contents
 
+## Table of Contents
+
 - [Table of Contents](#table-of-contents)
+- [Table of Contents](#table-of-contents-1)
 - [Rules](#rules)
-  - [TODO Functionality](#todo-functionality)
   - [Important Announcement](#important-announcement)
   - [Start the Journey](#start-the-journey)
   - [Judge](#judge)
-- [Problems](#problems)
-  - [Problems Template](#problems-template)
-  - [Special Operation](#special-operation)
-    - [Constructor](#constructor)
-    - [Event](#event)
-    - [EXPECT\_ERROR](#expect_error)
-    - [WITH\_ETHER](#with_ether)
-    - [USER\_ADDRESS](#user_address)
-    - [WAIT](#wait)
-    - [GAS\_USED\_LESS](#gas_used_less)
-- [Reference](#reference)
-  - [Roadmap](#roadmap)
-  - [Learnging Resource](#learnging-resource)
-  - [Vulnerability Resource](#vulnerability-resource)
 
 ---
 
 ## Rules
-
-### TODO Functionality
-
-**有些目前還不支援的內容，過一陣子我會處理這個問題，請大家先避開**
-- ✅ Basic Judging System Core
-- ✅ [Constructor](#constructor): Deploy the contract with constructor call data
-- ✅ [Event](#event): Expect the specific events to be emitted
-- ✅ [EXPECT_ERROR](#expect_error): Expect the `require`, `revert`, `assert` to be triggered.
-- ✅ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
-- ✅ [USER_ADDRESS](#user_address): Use User's Address to be expectReturn or callData
-- ⬜️ [WAIT](#wait): Wait for few blocks
-- ⬜️ [GAS_USED_LESS](#GAS_USED_LESS): Expect the total gas used less than specific amount.
 
 ### Important Announcement
 
@@ -120,7 +96,18 @@ function get_a() public view returns(address){
 ]
 ```
 
+4. 請注意佈署過程是 EOA(User) -> Deployer -> AnswerContract，所以**佈署的時候** `msg.sender` 會是 Deployer Contract。所以如果你有 `owner` 設定在 `constructor` 裡面，要讓解題者的 `address` 被設定為 `owner`，必須用 `tx.origin` 不可用 `msg.sender`。
+```solidity
+// 錯誤出法
+constructor() {
+    owner = msg.sender;
+}
 
+// 正確出法
+constructor() {
+    owner = tx.origin;
+}
+```
 
 ### Start the Journey
 
@@ -189,239 +176,3 @@ All Accepted!
 Done in 18.75s.
 ```
 
-## Problems
-
-### Problems Template
-
-FileName: `problem<problemNumber>.json` (e.g. `problem997.json`)
-
-> If your function is **Write Function** (calling this function will change the state), your `expectReturn` should be `[]` (empty array).
-
-```json
-{
-    "problemNumber": "<int>, number of this problem",
-    "problemVersion": "<int>, support dappchef version of this problem",
-    "description": "<str>, What user sholud do in this problem, which means problem statement",
-    "constructorCallData": "<array <array>>, calldata types and value",
-    "problemSolution": [
-        {
-            "methodName": "<str>, MethodName",
-            "callData": "<array>, callData",
-            "expectReturn": "<any>, the return of calling the Method with the callData"
-         },
-        {
-            "methodName": "<str>, MethodName",
-            "callData": "<array>, callData",
-            "expectReturn": "<any>, the return of calling the Method with the callData"
-         },
-        {
-            "methodName": "<str>, MethodName",
-            "callData": "<array>, callData",
-            "expectReturn": "<any>, the return of calling the Method with the callData"
-         }
-    ],
-    "attributes": [
-        {
-          "trait_type": "difficulty", 
-          "value": "<int>, difficulty of this problem, 1~3",
-        },
-        {
-          "trait_type": "class", 
-          "value": "<str>, class of this problem, see problems classification instructions part",
-        } 
-    ],
-    "image": "<str>, ipfs://<ipfsPrefix>/<problemNumber>, which means the NFT image location",
-}
-```
-
-> 1. The num of operations in the `problemSolution` is unlimited, if the problem is very complicated, the length of `problemSolution: Array.length` could be very long.
-> 1. This metadata conforms to the [OpenSea Format](https://docs.opensea.io/docs/metadata-standards) which can show the attributes successfullty.
-
-### Special Operation
-
-> **If the funcationality is constructing, don't use these operations in your problem!!**
-
-#### Constructor
-
-Constructor Usage: use array to include the arguments's type and the value.
-
-```JSON
-"constructorCallData": [
-    ["address", "0xdCca4cE55773359E191110Eeb21E0413f770032B"],
-    ["uint256", 321]
-],
-```
-
-#### Event
-
-Event Usage: use `#` in fornt of the event name, and use two array to represent `topics` and `data`.
-
-```JSON
-"problemSolution": [
-    {
-        "methodName": "emitCalling(address,uint256,bool,string)",
-        "callData": ["0xdCca4cE55773359E191110Eeb21E0413f770032B", 7, "true", "Hello World!"],
-        "expectReturn": []
-    },
-    {
-        "methodName": "#Calling(address,uint256,bool,string,string)",
-        "callData": [],
-        "expectReturn": [
-            ["0xdCca4cE55773359E191110Eeb21E0413f770032B",7,"true"],
-            ["Hello World!", "Meow"]
-        ]
-    }
-],
-```
-
-#### EXPECT_ERROR
-
-Use the `%` in front of the methodName and the first element of `callData` will become the `<error_msg>`, which will expect the calling failed and match the error msg.
-
-```solidity
-function testRequire(uint256 _i) public pure {
-    require(_i > 10, "Input must be greater than 10");
-}
-```
-
-You can use this in the `problem<number>.json`:
-```JSON
-{
-    "methodName": "%testRequire(uint256)",
-    "callData": ["9"],
-    "expectReturn": ["Input must be greater than 10"]
-}
-```
-
-#### WITH_ETHER
-
-Use the `$` in front of the methodName and the first element of `callData` will become the `<etherInWei>`, which will transfer specific amount of goerliEther from user to the contract when call the function. 
-
-If you have a function like below:
-```solidity
-function deposit(uint256 amount, address recipient) public payable {
-    // need msg.value == amount
-}
-```
-You can use this in the `problem<number>.json`:
-```JSON
-{
-    "methodName": "$deposit(uint256,address)",
-    "callData": ["1000000000000000000", 
-        [
-            "1000000000000000000", 
-            "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec"
-        ]
-    ],
-    "expectReturn": []
-}
-```
-
-If you want to "only transfer ether without calling any function", which means using `receive()` or `fallback()` to get the amount of ether-transfer. 
-
-```solidity
-fallback(string memory data) external payable returns (uint256, string memory) {
-    return (uint256(msg.value), data);
-}
-```
-
-You can use this in the `problem<number>.json`:
-```JSON
-{
-    "methodName": "$",
-    "callData": ["1000000000000000000", ["Hi!"]],
-    "expectReturn": ["1000000000000000000", "Hi!"]
-}
-```
-
-> Above example is send 1 ether (10*18 wei) to the contract.
-
-**The second element of `callData` should be an array, which means the calldata when invoking the function. In another word, if you want just call the fallback/receive function without any input, you should use:**
-```JSON
-{
-    "methodName": "$",
-    "callData": ["400000000000",[]],
-    "expectReturn": []
-},
-```
-
-#### USER_ADDRESS
-
-Use the `USER_ADDRESS` as the callData (Function Input Params) will give the **Address of the User(now Problem Solver)** to target method.
-
-If you have this function in the Contract:
-
-```solidity
-function getBalance(address account) public view returns(uint256){
-    return Balance(account);
-}
-```
-
-You can judge it like:
-```JSON
-{
-    "methodName": "getBalance(address)",
-    "callData": ["USER_ADDRESS"],
-    "expectReturn": ["..."]
-}
-```
-> In the above example, if the user's address is `0x123`, the string `"USER_ADDRESS"` in the `callData` array will be replaced to `0x123`.
-
-#### WAIT
-
-Use `WAIT` as the methodName and `<wait_block_number>` will wait for specific block amount.
-
-```JSON
-{
-    "methodName": "WAIT",
-    "callData": [10],
-    "expectReturn": []
-}
-```
-> Above example is Wait for 10 Block mined.
-
-#### GAS_USED_LESS
-TBD
-
----
-
-## Reference
-
-### Roadmap
-1. Build these contracts:
-    - Lending contract (Based on Aave)
-    - Staking contract (Based on Synthetix)
-    - AMM (Based on Uniswap v2)
-    - ERC20, ERC721, ERC1155
-    - Centralized Stable Coin - (Based on USDC)
-    - Governance contract (Based on Compound)
-    - Understand the architect of uniswap v3 and curve
-    - Example:
-        - Uniswap v2, v3, curve - https://lnkd.in/g_wmxTpm
-        - Compound Governance - https://lnkd.in/gzac5m34
-        - Other - https://lnkd.in/gnGNRx7C
-2. Make sure you know how to:
-    - write unit tests
-    - write mocks
-    - use Trail of Bits Toolbox
-    - use Hardhat + Foundry
-    - use SDKs
-    - leverage the console with Node
-    - check for sol coverage and gas reports
-    - integrate contracts with frontend
-3. Learn about solidity patterns - https://lnkd.in/gzRYy3t9
-4. Learn about attack vectors - https://lnkd.in/gSV_bj9R
-5. Learn about gas optimization - https://lnkd.in/gCM692mQ
-
-### Learnging Resource
-- [Solidity by Example](https://solidity-by-example.org/)
-- [Crypto Zombie](https://cryptozombies.io/)
-- [Appworks School Blockchain Program Resource](https://github.com/AppWorks-School/Blockchain-Resource)
-
-### Vulnerability Resource
-- [Ethernaut](https://ethernaut.openzeppelin.com/)
-- [Damn Vulnerable DeFi](https://github.com/nicolasgarcia214/damn-vulnerable-defi-foundry)
-- [DeFiHack](https://www.defihack.xyz/)
-- [Hack Solidity](https://zuhaibmd.medium.com/list/hack-solidity-b6a017b75a39)
-- [DeFi Security Lecture](https://medium.com/beaver-smartcontract-security/defi-security-lecture-1-reentrancy-attack-182396e41710)
-- [DeFiHackLabs](https://github.com/SunWeb3Sec/DeFiHackLabs)

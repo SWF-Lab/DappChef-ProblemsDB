@@ -1,0 +1,46 @@
+{
+    "problemNumber": 97,
+    "problemVersion": 1,
+    "description": "Send Message to Layer2 Optimism Contract",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "()",
+            "callData": [
+                ""
+            ],
+            "expectReturn": [
+                ""
+            ]
+        },
+        {
+            "methodName": "()",
+            "callData": [
+                ""
+            ],
+            "expectReturn": [
+                ""
+            ]
+        },
+        {
+            "methodName": "()",
+            "callData": [
+                ""
+            ],
+            "expectReturn": [
+                ""
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 3
+        },
+        {
+            "trait_type": "class",
+            "value": "Scalability"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/97"
+}

@@ -1,0 +1,46 @@
+{
+    "problemNumber": 92,
+    "problemVersion": 1,
+    "description": "Gnosis - MultiSigWallet",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "()",
+            "callData": [
+                ""
+            ],
+            "expectReturn": [
+                ""
+            ]
+        },
+        {
+            "methodName": "()",
+            "callData": [
+                ""
+            ],
+            "expectReturn": [
+                ""
+            ]
+        },
+        {
+            "methodName": "()",
+            "callData": [
+                ""
+            ],
+            "expectReturn": [
+                ""
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 3
+        },
+        {
+            "trait_type": "class",
+            "value": "Company"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/92"
+}

@@ -90,7 +90,10 @@ async function main() {
                 const log = AnswerContract.interface.parseLog(pastTXInfo["logs"][0])
                 const id = (log.topic).toString()
                 const eventTopics = (log.args.slice(0, indexedValue.length)).toString()
-                const eventData = (log.args.slice(indexedValue.length, indexedValue.length + nonIndexedValue.length)).toString()
+                // Pass the non-index event for special target
+                const eventData = nonIndexedValue.length == 0 ?
+                    (log.args.slice(indexedValue.length, indexedValue.length + nonIndexedValue.length)).toString()
+                    : []
                 console.log(`    - Your Output: ${id},${eventTopics},${eventData}`)
                 
                 // Comparing
