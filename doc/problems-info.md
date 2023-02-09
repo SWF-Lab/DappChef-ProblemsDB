@@ -40,11 +40,11 @@
 | 19. |Token|⭐||Dino|
 | 20. |Token|⭐||Dino|
 | 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
-| 22. |Beginner|⭐||FoodChain|
-| 23. |Beginner|⭐||FoodChain|
-| 24. |Beginner|⭐| Inheritance |FoodChain|
-| 25. |Beginner|⭐| Inheritance and Override |FoodChain|
-| 26. |Beginner|⭐| Inheritance and Override the state variable |FoodChain|
+| 22. |Beginner|⭐| Immutable and Constant |FoodChain ✅|
+| 23. |Beginner|⭐| Hash In Order |FoodChain ✅| 
+| 24. |Beginner|⭐| Inheritance |FoodChain ✅|
+| 25. |Beginner|⭐| Inheritance and Override |FoodChain ✅|
+| 26. |Beginner|⭐| Inheritance and Override the state variable |FoodChain ✅|
 | 27. |Beginner|⭐||FoodChain|
 | 28. |Beginner|⭐||FoodChain|
 | 29. |Beginner|⭐||FoodChain|
@@ -82,7 +82,7 @@
 | 61. ||⭐⭐||Dino|
 | 62. |Token|⭐⭐||FoodChain|
 | 63. |Token|⭐⭐||FoodChain|
-| 64. ||⭐⭐| Prime |FoodChain|
+| 64. | DSA |⭐⭐| Prime |FoodChain ✅|
 | 65. ||⭐⭐||FoodChain|
 | 66. ||⭐⭐||FoodChain|
 | 67. ||⭐⭐||FoodChain|
