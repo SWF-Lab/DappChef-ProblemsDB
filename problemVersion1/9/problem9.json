@@ -1,54 +1,14 @@
 {
   "problemNumber": 9,
   "problemVersion": 1,
-  "description": "Custom Error ! After solidity v0.8.4, save your gas.",
+  "description": "Deploy another contract ! Use your contract to deploy a contract.",
   "constructorCallData": [],
   "problemSolution": [
       {
-        "methodName": "%testAssert",
+        "methodName": "checkAns()",
         "callData": [],
-        "expectReturn": ["assert"]
-      },
-      {
-        "methodName": "%testRequire",
-        "callData": [],
-        "expectReturn": ["Required"]
-      },
-      {
-        "methodName": "%testRevert",
-        "callData": [],
-        "expectReturn": ["Reverted"]
-      },
-      {
-        "methodName": "addNumByOne()",
-        "callData": [],
-        "expectReturn": []
-      },
-      {
-        "methodName": "%testRequire",
-        "callData": [],
-        "expectReturn": []
-      },
-      {
-        "methodName": "%testRevert",
-        "callData": [],
-        "expectReturn": []
-      },
-      {
-        "methodName": "%testAssert",
-        "callData": [],
-        "expectReturn": []
+        "expectReturn": [true]
       }
   ],
-  "attributes": [
-      {
-        "trait_type": "difficulty", 
-        "value": 1
-      },
-      {
-        "trait_type": "class", 
-        "value": "Beginner"
-      }
-  ],
-  "image": "ipfs://<ipfsPrefix>/8"
+  "image": "ipfs://<ipfsPrefix>/9"
 }

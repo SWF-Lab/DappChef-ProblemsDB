@@ -1,23 +1,33 @@
 // SPDX-License-Identifier: Apache License
-pragma solidity ^0.8.17; 
-// 1. The system will call the three functions first and they should all revert.
-// 2. then the system call `addNumByOne` 
-// 3. After that the system will call the three functions and they should all pass without any error message
-// 4. DO NOTHNG after the requirements.
-contract answer8 {
-  uint256 public balance = 0;
+pragma solidity ^0.8.17;
 
-  // TODO: Write a function named `testAssert` using `assert`
+// The system will only deploy `problem9()`, write the code in the constructor.
+// The system will call `checkAns()` to check your answer.
+
+contract toBeDeployed {
+  bool public deployed;
+
+  function setDeployed() external {
+    deployed = true;
+  }
+  function getDeployed() external view returns (bool) {
+    return deployed;
+  }
+}
+
+contract problem9 {
+  toBeDeployed public deployContract;
+
+  constructor() {
+
+    // TODO: Deploy the contract `toBeDeployed`
+
+    // TODO: Call `setDeployed()` in toBeDeployed to set `deployed` to true.
 
 
-  // TODO: Write a function named `testRequire` using `require`, the error message should be "Required" if reverted.
+  }
 
-
-  // TODO: Write a function named `testRevert` using `revert`, the error message should be "Reverted" if reverted.
-
-
-
-  function addNumByOne() external {
-    balance++;
+  function checkAns() external view returns (bool) {
+    return deployContract.getDeployed();
   }
 }
