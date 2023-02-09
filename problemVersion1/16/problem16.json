@@ -1,0 +1,39 @@
+{
+    "problemNumber": 16,
+    "problemVersion": 1,
+    "description": "ERC20 ! Build ERC20 -PART 1.",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+          "methodName": "balanceOf(address)",
+          "callData": ["MSG_SENDER"],
+          "expectReturn": [100]
+        },
+        {
+            "methodName": "transfer(address,uint256)",
+            "callData": ["0xdCca4cE55773359E191110Eeb21E0413f770032B", 10],
+            "expectReturn": []
+        },
+        {
+          "methodName": "balanceOf(address)",
+          "callData": ["0xdCca4cE55773359E191110Eeb21E0413f770032B"],
+          "expectReturn": [10]
+        },
+        {
+          "methodName": "balanceOf(address)",
+          "callData": ["MSG_SENDER"],
+          "expectReturn": [90]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Token"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/16"
+}

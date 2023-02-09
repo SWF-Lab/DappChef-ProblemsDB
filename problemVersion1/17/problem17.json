@@ -1,0 +1,47 @@
+{
+    "problemNumber": 17,
+    "problemVersion": 1,
+    "description": "ERC20 ! Build ERC20 -PART 2.",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+          "methodName": "approve",
+          "callData": [
+            "0xdCca4cE55773359E191110Eeb21E0413f770032B",10
+          ],
+          "expectReturn": []
+        },
+        {
+            "methodName": "allowance(address,address)",
+            "callData": [
+              "MSG_SENDER", "0xdCca4cE55773359E191110Eeb21E0413f770032B"
+            ],
+            "expectReturn": [10]
+        },
+        {
+          "methodName": "transferFrom(address,address,uint256)",
+          "callData": [
+            "MSG_SENDER", 
+            "0xdCca4cE55773359E191110Eeb21E0413f770032B",
+            10
+          ],
+          "expectReturn": []
+        },
+        {
+          "methodName": "balanceOf(address)",
+          "callData": ["MSG_SENDER"],
+          "expectReturn": [90]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Token"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/17"
+}

@@ -13,7 +13,7 @@ contract Called {
   } 
 }
 
-contract answer12 {
+contract problem12 {
   Called public called;
   bool public success; 
   
