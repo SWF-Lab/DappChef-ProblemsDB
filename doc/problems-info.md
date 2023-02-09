@@ -19,23 +19,23 @@
 | No. | Class | Difficulty | Statement | Setter |
 | --- | --- | :---: | --- | :---: |
 | 0. |Beginner|⭐| Compiler Version Declaration |Mur** ✅|
-| 1. |Beginner|⭐| State Variable |Dino|
-| 2. |Beginner|⭐| Functions ( pure/ view ) |Dino|
-| 3. |Beginner|⭐| If/ Else |Dino|
-| 4. |Beginner|⭐| Mapping |Dino|
-| 5. |Beginner|⭐| Modifier |Dino|
-| 6. |Beginner|⭐| Fallback and Receive |Dino|
-| 7. |Beginner|⭐| Function overload |Dino|
-| 8. |Beginner|⭐| Revert, Require, Assert |Dino|
-| 9. |Beginner|⭐| Deploy contract with contract |Dino|
-| 10. |Beginner|⭐| Interface |Dino|
-| 11. |Beginner|⭐| Send ETH to another contract |Dino|
-| 12. |Beginner|⭐| Call |Dino|
-| 13. |Beginner|⭐| Struct |Dino|
+| 1. |Beginner|⭐| State Variable |Dino ✅|
+| 2. |Beginner|⭐| Functions ( pure/ view ) |Dino ✅|
+| 3. |Beginner|⭐| If/ Else |Dino ✅|
+| 4. |Beginner|⭐| Mapping |Dino ✅|
+| 5. |Beginner|⭐| Modifier |Dino ✅|
+| 6. |Beginner|⭐| Fallback and Receive |Dino ✅|
+| 7. |Beginner|⭐| Function overload |Dino ✅|
+| 8. |Beginner|⭐| Revert, Require, Assert |Dino ✅|
+| 9. |Beginner|⭐| Deploy contract with contract |Dino ✅|
+| 10. |Beginner|⭐| Interface |Dino ✅|
+| 11. |Beginner|⭐| Send ETH to another contract |Dino ✅|
+| 12. |Beginner|⭐| Call |Dino ✅|
+| 13. |Beginner|⭐| Struct |Dino ✅|
 | 14. |Beginner|⭐| Event |Mur** ✅|
 | 15. |Beginner|⭐| Constructor |Mur** ✅|
-| 16. |Token|⭐||Dino|
-| 17. |Token|⭐||Dino|
+| 16. |Token|⭐| Build ERC20 part 1 |Dino ✅|
+| 17. |Token|⭐| Build ERC20 part 2 |Dino ✅|
 | 18. |Token|⭐||Dino|
 | 19. |Token|⭐||Dino|
 | 20. |Token|⭐||Dino|
