@@ -6,14 +6,15 @@
 
 ## Table of Contents
 
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Table of Contents](#table-of-contents-1)
 - [Rules](#rules)
-  - [Important Announcement](#important-announcement)
-  - [Start the Journey](#start-the-journey)
-  - [Judge](#judge)
+    - [TODO Functionality](#todo-functionality)
+    - [Important Announcement](#important-announcement)
+    - [Start the Journey](#start-the-journey)
+    - [Judge](#judge)
+- [Metadata](./doc/metadata.md)
+- [How to Use Special Operation](./doc/special-operations.md)
+- [Problems Information & Metadata](./doc/problems-info.md)
+- [Reference](./doc/reference.md)
 
 ---
 
@@ -107,72 +108,5 @@ constructor() {
 constructor() {
     owner = tx.origin;
 }
-```
-
-### Start the Journey
-
-1. Clone the repo
-```bash
-$ git clone https://github.com/SWF-Lab/DappChef-Core-Contract.git
-```
-2. Make sure the `.env` arguments are same as your image. (add your private key of account which **has enough goerliEther**).
-```bash
-$ cp .env.example .env
-```
-3. Prepare the node_modules
-```bash
-$ yarn install
-```
-4. Compile the contract (**If the `problem<number>.sol` compiled failed is normal**):
-```bash
-$ yarn compile --force
-```
-5. Create new branch, reference with SWF-Lab/github_practice:
-```bash
-$ git checkout main # Change to the main branch
-$ git pull # Make sure the local code is same with the remote
-$ git checkout -b add-my-context # Create new branch
-```
-6. Put your problems to the folder `problemVersion1` with template [below](#problems-metadata-template).
-7. Write your problems statement and its **Token Metadata** in [Metadata Folder](/Metadata)...
-8. Push the code to remote repo:
-```bash
-$ git add .
-$ git commit -m "add new problems from x to y"
-$ git push
-```
-
-### Judge 
-
-Use the Judge Script to test your problem in Goerli.
-
-> Make sure the problem contract **has been compiled** (`$ yarn compile`), and the private key in the `.env` is as your image.
-
-```
-$ yarn execute scripts/judgeGoerli.ts --network goerli
->
-yarn run v1.22.18
-$ node -r ts-node/register -r tsconfig-paths/register hardhatRunWithArgs.ts scripts/judgeGoerli.ts --network goerli
-√ Please enter the problemNumber you want to judge: ... 15
-Trying to deploy problem 15 with Deployer Contract:
-    Tx successful with hash: 0xaaa0917f1d4fc2f78760167e5fe1e2055d88aebeea2ca09e661c0910dc748043
-    Deployed contract address is 0xC9f1e159fD3fA27B8a3e235947d499A01579E3A9
-
-Begin the Judging...
-
-Testing 0: getOwner()
-    - Sameple Input:
-    - Sameple Output: 0xdCca4cE55773359E191110Eeb21E0413f770032B
-    - Your Output: 0xdCca4cE55773359E191110Eeb21E0413f770032B
-    ...Accepted!
-
-Testing 1: getFoo()
-    - Sameple Input:
-    - Sameple Output: 321
-    - Your Output: 321
-    ...Accepted!
-
-All Accepted!
-Done in 18.75s.
 ```
 
