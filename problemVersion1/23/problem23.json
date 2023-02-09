@@ -1,0 +1,31 @@
+{
+    "problemNumber": 23,
+    "problemVersion": 1,
+    "description": "Hash In Order",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "hashInOrder()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "get_result",
+            "callData": [],
+            "expectReturn": [
+                "0x0c9abc34bde31d70a3c9d76141f5d4a79113efa5cf807a4e0bd01ef60ef4d573"
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/23"
+}

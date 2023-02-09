@@ -1,0 +1,24 @@
+{
+    "problemNumber": 26,
+    "problemVersion": 1,
+    "description": "Inheritance and Override the state variable",
+    "constructorCallData": [["string", "Jackson"]],
+    "problemSolution": [
+        {
+            "methodName": "getName()",
+            "callData": [],
+            "expectReturn": ["Hi, my name is Jackson"]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/26"
+}
