@@ -11,7 +11,6 @@
     - [Important Announcement](#important-announcement)
     - [Start the Journey](#start-the-journey)
     - [Judge](#judge)
-    - [Problems Template](#problems-template)
 - [Metadata](./doc/metadata.md)
 - [How to Use Special Operation](./doc/special-operations.md)
 - [Problems Information & Metadata](./doc/problems-info.md)
