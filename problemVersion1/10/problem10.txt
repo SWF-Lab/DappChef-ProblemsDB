@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: Apache License
 pragma solidity ^0.8.17;
 
-// The system will deploy `Called` for you, all use of interface is coded for you. 
-// All you need to write is the interface declaration.
+// The system will deploy `Called` for you
 contract Called {
   bool public called = false;
 
@@ -25,7 +24,8 @@ contract problem10 {
   }
 
   function setCalled() external {
-    ICalled(address(calledContract)).setCalled();
+    // TODO: finish this function by using `ICalled` to call `setCalled()` in contract `Called`. 
+
   }
 
   function checkAns() external view returns (bool) {
