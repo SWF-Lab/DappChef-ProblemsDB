@@ -64,7 +64,7 @@
 | 10. |Beginner|⭐| Interface |Dino|
 | 11. |Beginner|⭐| Send ETH to another contract |Dino|
 | 12. |Beginner|⭐| Call |Dino|
-| 13. |Beginner|⭐||Dino|
+| 13. |Beginner|⭐| Struct |Dino|
 | 14. |Beginner|⭐| Event |Mur** ✅|
 | 15. |Beginner|⭐| Constructor |Mur** ✅|
 | 16. |Token|⭐||Dino|
