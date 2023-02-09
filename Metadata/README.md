@@ -35,17 +35,18 @@
 
 ### Problems Classification Instructions
 
-| Learning Roadmap(L.R) | Class | Statement | Difficulty |
+| Level | Class | Statement | Difficulty |
 | :---: | :---: | --- | :---: |
-|S.C Beginner L.R | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
-|S.C Beginner L.R | Token	| Complete ERC-20/721 Construction	|⭐~⭐⭐|
-|S.C Junior L.R | DeFi	|	|⭐⭐|
-|S.C Junior L.R | Design_Pattern	| Upgradable Contract, Contract Wallet, Auction Model | ⭐⭐ |
+|Beginner  | Beginner |- From 0 to 1 Web3 Beginner Learning Roadmap <br/> - Basic Solidity Syntax Skill, Basic Dapp Skill & Concept|⭐|
+|Beginner | Token	| Complete ERC-20/721 Construction	|⭐~⭐⭐|
+|Junior | DeFi	|	|⭐⭐|
+|Junior | Design_Pattern	| Upgradable Contract, Contract Wallet, Auction Model | ⭐⭐ |
 | Interview Problems | Company	| Collected from lots of famous web3 company classical interview problem	|⭐⭐|
-|S.C Senior L.R | DSA | 	|⭐⭐~⭐⭐⭐|
-|S.C Senior L.R | Gas_Optim | 	|⭐⭐⭐|
-|Theories L.R |	Cryptography | ZKP, Hash, Signature	|⭐⭐⭐|
-|EVM L.R| EVM | Assembly, precompiled	|⭐⭐⭐|
+|Senior | DSA | 	|⭐⭐~⭐⭐⭐|
+|Senior | Gas_Optim | 	|⭐⭐⭐|
+|Senior |	Cryptography | ZKP, Hash, Signature	|⭐⭐⭐|
+|Senior| EVM | Assembly, precompiled	|⭐⭐⭐|
+|Senior| Scalability | Layer2, Side-Chain, Cross-Chain	|⭐⭐⭐|
 
 ### problemVersion1
 | No. | Class | Difficulty | Statement | Setter |
@@ -59,10 +60,10 @@
 | 6. |Beginner|⭐| Fallback and Receive |Dino|
 | 7. |Beginner|⭐| Function overload |Dino|
 | 8. |Beginner|⭐| Revert, Require, Assert |Dino|
-| 9. |Beginner|⭐||Dino|
-| 10. |Beginner|⭐||Dino|
-| 11. |Beginner|⭐||Dino|
-| 12. |Beginner|⭐||Dino|
+| 9. |Beginner|⭐| Deploy contract with contract |Dino|
+| 10. |Beginner|⭐| Interface |Dino|
+| 11. |Beginner|⭐| Send ETH to another contract |Dino|
+| 12. |Beginner|⭐| Call |Dino|
 | 13. |Beginner|⭐||Dino|
 | 14. |Beginner|⭐| Event |Mur** ✅|
 | 15. |Beginner|⭐| Constructor |Mur** ✅|
@@ -92,7 +93,7 @@
 | 39. |Token|⭐||FoodChain|
 | 40. |Token|⭐||FoodChain|
 | 41. |Company|⭐⭐|Signature && EIP-1271|Mur** ✅|
-| 42. |Company|⭐⭐||Mur**|
+| 42. |Company|⭐⭐|SupportsInterface (ERC-165) & RoyaltyInfo (ERC-2981) |Mur** ✅|
 | 43. |Company|⭐⭐||Mur**|
 | 44. |Company|⭐⭐||Mur**|
 | 45. |Company|⭐⭐||Mur**|
@@ -146,8 +147,8 @@
 | 93. |Company|⭐⭐⭐||Mur**|
 | 94. |Company|⭐⭐⭐||Mur**|
 | 95. |DSA|⭐⭐⭐|Floating Point Division|Mur**✅|
-| 96. ||⭐⭐⭐||Mur**|
-| 97. ||⭐⭐⭐||Mur**|
+| 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur**|
+| 97. |Scalability|⭐⭐⭐|Send Message to Layer2 - Optimism|Mur**|
 | 98. ||⭐⭐⭐||Mur**|
 | 99. ||⭐⭐⭐||Mur**|
 | 100. ||⭐⭐⭐||Mur**|
