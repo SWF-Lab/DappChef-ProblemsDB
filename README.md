@@ -176,3 +176,8 @@ Testing 1: getFoo()
 All Accepted!
 Done in 18.75s.
 ```
+### Appendix: Produce Problems Information
+
+```
+$ yarn execute scripts/produceProblemsJSON.ts
+```
