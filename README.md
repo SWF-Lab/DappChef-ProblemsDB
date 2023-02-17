@@ -13,7 +13,7 @@
     - [Judge](#judge)
 - [Metadata](./doc/metadata.md)
 - [How to Use Special Operation](./doc/special-operations.md)
-- [Problems Information & Metadata](./doc/problems-info.md)
+- [Problems Information](./doc/problems-info.md)
 - [Reference](./doc/reference.md)
 
 ---
@@ -30,7 +30,7 @@ contract answer48 is ERC721, ERC721Storage {
     // ...
 }
 ```
-`problem48.sol` 的 contract 必須為 `problem48`：
+`problem48.txt` 的 contract 必須為 `problem48`：
 ```solidity
 contract problem48 is ERC721, ERC721Storage {
     // ...
@@ -124,7 +124,7 @@ $ cp .env.example .env
 ```bash
 $ yarn install
 ```
-4. Compile the contract (**If the `problem<number>.sol` compiled failed is normal**):
+4. Compile the contract:
 ```bash
 $ yarn compile --force
 ```
