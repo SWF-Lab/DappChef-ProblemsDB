@@ -7,12 +7,11 @@
 ## Table of Contents
 
 - [Rules](#rules)
-    - [TODO Functionality](#todo-functionality)
     - [Important Announcement](#important-announcement)
     - [Start the Journey](#start-the-journey)
     - [Judge](#judge)
 - [Metadata](./doc/metadata.md)
-- [How to Use Special Operation](./doc/special-operations.md)
+- [Special Operation](./doc/special-operations.md)
 - [Problems Information](./doc/problems-info.md)
 - [Reference](./doc/reference.md)
 
