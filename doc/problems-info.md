@@ -68,57 +68,57 @@
 | 47. |Company|⭐⭐|Advanced Withdraw |Mur** ✅|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
 | 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
-| 50. ||⭐⭐||Dino|
-| 51. ||⭐⭐||Dino|
-| 52. ||⭐⭐||Dino|
-| 53. ||⭐⭐||Dino|
-| 54. ||⭐⭐||Dino|
-| 55. ||⭐⭐||Dino|
-| 56. ||⭐⭐||Dino|
-| 57. ||⭐⭐||Dino|
-| 58. ||⭐⭐||Dino|
-| 59. ||⭐⭐||Dino|
-| 60. ||⭐⭐||Dino|
-| 61. ||⭐⭐||Dino|
+| 50. |Design_Pattern|⭐⭐||Dino|
+| 51. |Design_Pattern|⭐⭐||Dino|
+| 52. |Design_Pattern|⭐⭐||Dino|
+| 53. |Design_Pattern|⭐⭐||Dino|
+| 54. |Design_Pattern|⭐⭐||Dino|
+| 55. |Design_Pattern|⭐⭐||Dino|
+| 56. |Design_Pattern|⭐⭐||Dino|
+| 57. |DeFi|⭐⭐||Dino|
+| 58. |DeFi|⭐⭐||Dino|
+| 59. |DeFi|⭐⭐||Dino|
+| 60. |DeFi|⭐⭐||Dino|
+| 61. |DeFi|⭐⭐||Dino|
 | 62. |Token|⭐⭐||FoodChain|
 | 63. |Token|⭐⭐||FoodChain|
 | 64. | DSA |⭐⭐| Prime |FoodChain ✅|
-| 65. ||⭐⭐||FoodChain|
-| 66. ||⭐⭐||FoodChain|
-| 67. ||⭐⭐||FoodChain|
-| 68. ||⭐⭐||FoodChain|
-| 69. ||⭐⭐||FoodChain|
-| 70. ||⭐⭐||FoodChain|
-| 71. ||⭐⭐||FoodChain|
-| 72. ||⭐⭐||FoodChain|
-| 73. ||⭐⭐||FoodChain|
+| 65. |Design_Pattern|⭐⭐||FoodChain|
+| 66. |Design_Pattern|⭐⭐||FoodChain|
+| 67. |Design_Pattern|⭐⭐||FoodChain|
+| 68. |Design_Pattern|⭐⭐||FoodChain|
+| 69. |Design_Pattern|⭐⭐||FoodChain|
+| 70. |Design_Pattern|⭐⭐||FoodChain|
+| 71. |Cryptography|⭐⭐||FoodChain|
+| 72. |DeFi|⭐⭐||FoodChain|
+| 73. |DeFi|⭐⭐||FoodChain|
 | 74. |Token|⭐⭐||Dino|
 | 75. |Token|⭐⭐||Dino|
-| 76. ||⭐⭐||Dino|
-| 77. ||⭐⭐||Dino|
-| 78. ||⭐⭐||Dino|
-| 79. ||⭐⭐||Dino|
-| 80. ||⭐⭐||Dino|
-| 81. ||⭐⭐||Dino|
-| 82. ||⭐⭐||Dino|
-| 83. ||⭐⭐||Dino|
-| 84. ||⭐⭐||Dino|
-| 85. ||⭐⭐||Dino|
-| 86. ||⭐⭐⭐||Dino|
-| 87. ||⭐⭐⭐||Dino|
-| 88. ||⭐⭐⭐||Dino|
-| 89. ||⭐⭐⭐||FoodChain|
-| 90. ||⭐⭐⭐||FoodChain|
-| 91. ||⭐⭐⭐||FoodChain|
+| 76. |Cryptography|⭐⭐||Dino|
+| 77. |Cryptography|⭐⭐||Dino|
+| 78. |Cryptography|⭐⭐||Dino|
+| 79. |Design_Pattern|⭐⭐||Dino|
+| 80. |Design_Pattern|⭐⭐||Dino|
+| 81. |Design_Pattern|⭐⭐||Dino|
+| 82. |Design_Pattern|⭐⭐||Dino|
+| 83. |DeFi|⭐⭐||Dino|
+| 84. |DeFi|⭐⭐||Dino|
+| 85. |DeFi|⭐⭐||Dino|
+| 86. |Design_Pattern|⭐⭐⭐||Dino|
+| 87. |Cryptography|⭐⭐⭐||Dino|
+| 88. |Gas_Optim|⭐⭐⭐||Dino|
+| 89. |Design_Pattern|⭐⭐⭐||FoodChain|
+| 90. |Cryptography|⭐⭐⭐||FoodChain|
+| 91. |Gas_Optim|⭐⭐⭐||FoodChain|
 | 92. |Company|⭐⭐⭐|Gnosis - MultiSigWallet|Mur**|
 | 93. |Company|⭐⭐⭐||Mur**|
 | 94. |Company|⭐⭐⭐||Mur**|
 | 95. |DSA|⭐⭐⭐|Floating Point Division|Mur**✅|
 | 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur**|
 | 97. |Scalability|⭐⭐⭐|Send Message to Layer2 - Optimism|Mur**|
-| 98. ||⭐⭐⭐||Mur**|
-| 99. ||⭐⭐⭐||Mur**|
-| 100. ||⭐⭐⭐||Mur**|
+| 98. |Scalability|⭐⭐⭐||Mur**|
+| 99. |EVM|⭐⭐⭐||Mur**|
+| 100. |EVM|⭐⭐⭐||Mur**|
 
 ### problemVersion2
 
