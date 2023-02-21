@@ -2,6 +2,7 @@
 
 ### General Learnging Resource
 - [Solidity by Example](https://solidity-by-example.org/)
+- [Getting Started with Solidity](https://cryptomarketpool.com/getting-started-with-solidity/)
 - [Crypto Zombie](https://cryptozombies.io/)
 - [Appworks School Blockchain Program Resource](https://github.com/AppWorks-School/Blockchain-Resource)
 

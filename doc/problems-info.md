@@ -45,10 +45,10 @@
 | 24. |Beginner|⭐| Inheritance |FoodChain ✅|
 | 25. |Beginner|⭐| Inheritance and Override |FoodChain ✅|
 | 26. |Beginner|⭐| Inheritance and Override the state variable |FoodChain ✅|
-| 27. |Beginner|⭐||FoodChain|
-| 28. |Beginner|⭐||FoodChain|
-| 29. |Beginner|⭐||FoodChain|
-| 30. |Beginner|⭐||FoodChain|
+| 27. |Beginner|⭐|Assembly|FoodChain|
+| 28. |Beginner|⭐|Bitwise Operators|FoodChain|
+| 29. |Beginner|⭐|Delegatecall|FoodChain|
+| 30. |Beginner|⭐|Compare String|FoodChain|
 | 31. |Beginner|⭐||FoodChain|
 | 32. |Beginner|⭐||FoodChain|
 | 33. |Beginner|⭐||FoodChain|
@@ -117,8 +117,8 @@
 | 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur**|
 | 97. |Scalability|⭐⭐⭐|Send Message to Layer2 - Optimism|Mur**|
 | 98. |Scalability|⭐⭐⭐||Mur**|
-| 99. |EVM|⭐⭐⭐||Mur**|
-| 100. |EVM|⭐⭐⭐||Mur**|
+| 99. |EVM|⭐⭐⭐|Stack too deep|Mur**|
+| 100. |EVM|⭐⭐⭐|Off-Chain Storage|Mur**|
 
 ### problemVersion2
 
