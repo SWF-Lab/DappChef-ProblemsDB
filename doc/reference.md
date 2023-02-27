@@ -1,35 +1,21 @@
 # Reference
 
-### Roadmap
-1. Build these contracts:
-    - Lending contract (Based on Aave)
-    - Staking contract (Based on Synthetix)
-    - AMM (Based on Uniswap v2)
-    - ERC20, ERC721, ERC1155
-    - Centralized Stable Coin - (Based on USDC)
-    - Governance contract (Based on Compound)
-    - Understand the architect of uniswap v3 and curve
-    - Example:
-        - Uniswap v2, v3, curve - https://lnkd.in/g_wmxTpm
-        - Compound Governance - https://lnkd.in/gzac5m34
-        - Other - https://lnkd.in/gnGNRx7C
-2. Make sure you know how to:
-    - write unit tests
-    - write mocks
-    - use Trail of Bits Toolbox
-    - use Hardhat + Foundry
-    - use SDKs
-    - leverage the console with Node
-    - check for sol coverage and gas reports
-    - integrate contracts with frontend
-3. Learn about solidity patterns - https://lnkd.in/gzRYy3t9
-4. Learn about attack vectors - https://lnkd.in/gSV_bj9R
-5. Learn about gas optimization - https://lnkd.in/gCM692mQ
-
-### Learnging Resource
+### General Learnging Resource
 - [Solidity by Example](https://solidity-by-example.org/)
+- [Getting Started with Solidity](https://cryptomarketpool.com/getting-started-with-solidity/)
 - [Crypto Zombie](https://cryptozombies.io/)
 - [Appworks School Blockchain Program Resource](https://github.com/AppWorks-School/Blockchain-Resource)
+
+### Design Patterns Resource
+
+- [Solidity Patterns](https://fravoll.github.io/solidity-patterns/)
+- [dragonfly-xyz/useful-solidity-patterns](https://github.com/dragonfly-xyz/useful-solidity-patterns)
+- [harendra-shakya/smart-contract-attack-vectors](https://github.com/harendra-shakya/smart-contract-attack-vectors)
+- [harendra-shakya/solidity-gas-optimization](https://github.com/harendra-shakya/solidity-gas-optimization)
+
+### DeFi
+- [smartcontractkit/defi-minimal](https://github.com/smartcontractkit/defi-minimal)
+- [harendra-shakya/uniswap-unwrapped](https://github.com/harendra-shakya/uniswap-unwrapped)
 
 ### Vulnerability Resource
 - [Ethernaut](https://ethernaut.openzeppelin.com/)

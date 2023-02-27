@@ -11,7 +11,7 @@
 - ✅ [EXPECT_ERROR](#expect_error): Expect the `require`, `revert`, `assert` to be triggered.
 - ✅ [WITH_ETHER](#with_ether): Send Ether (or call function with ether) to the Contract
 - ✅ [MSG_SENDER](#MSG_SENDER): Use User's Address to be expectReturn or callData
-- ⬜️ [WAIT](#wait): Wait for few blocks
+- ❌ [WAIT](#wait): Wait for few blocks
 - ⬜️ [GAS_USED_LESS](#GAS_USED_LESS): Expect the total gas used less than specific amount.
 
 ### Constructor
