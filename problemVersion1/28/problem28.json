@@ -1,0 +1,29 @@
+{
+    "problemNumber": 28,
+    "problemVersion": 1,
+    "description": "Bitwise operator - 1",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "getOnesComplement(uint16)",
+            "callData": [1000],
+            "expectReturn": [[64535]]
+        },
+        {
+            "methodName": "getTwosComplement(uint16)",
+            "callData": [1000],
+            "expectReturn": [[64536]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/27"
+}
