@@ -20,5 +20,15 @@
         "expectReturn": [50000]
       }
   ],
+  "attributes": [
+    {
+      "trait_type": "difficulty", 
+      "value": 1
+    },
+    {
+      "trait_type": "class", 
+      "value": "Beginner"
+    }
+  ],
   "image": "ipfs://<ipfsPrefix>/11"
 }
