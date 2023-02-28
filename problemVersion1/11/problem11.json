@@ -1,7 +1,7 @@
 {
   "problemNumber": 11,
   "problemVersion": 1,
-  "description": "Send ETH ! Send ETH to another contract using call.",
+  "description": "Send ETH using call",
   "constructorCallData": [],
   "problemSolution": [
       {

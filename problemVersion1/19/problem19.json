@@ -1,0 +1,54 @@
+{
+  "problemNumber": 19,
+  "problemVersion": 1,
+  "description": "ERC721 -part 1",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "%ownerOf(uint256)",
+        "callData": [0],
+        "expectReturn": ["token doesn't exist"]
+      },
+      {
+        "methodName": "%balanceOf(address)",
+        "callData": ["0x0000000000000000000000000000000000000000"],
+        "expectReturn": ["owner = zero address"]
+      },
+      {
+        "methodName": "%mint(address,uint256)",
+        "callData": ["0x0000000000000000000000000000000000000000"],
+        "expectReturn": ["mint to zero address"]
+      },
+      {
+        "methodName": "mint(address,uint256)",
+        "callData": ["0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac","100"],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%mint(address,uint256)",
+        "callData": ["0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac","100"],
+        "expectReturn": ["already minted"]
+      },
+      {
+        "methodName": "ownerOf(uint256)",
+        "callData": [100],
+        "expectReturn": ["0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"]
+      },
+      {
+        "methodName": "balanceOf(address)",
+        "callData": ["0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"],
+        "expectReturn": [1]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 1
+      },
+      {
+          "trait_type": "class",
+          "value": "Token"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/19"
+}

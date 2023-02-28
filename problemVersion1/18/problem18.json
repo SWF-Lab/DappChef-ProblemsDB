@@ -1,0 +1,34 @@
+{
+    "problemNumber": 18,
+    "problemVersion": 1,
+    "description": "ERC165",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+          "methodName": "supportsInterface(bytes4)",
+          "callData": ["0x01ffc9a7"],
+          "expectReturn": [true]
+        },
+        {
+          "methodName": "supportsInterface(bytes4)",
+          "callData": ["0x579ace26"],
+          "expectReturn": [true]
+        },
+        {
+          "methodName": "supportsInterface(bytes4)",
+          "callData": ["0x12345678"],
+          "expectReturn": [false]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Token"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/18"
+}

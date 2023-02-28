@@ -1,7 +1,7 @@
 {
   "problemNumber": 6,
   "problemVersion": 1,
-  "description": "Fallback and Receive, get your ethers with no reasons, good job.",
+  "description": "Fallback and Receive",
   "constructorCallData": [],
   "problemSolution": [
       {

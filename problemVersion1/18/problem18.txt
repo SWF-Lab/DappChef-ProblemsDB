@@ -1,0 +1,27 @@
+// SPDX-License-Identifier: Apache License
+pragma solidity ^0.8.17;
+
+// This is ERC165. Learn it before we move on to ERC721!
+interface IERC165 {
+    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+}
+
+interface IAnother {
+  function aFunction() external returns (bool);
+  function bFunction() external returns (bool);
+}
+
+
+contract problem18 is IERC165, IAnother {
+
+  // TODO: write a function named `supportsInterface` which takes a bytes4 as an input.
+  // This function check if the input interfaceID is supported by this contract.
+  // Note that `answer18` contract supports two interface: IERC165 and IAnother.
+
+
+    
+    function aFunction() external returns (bool) {}
+    function bFunction() external returns (bool) {}
+}
+
+
