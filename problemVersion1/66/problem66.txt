@@ -6,7 +6,7 @@ library SafeMath {
     
 }
 
-contract answer6 {
+contract problem66 {
     function operating(uint256 x, uint256 y, uint256 z, uint256 u) public pure returns(uint256) { 
         uint256 tmp; 
         tmp = SafeMath.safeAdd(x , type(uint256).max - 10);

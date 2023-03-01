@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract answer30 {
+contract problem30 {
     
     // TODO: this function can compare two strings and return a boolean which represent their consistency.
     function compareStrings(

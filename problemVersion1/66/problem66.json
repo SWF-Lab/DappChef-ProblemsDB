@@ -37,7 +37,7 @@
         },
         {
             "trait_type": "class",
-            "value": ""
+            "value": "Design_Pattern"
         }
     ],
     "image": "ipfs://<ipfsPrefix>/66"
