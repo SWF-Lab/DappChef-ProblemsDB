@@ -1,0 +1,24 @@
+{
+    "problemNumber": 31,
+    "problemVersion": 1,
+    "description": "Overflow",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "overflow(uint8)",
+            "callData": [255],
+            "expectReturn": [[233]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/31"
+}
