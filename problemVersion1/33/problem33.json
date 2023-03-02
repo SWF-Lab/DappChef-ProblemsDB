@@ -1,0 +1,29 @@
+{
+    "problemNumber": 33,
+    "problemVersion": 1,
+    "description": "Assembly Check Zero Address",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "assemblyCheckZeroAddr(address)",
+            "callData": ["0x5B38Da6a701c568545dCfcB03FcB875f56beddC4"],
+            "expectReturn": [[true]]
+        },
+        {
+            "methodName": "%assemblyCheckZeroAddr(address)",
+            "callData": ["0x0000000000000000000000000000000000000000"],
+            "expectReturn": [["ZeroAddress()"]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/33"
+}
