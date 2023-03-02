@@ -1,0 +1,24 @@
+{
+    "problemNumber": 32,
+    "problemVersion": 1,
+    "description": "Underflow",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "underflow(int8)",
+            "callData": [-35],
+            "expectReturn": [[99]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/32"
+}

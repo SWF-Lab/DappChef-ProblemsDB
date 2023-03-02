@@ -1,0 +1,20 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract problem27 {
+    // TODO: given a bytes32, please use assembly to get the bytes 0-16, 17-26, 27-32 and assign them to a, b, c respectively. 
+
+    function getBytes() public pure returns (bytes16 a, bytes10 b, bytes6 c) {
+        bytes memory hash = abi.encodePacked(getHash());
+
+        assembly {
+            // TODO: hint: you should use `assembly` to complete this problem. 
+            // example  input: `0xaeac79af5ec09446b57415974205af978043c921bdd57bd7dd48268c9a23fa5f`
+            // example output: a: `0xaeac79af5ec09446b57415974205af97`, b: `0x8043c921bdd57bd7dd48`, c: `0x268c9a23fa5f`
+        }
+    }
+
+    function getHash() public pure returns (bytes32) {
+        return keccak256(abi.encodePacked("HASH/HASH/HASH/HASH"));
+    }
+}

@@ -1,0 +1,49 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract problem67 {
+    bytes16 private constant _SYMBOLS = "0123456789abcdef";
+    function log10(uint256 value) internal pure returns (uint256) {
+        uint256 result = 0;
+        unchecked {
+            if (value >= 10 ** 64) {
+                value /= 10 ** 64;
+                result += 64;
+            }
+            if (value >= 10 ** 32) {
+                value /= 10 ** 32;
+                result += 32;
+            }
+            if (value >= 10 ** 16) {
+                value /= 10 ** 16;
+                result += 16;
+            }
+            if (value >= 10 ** 8) {
+                value /= 10 ** 8;
+                result += 8;
+            }
+            if (value >= 10 ** 4) {
+                value /= 10 ** 4;
+                result += 4;
+            }
+            if (value >= 10 ** 2) {
+                value /= 10 ** 2;
+                result += 2;
+            }
+            if (value >= 10 ** 1) {
+                result += 1;
+            }
+        }
+        return result;
+    }
+
+    function toString(uint256 value) internal pure returns (string memory) {
+        unchecked {
+            // TODO: you should complete this function to convert a `uint256` into `string`.  
+        }
+    }
+
+    function checkAnswer(uint256 a, string memory b) public pure returns (bool) {
+        return (keccak256(abi.encodePacked(b)) == keccak256(abi.encodePacked(toString(a))));
+    }
+}

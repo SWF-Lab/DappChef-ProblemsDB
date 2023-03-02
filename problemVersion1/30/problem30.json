@@ -1,0 +1,29 @@
+{
+    "problemNumber": 30,
+    "problemVersion": 1,
+    "description": "Compare Strings",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "compareStrings(string,string)",
+            "callData": [ "WHAZUP", "WHAZUP"],
+            "expectReturn": [[true]]
+        }, 
+        {
+            "methodName": "compareStrings(string,string)",
+            "callData": [ "WUZZUP", "WHAZUP"],
+            "expectReturn": [[false]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/30"
+}

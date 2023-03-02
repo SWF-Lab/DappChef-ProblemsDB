@@ -1,0 +1,28 @@
+{
+    "problemNumber": 27,
+    "problemVersion": 1,
+    "description": "Assembly Memory Load",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "getBytes()",
+            "callData": [],
+            "expectReturn": [[
+                "0x664f44f64df7f2ccac33f594c4ae9f90",
+                "0xad7b28f9d1b3228840de",
+                "0x4cceea667b01"
+            ]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/27"
+}

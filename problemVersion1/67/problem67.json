@@ -1,0 +1,29 @@
+{
+    "problemNumber": 67,
+    "problemVersion": 1,
+    "description": "From Uint256 to String",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "checkAnswer(uint256,string)",
+            "callData": [15555, "15555"],
+            "expectReturn": [true]
+        },
+        {
+            "methodName": "checkAnswer(uint256,string)",
+            "callData": [18888, "18887"],
+            "expectReturn": [false]
+        } 
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Design_Pattern"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/67"
+}

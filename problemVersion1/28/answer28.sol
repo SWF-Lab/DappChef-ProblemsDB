@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract answer28 {
+    // TODO: given an uint16, please return a value of its 1's complement
+    // EX: 0x00000000000010011 (19) => 0x1111111111101100 (65516) 
+    function getOnesComplement(uint16 a) public pure returns (uint16) {
+        return ~a;
+    }
+
+    // TODO: given an uint16, please return a value of its 2's complement
+    // EX: 0x00000000000010011 (19) => 0x1111111111101101 (65517) 
+    function getTwosComplement(uint16 a) public pure returns (uint16) {
+        return ~a + 1;    
+    } 
+}
