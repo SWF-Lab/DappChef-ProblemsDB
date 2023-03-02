@@ -74,7 +74,7 @@ async function main() {
     for (let i = 0; i < solution.length; i++) {
 
         console.log(`    \nTesting ${i}: ${solution[i].methodName}`)
-        console.log(`    - Sameple Input: ${solution[i].callData}`)
+        console.log(`    - Sample Input: ${solution[i].callData}`)
     
         try{
             // If this methodName is Check Event Emitted
