@@ -91,7 +91,7 @@ async function main() {
                 const id = (log.topic).toString()
                 const eventTopics = (log.args.slice(0, indexedValue.length)).toString()
                 // Pass the non-index event for special target
-                const eventData = nonIndexedValue.length == 0 ?
+                const eventData = nonIndexedValue.length != 0 ?
                     (log.args.slice(indexedValue.length, indexedValue.length + nonIndexedValue.length)).toString()
                     : []
                 console.log(`    - Your Output: ${id},${eventTopics},${eventData}`)

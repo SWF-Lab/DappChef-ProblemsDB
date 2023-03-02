@@ -1,7 +1,7 @@
 {
-    "problemNumber": 50,
+    "problemNumber": 51,
     "problemVersion": 1,
-    "description": "English Auction",
+    "description": "Dutch Auction",
     "constructorCallData": [],
     "problemSolution": [
         {
@@ -20,5 +20,5 @@
             "value": "Design_Pattern"
         }
     ],
-    "image": "ipfs://<ipfsPrefix>/50"
+    "image": "ipfs://<ipfsPrefix>/51"
 }
