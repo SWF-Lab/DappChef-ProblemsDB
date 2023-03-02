@@ -84,7 +84,7 @@ async function main() {
                 const topics0 = ethers.utils.id((solution[i].methodName).substring(1))
                 const indexedValue = solution[i].expectReturn[0]
                 const nonIndexedValue = solution[i].expectReturn[1]
-                console.log(`    - Sameple Output: ${topics0},${indexedValue},${nonIndexedValue}`)
+                console.log(`    - Sample Output: ${topics0},${indexedValue},${nonIndexedValue}`)
 
                 // Get the Transaction Log
                 const log = AnswerContract.interface.parseLog(pastTXInfo["logs"][0])
@@ -164,7 +164,7 @@ async function main() {
                     continue
                 }
 
-                console.log(`    - Sameple Output: ${solution[i].expectReturn}`)
+                console.log(`    - Sample Output: ${solution[i].expectReturn}`)
                 console.log(`    - Your Output: ${_return}`)
                 if (_return.toString() == solution[i].expectReturn.toString()) {
                     console.log(`    ...Accepted!`)
