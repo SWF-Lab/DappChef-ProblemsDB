@@ -36,22 +36,22 @@
 | 15. |Beginner|⭐| Constructor |Mur** ✅|
 | 16. |Token|⭐| Build ERC20 part 1 |Dino ✅|
 | 17. |Token|⭐| Build ERC20 part 2 |Dino ✅|
-| 18. |Token|⭐||Dino|
-| 19. |Token|⭐||Dino|
-| 20. |Token|⭐||Dino|
+| 18. |Token|⭐| ERC721- part 1 ERC165|Dino|
+| 19. |Token|⭐|ERC721 -part 2 build|Dino|
+| 20. |Token|⭐|ERC721 -part3 build|Dino|
 | 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
 | 22. |Beginner|⭐| Immutable and Constant |FoodChain ✅|
 | 23. |Beginner|⭐| Hash In Order |FoodChain ✅| 
 | 24. |Beginner|⭐| Inheritance |FoodChain ✅|
 | 25. |Beginner|⭐| Inheritance and Override |FoodChain ✅|
 | 26. |Beginner|⭐| Inheritance and Override the state variable |FoodChain ✅|
-| 27. |Beginner|⭐|Assembly|FoodChain|
-| 28. |Beginner|⭐|Bitwise Operators|FoodChain|
-| 29. |Beginner|⭐|Delegatecall|FoodChain|
-| 30. |Beginner|⭐|Compare String|FoodChain|
-| 31. |Beginner|⭐||FoodChain|
-| 32. |Beginner|⭐||FoodChain|
-| 33. |Beginner|⭐||FoodChain|
+| 27. |Beginner|⭐|Assembly|FoodChain✅|
+| 28. |Beginner|⭐|Bitwise Operators|FoodChain✅|
+| 29. |Beginner|⭐|Delegatecall|FoodChain✅|
+| 30. |Beginner|⭐|Compare String|FoodChain✅|
+| 31. |Beginner|⭐|Overflow|FoodChain ✅|
+| 32. |Beginner|⭐|Underflow|FoodChain ✅|
+| 33. |Beginner|⭐|Assembly Check Zero Address|FoodChain ✅|
 | 34. |Beginner|⭐||FoodChain|
 | 35. |Beginner|⭐||FoodChain|
 | 36. |Token|⭐||FoodChain|
@@ -68,10 +68,10 @@
 | 47. |Company|⭐⭐|Advanced Withdraw |Mur** ✅|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
 | 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
-| 50. |Design_Pattern|⭐⭐||Dino|
-| 51. |Design_Pattern|⭐⭐||Dino|
-| 52. |Design_Pattern|⭐⭐||Dino|
-| 53. |Design_Pattern|⭐⭐||Dino|
+| 50. |Design_Pattern|⭐⭐|English Auction|Dino|
+| 51. |Design_Pattern|⭐⭐|Dutch Auction|Dino|
+| 52. |Design_Pattern|⭐⭐|Reentrancy|Dino|
+| 53. |Design_Pattern|⭐⭐|MultiCall|Dino|
 | 54. |Design_Pattern|⭐⭐||Dino|
 | 55. |Design_Pattern|⭐⭐||Dino|
 | 56. |Design_Pattern|⭐⭐||Dino|
@@ -83,9 +83,9 @@
 | 62. |Token|⭐⭐||FoodChain|
 | 63. |Token|⭐⭐||FoodChain|
 | 64. | DSA |⭐⭐| Prime |FoodChain ✅|
-| 65. |Design_Pattern|⭐⭐||FoodChain|
-| 66. |Design_Pattern|⭐⭐||FoodChain|
-| 67. |Design_Pattern|⭐⭐||FoodChain|
+| 65. |Design_Pattern|⭐⭐|Faucet - ERC20|FoodChain✅|
+| 66. |Design_Pattern|⭐⭐|SafeMath|FoodChain ✅|
+| 67. |Design_Pattern|⭐⭐|From Uint256 to String|FoodChain ✅|
 | 68. |Design_Pattern|⭐⭐||FoodChain|
 | 69. |Design_Pattern|⭐⭐||FoodChain|
 | 70. |Design_Pattern|⭐⭐||FoodChain|
