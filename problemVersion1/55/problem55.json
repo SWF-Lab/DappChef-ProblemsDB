@@ -1,0 +1,31 @@
+{
+  "problemNumber": 55,
+  "problemVersion": 1,
+  "description": "EIP-712",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "getHash(uint256,address)",
+        "callData": [
+          123, "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"
+        ],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getAns()",
+        "callData": [],
+        "expectReturn": ["0x3e6fd8dfe8a8824b3a56e199559bb3ce01d5ec59d97252c28a49907c1367d024"]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 2
+      },
+      {
+          "trait_type": "class",
+          "value": "Design_Pattern"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/55"
+}

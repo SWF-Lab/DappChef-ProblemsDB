@@ -1,0 +1,64 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+// This is a vulnerable contract
+// We have a contract named problem52 which can steal ethers from this contract by calling `attack`.
+// modify VulnerableContract to prevent reentrancy from happening.
+contract VulnerableContract {
+    mapping (address => uint) public balances;
+    
+    //TODO: modify for preventing reentrancy
+
+
+
+    receive() external payable {}
+
+    function deposit() public payable {
+      balances[msg.sender] += msg.value;
+    }
+
+    function withdraw() public {
+        uint bal = balances[msg.sender];
+        require(bal > 0);
+
+        (bool success, ) = msg.sender.call{value: bal}("");
+        require(success, "Transfer failed");
+
+        balances[msg.sender] = 0;
+    }
+
+    function getBalance() public view returns (uint256) {
+      return address(this).balance;
+    }
+}
+
+contract problem52 {
+  VulnerableContract public vc;
+  uint256 amount = 1000000000 wei;
+
+  receive() external payable {
+    if (address(vc).balance >= 1000000000 wei) {
+      vc.withdraw();
+    }
+  }
+  constructor() payable {}
+
+  function deployContract() external {
+    vc = new VulnerableContract();
+  }
+
+  function sendETH() public {
+    (bool success, ) = address(vc).call{value: 1000000000}("");   
+    require(success, "sendETH not success");
+  }
+
+  function attack() public payable {
+    vc.deposit{value: 1000000000}();
+    vc.withdraw();
+  }
+
+  function getVcBalance() external view returns(uint256) {
+    return vc.getBalance();
+  }
+
+}

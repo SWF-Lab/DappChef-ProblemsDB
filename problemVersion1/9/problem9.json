@@ -1,7 +1,7 @@
 {
   "problemNumber": 9,
   "problemVersion": 1,
-  "description": "Deploy another contract ! Use your contract to deploy a contract.",
+  "description": "Deploy another contract with contract",
   "constructorCallData": [],
   "problemSolution": [
       {
@@ -9,6 +9,16 @@
         "callData": [],
         "expectReturn": [true]
       }
+  ],
+  "attributes": [
+    {
+      "trait_type": "difficulty", 
+      "value": 1
+    },
+    {
+      "trait_type": "class", 
+      "value": "Beginner"
+    }
   ],
   "image": "ipfs://<ipfsPrefix>/9"
 }

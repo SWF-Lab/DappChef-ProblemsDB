@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17; 
 // Below you have to declare public functions, remember to assign the type of functions( pure or view )
 contract problem2 { 

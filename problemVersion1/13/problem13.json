@@ -1,7 +1,7 @@
 {
   "problemNumber": 13,
   "problemVersion": 1,
-  "description": "Struct ! Define your own type.",
+  "description": "Struct",
   "constructorCallData": [],
   "problemSolution": [
       {
@@ -14,6 +14,16 @@
         "callData": [],
         "expectReturn": ["pineapple",100]
       }
+  ],
+  "attributes": [
+    {
+      "trait_type": "difficulty", 
+      "value": 1
+    },
+    {
+      "trait_type": "class", 
+      "value": "Beginner"
+    }
   ],
   "image": "ipfs://<ipfsPrefix>/13"
 }

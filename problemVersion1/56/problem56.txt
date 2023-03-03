@@ -1,0 +1,39 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+// In this problem, we are going to write a proxy contract for `Called`
+contract Called {
+  string public message;
+
+  function setMessage(string memory _message) external {
+    message = _message;
+  }
+}
+
+
+contract ProxyContract {
+  address immutable called;
+
+  //TODO 1: write a constructor and assign value to `called`
+ 
+
+  //TODO 2: write a fallback function which should delegate call the proxified `Called` contract
+  
+
+
+
+
+}
+
+contract problem56 {
+  Called called = new Called();
+  ProxyContract proxy = new ProxyContract(address(called));
+  Called proxified = Called(address(proxy));
+
+  function test() external {
+    proxified.setMessage("hi");
+  }
+  function getAns() external view returns (string memory) {
+    return proxified.message();
+  }
+}

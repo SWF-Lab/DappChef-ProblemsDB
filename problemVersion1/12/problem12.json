@@ -1,7 +1,7 @@
 {
   "problemNumber": 12,
   "problemVersion": 1,
-  "description": "Call ! Call other contracts functions by using call.",
+  "description": "Call",
   "constructorCallData": [],
   "problemSolution": [
       {
@@ -24,6 +24,16 @@
         "callData": [],
         "expectReturn": ["hello"]
       }
+  ],
+  "attributes": [
+    {
+      "trait_type": "difficulty", 
+      "value": 1
+    },
+    {
+      "trait_type": "class", 
+      "value": "Beginner"
+    }
   ],
   "image": "ipfs://<ipfsPrefix>/12"
 }

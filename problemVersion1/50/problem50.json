@@ -1,0 +1,20 @@
+{
+    "problemNumber": 50,
+    "problemVersion": 1,
+    "description": "English Auction",
+    "constructorCallData": [],
+    "problemSolution": [
+
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Design_Pattern"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/50"
+}

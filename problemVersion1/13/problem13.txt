@@ -1,7 +1,7 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract answer13 {
+contract problem13 {
   // TODO: Define a struct named `Food`, 
   // The first variable is a string named `name`, and the second is a uint256 named `price`.
 

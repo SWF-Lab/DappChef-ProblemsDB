@@ -1,0 +1,59 @@
+{
+  "problemNumber": 20,
+  "problemVersion": 1,
+  "description": "ERC721 -part 2",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "mint(address,uint256)",
+        "callData": ["MSG_SENDER",100],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%transferFrom(address,address,uint256)",
+        "callData": ["MSG_SENDER","0x0000000000000000000000000000000000000000",100],
+        "expectReturn": ["transfer to zero address"]
+      },
+      {
+        "methodName": "transferFrom(address,address,uint256)",
+        "callData": ["MSG_SENDER","0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac",100],
+        "expectReturn": []
+      },
+      {
+        "methodName": "balanceOf(address)",
+        "callData": ["0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"],
+        "expectReturn": [1]
+      },
+      {
+        "methodName": "ownerOf(uint256)",
+        "callData": [100],
+        "expectReturn": ["0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"]
+      },
+      {
+        "methodName": "mint(address,uint256)",
+        "callData": ["MSG_SENDER",50],
+        "expectReturn": []
+      },
+      {
+        "methodName": "burn(uint256)",
+        "callData": [50],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%ownerOf(uint256)",
+        "callData": [50],
+        "expectReturn": ["token doesn't exist"]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 1
+      },
+      {
+          "trait_type": "class",
+          "value": "Token"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/20"
+}

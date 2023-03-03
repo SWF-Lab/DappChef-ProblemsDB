@@ -1,7 +1,7 @@
 {
   "problemNumber": 11,
   "problemVersion": 1,
-  "description": "Send ETH ! Send ETH to another contract using call.",
+  "description": "Send ETH using call",
   "constructorCallData": [],
   "problemSolution": [
       {
@@ -19,6 +19,16 @@
         "callData": [],
         "expectReturn": [50000]
       }
+  ],
+  "attributes": [
+    {
+      "trait_type": "difficulty", 
+      "value": 1
+    },
+    {
+      "trait_type": "class", 
+      "value": "Beginner"
+    }
   ],
   "image": "ipfs://<ipfsPrefix>/11"
 }

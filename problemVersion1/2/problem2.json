@@ -1,7 +1,7 @@
 {
   "problemNumber": 2,
   "problemVersion": 1,
-  "description": "Functions! View functions do only readings of the state on blockchain, and pure functions do no readings.",
+  "description": "Functions",
   "constructorCallData": [],
   "problemSolution": [
       {
