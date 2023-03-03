@@ -1,0 +1,28 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract problem54 {
+  event Log(address); 
+  bytes[] public answers = new bytes[](2);
+
+  //TODO: Write a function named `delegateCall` taking a bytes calldata array.
+  // This bytes array will be inputs like ["0x6b59084d", "0x66e41cb7"] as function selectors.
+  // You shoud delegateCall each functions inputed, and record the reply from `delegatecall` in `answers`. 
+
+
+
+
+
+  // In fact, ["0x6b59084d", "0x66e41cb7"] is the selector of test1 and test2 below. It will be the test sample.
+  function test1() external returns (uint256) {
+    emit Log(msg.sender);
+    return 1;
+  }
+  function test2() external pure returns (uint256) {
+    return 2;
+  }
+
+  function getAns() external view returns(bytes[] memory) {
+    return answers;
+  }
+}

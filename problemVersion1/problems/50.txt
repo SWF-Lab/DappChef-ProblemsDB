@@ -1,0 +1,77 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract problem50 {
+    event Start();
+    event Bid(address indexed bidder, uint256 amount);
+    event Withdraw(address indexed bidder, uint256 amount);
+    event End(address winner, uint256 amount);
+
+    address payable public seller;
+    uint256 public nowTime;
+    uint256 public endTime;
+    bool public started;
+    bool public ended;
+
+    address public winner;
+    uint256 public highestBid;
+    mapping(address => uint256) public bids;
+
+    constructor(uint256 _startingBid) {
+      seller = payable(msg.sender);
+      highestBid = _startingBid;
+    }
+
+    function start() external {
+        //TODO 1: require not started and revert with "started",
+        //        require that only `seller` can call start
+
+
+        started = true;
+        nowTime = 0;
+        // This is only for judgement, in real case you have to use `block.timestamp`
+        endTime = nowTime + 10;
+
+        emit Start();
+    }
+
+    function bid() external payable {
+        require(started, "The auction had not started");
+        require(nowTime < endTime, "The auction had ended");
+
+        // TODO 2: declare an uint256 named `newBid` and calculate a bidders new bid with msg.value. 
+        // You should check if the new bid is biger that the current winner, 
+        // if not, revert with message "lower than the highest bid.""
+
+
+        // TODO 3: if all requirement are satisfied, modify `winner`, `highestBid` and `bids`, last emit `Bid`
+
+
+    }
+
+    function withdraw() external {
+        require(msg.sender != winner, "Highest bidder cannot withdraw.");
+
+        //TODO 4: modify `bids` and transfer the value to the withdrawer, emit `Withdraw`
+
+
+
+    }
+
+    function end() external {
+
+        // TODO 5: think of what `require`s this function need and emplement them, be sure to modify `ended` and emit `End` 
+
+
+
+    }
+
+    // DO NOT modify functions below, these are for judgements.
+    function setTimeToEnd() external {
+      nowTime = endTime;
+    }
+    function getBiddersBid(address bidder) external view returns(uint256) {
+      return bids[bidder];
+    }
+
+}

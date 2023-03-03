@@ -3,7 +3,7 @@
 // The only thing you should do is completing the division(), and make the quotient, remainder and result return the correct value.
 pragma solidity ^0.8.17;
 
-contract answer95 {
+contract problem95 {
     using Strings for uint256;
     
     function division(

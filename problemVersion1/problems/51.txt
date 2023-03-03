@@ -1,0 +1,53 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+// Dutch Auction introduction:  A Dutch auction is a type of auction where the auctioneer begins with a high asking price for the item being sold and gradually lowers the price until a bidder accepts the current price. The first bidder to accept the current price wins the auction and pays the final price.
+
+//TODO: complete this dutch auction
+contract problem51 {
+    uint private constant DURATION = ;
+
+    address payable public immutable seller;
+    uint public immutable startingPrice;
+    uint public immutable startAt;
+    uint public immutable expiresAt;
+    uint public immutable discountRate;
+    bool public ended = false;
+
+    // mock of block.timestamp
+    uint256 public nowTime = 1677679389;
+
+    
+    constructor(uint _startingPrice, uint _discountRate) {
+      //TODO 1: set the `seller`, `startingPrice`, `startAt`, `expiresAt`, `discountRate`
+      // please use `nowTime` to replace any block.timestamp
+
+
+      require(_startingPrice >= _discountRate * DURATION, "starting price is too low");
+    }
+
+    function getPrice() public view returns (uint) {
+        //TODO 2: calculate the price and return it
+
+
+    }
+
+    function buy() external payable {
+        require(!ended, "The auction had ended");
+        require(nowTime < expiresAt, "auction had expired");
+
+        uint256 price = getPrice();
+        require(msg.value >= price, "not enough ETH");
+
+        //TODO 3: You should refund if the buyer pays more than the price.
+          
+
+
+        ended = true;
+    }
+
+    //functions for judging
+    function addNowTime(uint256 addTime) external {
+      nowTime += addTime;
+    }
+}

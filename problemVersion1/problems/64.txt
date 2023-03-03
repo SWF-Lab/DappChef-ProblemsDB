@@ -1,9 +1,9 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
 // TODO: you should finish `areThesePrime()`.
 contract problem64 {
-    // TODO: this function has a parameter, `_nums`, which is comprised of several `uint256`. it should check each element in `_nums` whether it's a prime or not and return an Boolean array as a result.
+    
     
     // hint: You can modularize your code by adding other functions.
     
@@ -13,6 +13,6 @@ contract problem64 {
     */
 
     function areThesePrime(uint256[] memory _nums) public pure returns(bool[] memory) {
-        
+        // TODO: this function has a parameter, `_nums`, which is comprised of several `uint256`. it should check each element in `_nums` whether it's a prime or not and return an Boolean array as a result.
     }
 }

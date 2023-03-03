@@ -179,4 +179,33 @@ Done in 18.75s.
 
 ```
 $ yarn execute scripts/produceProblemsJSON.ts
+>
+PROBLEMS_CODE_IPFS_CID
+{
+  cid: 'bafybeiavkziqbnnvqa4hb76jc2zazc3acewecg2wo3avgmgq4xu2g4k4va',
+  deals: [],
+  size: 73355,
+  pin: {
+    cid: 'bafybeiavkziqbnnvqa4hb76jc2zazc3acewecg2wo3avgmgq4xu2g4k4va',
+    created: 2023-03-03T16:31:59.559Z,
+    size: 73355,
+    status: 'pinned'
+  },
+  created: 2023-03-03T16:31:59.559Z
+}
+storing file(s) from [object Object]
+PROBLEMS_IPFS_CID
+{
+  cid: 'bafybeicd5v4rm7kb36elhs6ng5eivwtpvno7nsyogdbfop3uzb22ofvupy',
+  deals: [],
+  size: 29542,
+  pin: {
+    cid: 'bafybeicd5v4rm7kb36elhs6ng5eivwtpvno7nsyogdbfop3uzb22ofvupy',
+    created: 2023-03-03T16:37:36.817Z,
+    size: 29542,
+    status: 'pinned'
+  },
+  created: 2023-03-03T16:37:36.817Z
+}
+Done in 22.07s.
 ```
