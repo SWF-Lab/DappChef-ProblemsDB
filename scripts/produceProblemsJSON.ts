@@ -4,6 +4,8 @@ import { NFTStorage } from 'nft.storage'
 import { filesFromPath } from 'files-from-path'
 import dotenv from 'dotenv';
 dotenv.config();
+import num2cid from "./num2cid.json"
+
 
 const token = process.env.NFT_STORAGE_API_TOKEN as string
 
@@ -52,6 +54,13 @@ async function main() {
             const raw_problemInfo = fs.readFileSync(path.join(__dirname, `../problemVersion1/${problemNumber}/problem${problemNumber}.json`))
             const problemInfo = JSON.parse(raw_problemInfo as any);
             obj[`${problemNumber}`] = problemInfo
+            const imageDB = num2cid as any
+            let img_cid = imageDB[problemNumber]
+            obj[`${problemNumber}`]["image"] = "https://nftstorage.link/ipfs/" +
+                img_cid +
+                "?filename=" +
+                problemNumber +
+                ".png"
 
             const problemText = fs.readFileSync(path.join(__dirname, `../problemVersion1/${problemNumber}/problem${problemNumber}.txt`))
             fs.writeFileSync(`./problemVersion1/problems/${problemNumber}.txt`, problemText)
