@@ -5,8 +5,7 @@ contract answer54 {
   event Log(address); 
   bytes[] public answers = new bytes[](2);
 
-  //test1: 0x6b59084d
-  //test2: 0x66e41cb7
+  //["0x6b59084d", "0x66e41cb7"]
   function delegateCall(bytes[] calldata data) external returns (bytes[] memory) {
     bytes[] memory results = new bytes[](data.length);
 
@@ -25,13 +24,6 @@ contract answer54 {
   }
   function test2() external pure returns (uint256) {
     return 2;
-  }
-
-  function getData1() external pure returns (bytes memory){
-    return abi.encodeWithSelector(this.test1.selector);
-  }
-  function getData2() external pure returns (bytes memory) {
-    return abi.encodeWithSelector(this.test2.selector);
   }
 
   function getAns() external view returns(bytes[] memory) {

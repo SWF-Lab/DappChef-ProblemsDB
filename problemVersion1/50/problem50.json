@@ -4,11 +4,7 @@
     "description": "English Auction",
     "constructorCallData": [],
     "problemSolution": [
-        {
-            "methodName": "returnGreeting(string)",
-            "callData": ["Suprise! I'm back!"],
-            "expectReturn": ["Suprise! I'm back!"]
-        }
+
     ],
     "attributes": [
         {
