@@ -1,0 +1,29 @@
+{
+  "problemNumber": 56,
+  "problemVersion": 1,
+  "description": "Proxy",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "test()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getAns()",
+        "callData": [],
+        "expectReturn": ["hi"]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 2
+      },
+      {
+          "trait_type": "class",
+          "value": "Design_Pattern"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/56"
+}
