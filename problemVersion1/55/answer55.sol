@@ -5,7 +5,7 @@ contract answer55 {
     bytes32 answer;
 
     //given data: 123, "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac"
-    //should respond: 0x48b897a64460fecb557a65e107ebb920b3d98d944acac78e36d9582f1d1ea60b
+    //should respond: 0x3e6fd8dfe8a8824b3a56e199559bb3ce01d5ec59d97252c28a49907c1367d024
     function getHash(uint256 value, address sender) public returns (bytes32) {
         bytes32 domainHash = keccak256(abi.encode(
             keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),

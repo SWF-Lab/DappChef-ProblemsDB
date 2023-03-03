@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17; 
 contract problem6 {
     // `method`: "fallback" for fallback function, and the value sent to this contract for `amount`

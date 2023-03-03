@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 
 // TODO: You should declare the compiler version here with the reserved word "pragma"
 contract problem0 { 

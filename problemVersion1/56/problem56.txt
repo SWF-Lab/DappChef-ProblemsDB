@@ -22,10 +22,10 @@ contract ProxyContract {
 
 
 
-  
+
 }
 
-contract answer56 {
+contract problem56 {
   Called called = new Called();
   ProxyContract proxy = new ProxyContract(address(called));
   Called proxified = Called(address(proxy));
