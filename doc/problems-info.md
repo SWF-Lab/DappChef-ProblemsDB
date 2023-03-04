@@ -36,8 +36,8 @@
 | 15. |Beginner|⭐| Constructor |Mur** ✅|
 | 16. |Token|⭐| Build ERC20 part 1 |Dino ✅|
 | 17. |Token|⭐| Build ERC20 part 2 |Dino ✅|
-| 18. |Token|⭐| ERC721- part 1 ERC165|Dino|
-| 19. |Token|⭐|ERC721 -part 2 build|Dino|
+| 18. |Token|⭐| ERC721- part 1 ERC165|Dino ✅|
+| 19. |Token|⭐|ERC721 -part 2 build|Dino ✅|
 | 20. |Token|⭐|ERC721 -part3 build|Dino|
 | 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
 | 22. |Beginner|⭐| Immutable and Constant |FoodChain ✅|
@@ -46,9 +46,9 @@
 | 25. |Beginner|⭐| Inheritance and Override |FoodChain ✅|
 | 26. |Beginner|⭐| Inheritance and Override the state variable |FoodChain ✅|
 | 27. |Beginner|⭐|Assembly|FoodChain✅|
-| 28. |Beginner|⭐|Bitwise Operators|FoodChain✅|
-| 29. |Beginner|⭐|Delegatecall|FoodChain✅|
-| 30. |Beginner|⭐|Compare String|FoodChain✅|
+| 28. |Beginner|⭐|Bitwise Operators|FoodChain ✅|
+| 29. |Beginner|⭐|Delegatecall|FoodChain ✅|
+| 30. |Beginner|⭐|Compare String|FoodChain ✅|
 | 31. |Beginner|⭐|Overflow|FoodChain ✅|
 | 32. |Beginner|⭐|Underflow|FoodChain ✅|
 | 33. |Beginner|⭐|Assembly Check Zero Address|FoodChain ✅|
@@ -61,7 +61,7 @@
 | 40. |Token|⭐||FoodChain|
 | 41. |Company|⭐⭐|Signature && EIP-1271|Mur** ✅|
 | 42. |Company|⭐⭐|SupportsInterface (ERC-165) & RoyaltyInfo (ERC-2981) |Mur** ✅|
-| 43. |Company|⭐⭐||Mur**|
+| 43. |Company|⭐⭐|ERC-5646 Token FigerPrint|Mur**|
 | 44. |Company|⭐⭐||Mur**|
 | 45. |Company|⭐⭐||Mur**|
 | 46. |Company|⭐⭐||Mur**|
@@ -70,11 +70,11 @@
 | 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
 | 50. |Design_Pattern|⭐⭐|English Auction|Dino|
 | 51. |Design_Pattern|⭐⭐|Dutch Auction|Dino|
-| 52. |Design_Pattern|⭐⭐|Reentrancy|Dino|
-| 53. |Design_Pattern|⭐⭐|MultiCall|Dino|
-| 54. |Design_Pattern|⭐⭐||Dino|
-| 55. |Design_Pattern|⭐⭐||Dino|
-| 56. |Design_Pattern|⭐⭐||Dino|
+| 52. |Design_Pattern|⭐⭐|Reentrancy|Dino ✅|
+| 53. |Design_Pattern|⭐⭐|MultiCall|Dino ✅|
+| 54. |Design_Pattern|⭐⭐| Multi DelegateCall |Dino ✅|
+| 55. |Design_Pattern|⭐⭐|EIP-712 |Dino ✅|
+| 56. |Design_Pattern|⭐⭐|  Proxy |Dino ✅|
 | 57. |DeFi|⭐⭐||Dino|
 | 58. |DeFi|⭐⭐||Dino|
 | 59. |DeFi|⭐⭐||Dino|
@@ -83,7 +83,7 @@
 | 62. |Token|⭐⭐||FoodChain|
 | 63. |Token|⭐⭐||FoodChain|
 | 64. | DSA |⭐⭐| Prime |FoodChain ✅|
-| 65. |Design_Pattern|⭐⭐|Faucet - ERC20|FoodChain✅|
+| 65. |Design_Pattern|⭐⭐|Faucet - ERC20|FoodChain ✅|
 | 66. |Design_Pattern|⭐⭐|SafeMath|FoodChain ✅|
 | 67. |Design_Pattern|⭐⭐|From Uint256 to String|FoodChain ✅|
 | 68. |Design_Pattern|⭐⭐||FoodChain|
@@ -111,14 +111,14 @@
 | 90. |Cryptography|⭐⭐⭐||FoodChain|
 | 91. |Gas_Optim|⭐⭐⭐||FoodChain|
 | 92. |Company|⭐⭐⭐|Gnosis - MultiSigWallet|Mur**|
-| 93. |Company|⭐⭐⭐||Mur**|
+| 93. |Company|⭐⭐⭐|EIP3668 CCIP READ|Mur**|
 | 94. |Company|⭐⭐⭐||Mur**|
-| 95. |DSA|⭐⭐⭐|Floating Point Division|Mur**✅|
+| 95. |DSA|⭐⭐⭐|Floating Point Division|Mur** ✅|
 | 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur**|
 | 97. |Scalability|⭐⭐⭐|Send Message to Layer2 - Optimism|Mur**|
-| 98. |Scalability|⭐⭐⭐||Mur**|
+| 98. |Scalability|⭐⭐⭐|Off-Chain Storage|Mur**|
 | 99. |EVM|⭐⭐⭐|Stack too deep|Mur**|
-| 100. |EVM|⭐⭐⭐|Off-Chain Storage|Mur**|
+| 100. |EVM|⭐⭐⭐|Precompiled Contract|Mur**|
 
 ### problemVersion2
 
