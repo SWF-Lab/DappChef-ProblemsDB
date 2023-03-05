@@ -5,7 +5,7 @@ pragma solidity ^0.8.17;
 // 3. After that the system will call the three functions and they should all pass without any error message
 // 4. DO NOTHNG after the requirements.
 
-contract problem8 {
+contract answer8 {
   uint256 public balance = 0;
 
   // TODO: Write a function named `testAssert` using `assert`

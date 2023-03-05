@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract problem54 {
+contract answer54 {
   event Log(address); 
   bytes[] public answers = new bytes[](2);
 

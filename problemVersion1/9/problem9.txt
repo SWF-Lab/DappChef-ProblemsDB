@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-// The system will only deploy `problem9()`, write the code in the constructor.
+// The system will only deploy `answer9()`, write the code in the constructor.
 // The system will call `checkAns()` to check your answer.
 
 contract toBeDeployed {
@@ -15,7 +15,7 @@ contract toBeDeployed {
   }
 }
 
-contract problem9 {
+contract answer9 {
   toBeDeployed public deployContract;
 
   constructor() {

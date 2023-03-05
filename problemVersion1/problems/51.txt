@@ -4,7 +4,7 @@ pragma solidity ^0.8.17;
 // Dutch Auction introduction:  A Dutch auction is a type of auction where the auctioneer begins with a high asking price for the item being sold and gradually lowers the price until a bidder accepts the current price. The first bidder to accept the current price wins the auction and pays the final price.
 
 //TODO: complete this dutch auction
-contract problem51 {
+contract answer51 {
     uint private constant DURATION = ;
 
     address payable public immutable seller;

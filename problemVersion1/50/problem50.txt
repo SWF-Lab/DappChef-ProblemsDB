@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract problem50 {
+contract answer50 {
     event Start();
     event Bid(address indexed bidder, uint256 amount);
     event Withdraw(address indexed bidder, uint256 amount);

@@ -32,7 +32,7 @@ contract VulnerableContract {
     }
 }
 
-contract problem52 {
+contract answer52 {
   VulnerableContract public vc;
   uint256 amount = 1000000000 wei;
 

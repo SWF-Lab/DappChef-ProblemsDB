@@ -43,7 +43,7 @@ contract ERC721 is IERC721 {
 
 }
 
-contract problem19 is ERC721 {
+contract answer19 is ERC721 {
 
   function mint(address to, uint256 id) external {
     _mint(to, id);

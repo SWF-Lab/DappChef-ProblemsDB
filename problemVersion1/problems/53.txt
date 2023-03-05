@@ -20,7 +20,7 @@ contract Test {
     }
 }
 
-contract problem53 {
+contract answer53 {
   Test public testContract;
   bytes[] public datas = new bytes[](2);
   address[] public targets = new address[](2);

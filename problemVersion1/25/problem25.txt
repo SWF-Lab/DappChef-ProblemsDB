@@ -9,7 +9,7 @@ contract Greeting {
 }
 
 // TODO: you should inherit Greeting and complete the following function.
-contract problem25 {
+contract answer25 {
     // TODO: you should inherit and override returnGreeting from Greeting and convert the return value into the parameter: _input.
     function returnGreeting() {
         // TODO: complete this function.

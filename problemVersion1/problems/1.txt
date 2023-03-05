@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17;
 
 // Declare public state variables as command, then assign the default value of that type.
-contract problem1 {
+contract answer1 {
     // TODO: declare a uint variable named myUint
     
     // TODO: declare a boolean variable named myBool
