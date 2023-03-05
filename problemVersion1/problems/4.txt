@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17; 
 
-contract problem4 {
+contract answer4 {
     // imagine we can record that an address own how much token
     // TODO: declare a mapping mapping from an address to an uint256 named `balanceOf`
     

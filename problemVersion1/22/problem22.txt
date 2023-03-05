@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17;
 
 // TODO: you should declare two global addresses, CALLER_1 and CALLER_2.
-contract problem22 {
+contract answer22 {
     
     address public immutable CALLER_1;
 

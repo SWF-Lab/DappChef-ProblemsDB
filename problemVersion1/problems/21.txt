@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract problem21 {
+contract answer21 {
 
     address public a;
     uint256 public b;

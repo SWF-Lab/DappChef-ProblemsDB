@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17; 
 // Below you have to declare public functions, remember to assign the type of functions( pure or view )
-contract problem2 { 
+contract answer2 { 
     uint public x = 1;
 
     // TODO: declare a function named addNumWithX taking an uint as input and return the addition of the input and x

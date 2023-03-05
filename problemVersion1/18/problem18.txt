@@ -12,7 +12,7 @@ interface IAnother {
 }
 
 
-contract problem18 is IERC165, IAnother {
+contract answer18 is IERC165, IAnother {
 
   // TODO: write a function named `supportsInterface` which takes a bytes4 as an input.
   // This function check if the input interfaceID is supported by this contract.

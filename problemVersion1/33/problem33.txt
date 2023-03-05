@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract problem33 {
+contract answer33 {
     error ZeroAddress();
     function assemblyCheckZeroAddr(address toCheck) public pure returns (bool success) {
         assembly {

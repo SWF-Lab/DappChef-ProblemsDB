@@ -16,7 +16,7 @@ contract Called {
 // TODO: write an interface named `ICalled`, implement the two functions in contract `Called`. 
 
 
-contract problem10 {
+contract answer10 {
   Called public calledContract;
 
   constructor() {

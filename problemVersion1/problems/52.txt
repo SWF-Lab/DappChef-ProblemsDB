@@ -2,7 +2,7 @@
 pragma solidity ^0.8.0;
 
 // This is a vulnerable contract
-// We have a contract named problem52 which can steal ethers from this contract by calling `attack`.
+// We have a contract named answer52 which can steal ethers from this contract by calling `attack`.
 // modify VulnerableContract to prevent reentrancy from happening.
 contract VulnerableContract {
     mapping (address => uint) public balances;
@@ -32,7 +32,7 @@ contract VulnerableContract {
     }
 }
 
-contract problem52 {
+contract answer52 {
   VulnerableContract public vc;
   uint256 amount = 1000000000 wei;
 

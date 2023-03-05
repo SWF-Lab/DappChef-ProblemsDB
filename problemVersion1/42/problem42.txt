@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract problem42 {
+contract answer42 {
 
     // TODO: you should find the value of _INTERFACE_ID_ERC2981, and give to the variable _INTERFACE_ID_ERC2981 below
     bytes4 private constant _INTERFACE_ID_ERC2981 = 

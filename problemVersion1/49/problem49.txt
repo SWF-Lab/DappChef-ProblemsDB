@@ -1,7 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract problem49 {
+contract answer49 {
     LP public holdToken;
     StableCoin public dai;
 
