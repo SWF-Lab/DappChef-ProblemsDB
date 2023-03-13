@@ -1,0 +1,48 @@
+{
+    "problemNumber": 46,
+    "problemVersion": 1,
+    "description": "Social Recovery - Guardian Management",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "owner()",
+            "callData": [],
+            "expectReturn": [
+                "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec"
+            ]
+        },
+        {
+            "methodName": "guardianOp_initiateRecovery()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "guardianOp_supportRecovery()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "guardianOp_executeRecovery()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "owner()",
+            "callData": [],
+            "expectReturn": [
+                "MSG_SENDER"
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Company"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/46"
+}
