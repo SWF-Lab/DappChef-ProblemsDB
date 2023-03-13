@@ -61,7 +61,7 @@
 | 40. |Token|⭐||FoodChain|
 | 41. |Company|⭐⭐|Signature && EIP-1271|Mur** ✅|
 | 42. |Company|⭐⭐|SupportsInterface (ERC-165) & RoyaltyInfo (ERC-2981) |Mur** ✅|
-| 43. |Company|⭐⭐|ERC-5646 Token FigerPrint|Mur**|
+| 43. |Company|⭐⭐|ERC-5646 Token FigerPrint ✅|Mur**|
 | 44. |Company|⭐⭐|Account Contract ✅|Mur**|
 | 45. |Company|⭐⭐||Mur**|
 | 46. |Company|⭐⭐||Mur**|
