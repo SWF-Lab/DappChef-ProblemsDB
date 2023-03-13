@@ -61,8 +61,8 @@
 | 40. |Token|⭐||FoodChain|
 | 41. |Company|⭐⭐|Signature && EIP-1271|Mur** ✅|
 | 42. |Company|⭐⭐|SupportsInterface (ERC-165) & RoyaltyInfo (ERC-2981) |Mur** ✅|
-| 43. |Company|⭐⭐|ERC-5646 Token FigerPrint|Mur**|
-| 44. |Company|⭐⭐||Mur**|
+| 43. |Company|⭐⭐|ERC-5646 Token FigerPrint ✅|Mur**|
+| 44. |Company|⭐⭐|Account Contract ✅|Mur**|
 | 45. |Company|⭐⭐||Mur**|
 | 46. |Company|⭐⭐||Mur**|
 | 47. |Company|⭐⭐|Advanced Withdraw |Mur** ✅|
@@ -80,14 +80,14 @@
 | 59. |DeFi|⭐⭐||Dino|
 | 60. |DeFi|⭐⭐||Dino|
 | 61. |DeFi|⭐⭐||Dino|
-| 62. |Token|⭐⭐||FoodChain|
-| 63. |Token|⭐⭐||FoodChain|
+| 62. |Token|⭐⭐| Dynamic NFT (ERC721) |FoodChain|
+| 63. |Token|⭐⭐| Dynamic NFT (ERC1155) |FoodChain|
 | 64. | DSA |⭐⭐| Prime |FoodChain ✅|
 | 65. |Design_Pattern|⭐⭐|Faucet - ERC20|FoodChain ✅|
 | 66. |Design_Pattern|⭐⭐|SafeMath|FoodChain ✅|
 | 67. |Design_Pattern|⭐⭐|From Uint256 to String|FoodChain ✅|
 | 68. |Design_Pattern|⭐⭐||FoodChain|
-| 69. |Design_Pattern|⭐⭐||FoodChain|
+| 69. |Design_Pattern|⭐⭐| Linked List |FoodChain|
 | 70. |Design_Pattern|⭐⭐||FoodChain|
 | 71. |Cryptography|⭐⭐||FoodChain|
 | 72. |DeFi|⭐⭐||FoodChain|
@@ -107,7 +107,7 @@
 | 86. |Design_Pattern|⭐⭐⭐||Dino|
 | 87. |Cryptography|⭐⭐⭐||Dino|
 | 88. |Gas_Optim|⭐⭐⭐||Dino|
-| 89. |Design_Pattern|⭐⭐⭐||FoodChain|
+| 89. |Design_Pattern|⭐⭐⭐| Hashed Time-Locked Contract |FoodChain|
 | 90. |Cryptography|⭐⭐⭐||FoodChain|
 | 91. |Gas_Optim|⭐⭐⭐||FoodChain|
 | 92. |Company|⭐⭐⭐|Gnosis - MultiSigWallet|Mur**|
