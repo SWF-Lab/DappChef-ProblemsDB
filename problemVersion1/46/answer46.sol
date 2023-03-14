@@ -63,13 +63,13 @@ contract answer46 {
     }
 
     constructor() {
-        for (uint i = 0; i < 3; i++) {
+        for (uint i = 0; i < 5; i++) {
             Guardians[i] = new Account(address(msg.sender));
             isGuardian[address(Guardians[i])] = true;
         }
 
-        threshold = 2;
-        owner = 0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec;
+        threshold = 3;
+        owner = msg.sender;
     }
 
     /************************************************
@@ -116,9 +116,10 @@ contract answer46 {
     function executeRecovery(
         address newOwner
     ) public onlyGuardian onlyInRecovery {
-
         for (uint i = 0; i < 3; i++) {
-            Recovery memory recovery = guardianToRecovery[address(Guardians[i])];
+            Recovery memory recovery = guardianToRecovery[
+                address(Guardians[i])
+            ];
 
             require(
                 recovery.recoveryRound == currRecoveryRound,
@@ -133,7 +134,8 @@ contract answer46 {
                 "duplicate guardian used in recovery"
             );
 
-            guardianToRecovery[address(Guardians[i])].usedInExecuteRecovery = true;
+            guardianToRecovery[address(Guardians[i])]
+                .usedInExecuteRecovery = true;
         }
 
         inRecovery = false;
@@ -159,9 +161,7 @@ contract answer46 {
     function initiateGuardianRemoval(address guardianAddr) external onlyOwner {
         // verify that the hash actually corresponds to a guardian
         require(isGuardian[guardianAddr], "not a guardian");
-
-        // removal delay fixed at 3 days
-        guardianToRemovalTimestamp[guardianAddr] = block.timestamp + 3 days;
+        guardianToRemovalTimestamp[guardianAddr] = block.timestamp;
     }
 
     function executeGuardianRemoval(
@@ -188,47 +188,15 @@ contract answer46 {
         guardianToRemovalTimestamp[guardianAddr] = 0;
     }
 
-    function supportsInterface(
-        bytes4 interfaceId
-    ) external pure returns (bool) {
-        if (
-            interfaceId == 0x01ffc9a7 || // ERC165 interfaceID
-            interfaceId == 0x150b7a02 || // ERC721TokenReceiver interfaceID
-            interfaceId == 0x4e2312e0 // ERC1155TokenReceiver interfaceID
-        ) {
-            return true;
-        }
-        return false;
-    }
-
     /************************************************
      *  guardianOp for Testing
      ***********************************************/
 
-    function guardianOp_initiateRecovery() public {
-        Guardians[0].execute(
-            address(this),
-            abi.encodeWithSelector(this.initiateRecovery.selector, msg.sender)
-        );
-    }
-
-    function guardianOp_supportRecovery() public {
-        for (uint i = 1; i < 3; i++) {
-            Guardians[i].execute(
-                address(this),
-                abi.encodeWithSelector(
-                    this.supportRecovery.selector,
-                    msg.sender
-                )
-            );
-        }
-    }
-
-    function guardianOp_executeRecovery() public {
+    function guardianOp_transferGuardianship() public {
         Guardians[0].execute(
             address(this),
             abi.encodeWithSelector(
-                this.executeRecovery.selector,
+                this.transferGuardianship.selector,
                 msg.sender
             )
         );

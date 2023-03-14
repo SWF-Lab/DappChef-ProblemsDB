@@ -64,7 +64,7 @@
 | 43. |Company|⭐⭐|ERC-5646 Token FigerPrint |Mur** ✅|
 | 44. |Company|⭐⭐|Account Contract |Mur** ✅|
 | 45. |Company|⭐⭐|Social Recovery - Owner Recovery|Mur** ✅|
-| 46. |Company|⭐⭐|Social Recovery - Guardian Management|Mur**|
+| 46. |Company|⭐⭐|Social Recovery - Guardian Management|Mur** ✅|
 | 47. |Company|⭐⭐|Advanced Withdraw |Mur** ✅|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
 | 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
