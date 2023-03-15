@@ -1,7 +1,7 @@
 {
-    "problemNumber": 36,
+    "problemNumber": 39,
     "problemVersion": 1,
-    "description": "ERC721Receiver",
+    "description": "ERC1155Receiver",
     "constructorCallData": [],
     "problemSolution": [
         {
@@ -22,8 +22,8 @@
         },
         {
             "trait_type": "class",
-            "value": "Beginner"
+            "value": "Token"
         }
     ],
-    "image": "ipfs://<ipfsPrefix>/36"
+    "image": "ipfs://<ipfsPrefix>/39"
 }
