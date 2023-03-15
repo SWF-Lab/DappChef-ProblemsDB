@@ -1,0 +1,44 @@
+{
+    "problemNumber": 52,
+    "problemVersion": 1,
+    "description": "Reentrancy",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+          "methodName": "$getEth()",
+          "callData": [2000000000,[]],
+          "expectReturn": []
+        },
+        {
+          "methodName": "deployContract()",
+          "callData": [],
+          "expectReturn": []
+        },
+        {
+          "methodName": "sendETH",
+          "callData": [],
+          "expectReturn": []
+        },
+        {
+          "methodName": "%attack()",
+          "callData": [],
+          "expectReturn": ["Transfer failed"]
+        },
+        {
+          "methodName": "getVcBalance()",
+          "callData": [],
+          "expectReturn": [1000000000]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Design_Pattern"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/52"
+}

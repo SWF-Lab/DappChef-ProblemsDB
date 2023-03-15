@@ -1,7 +1,7 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-contract problem23 {
+contract answer23 {
     uint256 public constant UINT = 138675023;
     int8 public constant INT = 18;
     address public constant CALLER = 0x0000000000000000000000000000000000000123;

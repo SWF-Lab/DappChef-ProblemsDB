@@ -1,0 +1,51 @@
+{
+  "problemNumber": 43,
+  "problemVersion": 1,
+  "description": "ERC-5646 Token FigerPrint",
+  "constructorCallData": [],
+  "problemSolution": [
+    {
+      "methodName": "setState(uint256,address,address,uint256,uint256)",
+      "callData": [
+        "763",
+        "0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac",
+        "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec",
+        "7",
+        "889091"
+      ],
+      "expectReturn": []
+    },
+    {
+      "methodName": "$getStateFingerprint(uint256)",
+      "callData": [
+        "1200000000000000",
+        [
+          "763"
+        ]
+      ],
+      "expectReturn": []
+    },
+    {
+      "methodName": "#getNowFingerprint(address,bytes32)",
+      "callData": [],
+      "expectReturn": [
+        [
+          "MSG_SENDER",
+          "0xfbef40667b9727647abccac2a7a99611b09060d37fa88a36b111c0442cc7e050"
+        ],
+        []
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "difficulty",
+      "value": 2
+    },
+    {
+      "trait_type": "class",
+      "value": "Company"
+    }
+  ],
+  "image": "ipfs://<ipfsPrefix>/43"
+}

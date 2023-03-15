@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
 contract Called {
@@ -13,7 +13,7 @@ contract Called {
   } 
 }
 
-contract problem12 {
+contract answer12 {
   Called public called;
   bool public success; 
   

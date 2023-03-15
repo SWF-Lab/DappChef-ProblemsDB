@@ -83,17 +83,16 @@ async function main() {
                 // Get expectReturn
                 const topics0 = ethers.utils.id((solution[i].methodName).substring(1))
                 const indexedValue = solution[i].expectReturn[0]
-                const nonIndexedValue = solution[i].expectReturn[1]
+                const nonIndexedValue = solution[i].expectReturn[1].length == 0 ? "" : solution[i].expectReturn[1]
                 console.log(`    - Sample Output: ${topics0},${indexedValue},${nonIndexedValue}`)
 
                 // Get the Transaction Log
                 const log = AnswerContract.interface.parseLog(pastTXInfo["logs"][0])
                 const id = (log.topic).toString()
                 const eventTopics = (log.args.slice(0, indexedValue.length)).toString()
-                // Pass the non-index event for special target
-                const eventData = nonIndexedValue.length == 0 ?
+                const eventData = nonIndexedValue.length != 0 ?
                     (log.args.slice(indexedValue.length, indexedValue.length + nonIndexedValue.length)).toString()
-                    : []
+                    : ""
                 console.log(`    - Your Output: ${id},${eventTopics},${eventData}`)
                 
                 // Comparing

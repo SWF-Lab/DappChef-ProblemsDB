@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
 contract Greeting {
@@ -8,8 +8,8 @@ contract Greeting {
     }
 }
 
-// TODO: you should inherit Greeting and complete greeting() in problem24
-contract problem24 {
+// TODO: you should inherit Greeting and complete greeting() in answer24
+contract answer24 {
     function greeting() public pure returns(string memory) {
         // TODO: you should return GREETING in this function.
     } 

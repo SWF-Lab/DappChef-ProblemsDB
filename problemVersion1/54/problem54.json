@@ -1,0 +1,34 @@
+{
+    "problemNumber": 54,
+    "problemVersion": 1,
+    "description": "Multi DelegateCall",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+          "methodName": "delegateCall(bytes[])",
+          "callData": [["0x6b59084d", "0x66e41cb7"]],
+          "expectReturn": []
+        },
+        {
+          "methodName": "#Log(address)",
+          "callData": [],
+          "expectReturn": [[],["MSG_SENDER"]]
+        },
+        {
+          "methodName": "getAns",
+          "callData": [],
+          "expectReturn": [["0x0000000000000000000000000000000000000000000000000000000000000001","0x0000000000000000000000000000000000000000000000000000000000000002"]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Design_Pattern"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/54"
+}

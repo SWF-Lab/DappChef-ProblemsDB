@@ -1,8 +1,8 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17; 
 
 // complete the function below
-contract problem3 { 
+contract answer3 { 
     function biggerThanTen(uint256 num) public pure returns (bool) {
         // if the input is bigger than ten, return true, else return false
 

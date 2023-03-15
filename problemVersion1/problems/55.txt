@@ -1,0 +1,39 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract answer55 {
+    bytes32 answer;
+
+    // This is an EIP712 based contract, please complete the part to get the EIP712 hash.
+    // This hash should pass the requirement below if the signature is valid
+    // require(signer == ecrecover(getHash(value, sender), v, r, s))
+    function getHash(uint256 value, address sender) public returns (bytes32) {
+
+        //TODO 1: complete the calculation of domainHash
+        bytes32 domainHash = 
+
+
+
+
+            0xd9145CCE52D386f254917e481eB44e9943F39138 
+            //the last arg should be address(this), but for judging reasons, please leave this for us.
+        ));
+
+        //TODO 2: complete the calculation of structHash
+        bytes32 structHash = 
+
+
+        ));
+
+        //TODO 3: complete the calculation of the hash
+        answer = 
+        
+        return answer;
+    }
+
+    function getAns() external view returns(bytes32) {
+      return answer;
+    }
+
+}
+

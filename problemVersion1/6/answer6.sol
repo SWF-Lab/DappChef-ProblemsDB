@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17; 
 contract answer6 {
     event Log(string method, uint256 amount);
@@ -11,8 +11,4 @@ contract answer6 {
     receive() external payable {
       emit Log("recieve", msg.value);
     }
-
-    // function emitLog() external {
-    //   emit Log("test",1000000);
-    // }
 }

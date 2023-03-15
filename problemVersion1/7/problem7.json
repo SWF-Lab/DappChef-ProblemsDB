@@ -1,7 +1,7 @@
 {
   "problemNumber": 7,
   "problemVersion": 1,
-  "description": "Function Overload ! Your functions can have the same name with different inputs.",
+  "description": "Function Overload",
   "constructorCallData": [],
   "problemSolution": [
       {

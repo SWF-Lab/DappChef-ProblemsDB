@@ -1,0 +1,57 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+//This is multiCall, we want to write a function which can execute multiple calls where user inputs there call datas.
+
+
+contract Test {
+    function test1() external pure returns (uint256) {
+      return 1;
+    }
+    function test2() external pure returns (uint256) {
+      return 2;
+    }
+
+    function getData1() external pure returns (bytes memory) {
+        return abi.encodeWithSelector(this.test1.selector);
+    }
+    function getData2() external pure returns (bytes memory) {
+      return abi.encodeWithSelector(this.test2.selector);
+    }
+}
+
+contract answer53 {
+  Test public testContract;
+  bytes[] public datas = new bytes[](2);
+  address[] public targets = new address[](2);
+
+  // For judge system reasons, 
+  // we pretent that users inputs `datas` as calldata, and `targets` as targets address, their owns. 
+  function multiCall() external view returns (bytes[] memory) {
+    require(datas.length == targets.length, "Length not equal");
+    bytes[] memory results = new bytes[](datas.length);
+
+    // TODO: execute the calldatas from the address, for this problem, the call amount is specified as 2. 
+    // Store the results in `results`.
+
+
+    return results;
+  }
+
+
+
+  function deployTest() external {
+    testContract = new Test();
+  }
+
+  //This two functions get the data from `Test` contract.
+  function getData1() external {
+    targets[0] = address(testContract);
+    datas[0] = testContract.getData1();
+  }
+
+  function getData2() external {
+    targets[1] = address(testContract);
+    datas[1] = testContract.getData2();
+  }
+}

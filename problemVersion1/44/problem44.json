@@ -1,0 +1,57 @@
+{
+  "problemNumber": 44,
+  "problemVersion": 1,
+  "description": "Account Contract",
+  "constructorCallData": [],
+  "problemSolution": [
+    {
+      "methodName": "register(uint256)",
+      "callData": [
+        5
+      ],
+      "expectReturn": []
+    },
+    {
+      "methodName": "userNum()",
+      "callData": [],
+      "expectReturn": [
+        5
+      ]
+    },
+    {
+      "methodName": "claim(uint256,uint256)",
+      "callData": [
+        4,
+        5
+      ],
+      "expectReturn": []
+    },
+    {
+      "methodName": "claimed(uint256)",
+      "callData": [
+        4
+      ],
+      "expectReturn": [
+        "true"
+      ]
+    },
+    {
+      "methodName": "userNum()",
+      "callData": [],
+      "expectReturn": [
+        10
+      ]
+    }
+  ],
+  "attributes": [
+    {
+      "trait_type": "difficulty",
+      "value": 2
+    },
+    {
+      "trait_type": "class",
+      "value": "Company"
+    }
+  ],
+  "image": "ipfs://<ipfsPrefix>/44"
+}

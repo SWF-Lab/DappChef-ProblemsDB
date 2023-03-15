@@ -1,4 +1,4 @@
-// SPDX-License-Identifier: Apache License
+// SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
 interface IERC20 {
@@ -21,7 +21,7 @@ interface IERC20 {
 }
 
 // Finish the functions below, you can have a peek to the interface if you feel it difficult.
-contract problem16 is IERC20 {
+contract answer16 is IERC20 {
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
     uint256 private _totalSupply = 100;

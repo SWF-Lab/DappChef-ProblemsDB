@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17;
 
 // TODO: you should finish `areThesePrime()`.
-contract problem64 {
+contract answer64 {
     
     
     // hint: You can modularize your code by adding other functions.

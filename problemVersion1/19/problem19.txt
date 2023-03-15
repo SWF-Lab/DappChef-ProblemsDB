@@ -1,0 +1,53 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface IERC165 {
+    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+}
+
+// This is only a part of IERC721
+interface IERC721 is IERC165 {
+    event Transfer(address indexed from, address indexed to, uint256 indexed tokenId);
+
+    function balanceOf(address owner) external view returns (uint256 balance);
+
+    function ownerOf(uint256 tokenId) external view returns (address owner);
+}
+
+contract ERC721 is IERC721 {
+  // declare a `_ownerOf` internal mapping
+
+  // declare a `_balanceOf` internal mapping
+
+
+  function supportsInterface(bytes4 interfaceId) external pure returns (bool) {
+    return
+      interfaceId == type(IERC721).interfaceId ||
+      interfaceId == type(IERC165).interfaceId;
+  }
+
+  // TODO: write a `_mint` internal function taking an address and an id
+  // It should revert with "mint to zero address" message if so
+  // It should revert with "already minted" message if so
+  // it should emit Transfer
+
+
+  // TODO: write an `ownerOf` external function.
+  // It should revert with "token doesn't exist" if so
+
+
+  // TODO: write an `balanceOf` external function.
+  // It should revert with "owner = zero address" if someone query for zero address
+
+
+
+}
+
+contract answer19 is ERC721 {
+
+  function mint(address to, uint256 id) external {
+    _mint(to, id);
+  }
+
+}
+
