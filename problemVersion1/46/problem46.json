@@ -1,0 +1,75 @@
+{
+    "problemNumber": 46,
+    "problemVersion": 1,
+    "description": "Social Recovery - Guardian Management",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "isGuardian(address)",
+            "callData": [
+                "MSG_SENDER"
+            ],
+            "expectReturn": [
+                "false"
+            ]
+        },
+        {
+            "methodName": "owner()",
+            "callData": [],
+            "expectReturn": [
+                "MSG_SENDER"
+            ]
+        },
+        {
+            "methodName": "guardianOp_transferGuardianship()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "isGuardian(address)",
+            "callData": [
+                "MSG_SENDER"
+            ],
+            "expectReturn": [
+                "true"
+            ]
+        },
+        {
+            "methodName": "initiateGuardianRemoval(address)",
+            "callData": ["MSG_SENDER"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "executeGuardianRemoval(address,address)",
+            "callData": ["MSG_SENDER","0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "isGuardian(address)",
+            "callData": ["MSG_SENDER"],
+            "expectReturn": [
+                "false"
+            ]
+        },
+        {
+            "methodName": "isGuardian(address)",
+            "callData": [
+                "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec"
+            ],
+            "expectReturn": [
+                "true"
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Company"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/46"
+}

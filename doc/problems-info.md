@@ -61,10 +61,10 @@
 | 40. |Token|⭐||FoodChain|
 | 41. |Company|⭐⭐|Signature && EIP-1271|Mur** ✅|
 | 42. |Company|⭐⭐|SupportsInterface (ERC-165) & RoyaltyInfo (ERC-2981) |Mur** ✅|
-| 43. |Company|⭐⭐|ERC-5646 Token FigerPrint ✅|Mur**|
-| 44. |Company|⭐⭐|Account Contract ✅|Mur**|
-| 45. |Company|⭐⭐||Mur**|
-| 46. |Company|⭐⭐||Mur**|
+| 43. |Company|⭐⭐|ERC-5646 Token FigerPrint |Mur** ✅|
+| 44. |Company|⭐⭐|Account Contract |Mur** ✅|
+| 45. |Company|⭐⭐|Social Recovery - Owner Recovery|Mur** ✅|
+| 46. |Company|⭐⭐|Social Recovery - Guardian Management|Mur** ✅|
 | 47. |Company|⭐⭐|Advanced Withdraw |Mur** ✅|
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
 | 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
@@ -75,11 +75,11 @@
 | 54. |Design_Pattern|⭐⭐| Multi DelegateCall |Dino ✅|
 | 55. |Design_Pattern|⭐⭐|EIP-712 |Dino ✅|
 | 56. |Design_Pattern|⭐⭐|  Proxy |Dino ✅|
-| 57. |DeFi|⭐⭐||Dino|
-| 58. |DeFi|⭐⭐||Dino|
-| 59. |DeFi|⭐⭐||Dino|
-| 60. |DeFi|⭐⭐||Dino|
-| 61. |DeFi|⭐⭐||Dino|
+| 57. |DeFi|⭐⭐| Lending |Dino|
+| 58. |DeFi|⭐⭐| Swap |Dino|
+| 59. |DeFi|⭐⭐| Option |Dino|
+| 60. |DeFi|⭐⭐| Stake |Dino|
+| 61. |DeFi|⭐⭐| Leverage  |Dino|
 | 62. |Token|⭐⭐| Dynamic NFT (ERC721) |FoodChain|
 | 63. |Token|⭐⭐| Dynamic NFT (ERC1155) |FoodChain|
 | 64. | DSA |⭐⭐| Prime |FoodChain ✅|
@@ -112,13 +112,13 @@
 | 91. |Gas_Optim|⭐⭐⭐||FoodChain|
 | 92. |Company|⭐⭐⭐|Gnosis - MultiSigWallet|Mur**|
 | 93. |Company|⭐⭐⭐|EIP3668 CCIP READ|Mur**|
-| 94. |Company|⭐⭐⭐||Mur**|
+| 94. |Company|⭐⭐⭐|Aave Flashloan|Mur**|
 | 95. |DSA|⭐⭐⭐|Floating Point Division|Mur** ✅|
 | 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur**|
 | 97. |Scalability|⭐⭐⭐|Send Message to Layer2 - Optimism|Mur**|
 | 98. |Scalability|⭐⭐⭐|Off-Chain Storage|Mur**|
 | 99. |EVM|⭐⭐⭐|Stack too deep|Mur**|
-| 100. |EVM|⭐⭐⭐|Precompiled Contract|Mur**|
+| 100. |EVM|⭐⭐⭐|Precompiled Contract|Mur** ✅|
 
 ### problemVersion2
 

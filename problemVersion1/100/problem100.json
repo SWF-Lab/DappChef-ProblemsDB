@@ -1,0 +1,29 @@
+{
+    "problemNumber": 100,
+    "problemVersion": 1,
+    "description": "Precompiled Contract.",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "calculateHash(uint256,uint256,uint256)",
+            "callData": ["11542","5","89665"],
+            "expectReturn": []
+         },
+         {
+          "methodName": "answer()",
+          "callData": [],
+          "expectReturn": ["0x266f8b097166ca899411223748c181bd54efc62f"]
+        }
+    ],
+    "attributes": [
+        {
+          "trait_type": "difficulty", 
+          "value": 3
+        },
+        {
+          "trait_type": "class", 
+          "value": "EVM"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/100"
+}

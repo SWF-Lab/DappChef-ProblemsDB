@@ -5,7 +5,7 @@
     "constructorCallData": [],
     "problemSolution": [
         {
-            "methodName": "getGreet()",
+            "methodName": "greet()",
             "callData": [],
             "expectReturn": ["Hello World!"]
          }
