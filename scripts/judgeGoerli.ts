@@ -2,7 +2,7 @@ import * as fs from 'fs'
 import path from "path";
 import { ethers } from "hardhat"
 import prompts from "prompts"
-import DEPLOYER_ABI from "./DeployerABI.json"
+import DEPLOYER from "./DeployerABI.json"
 
 async function main() {
 
@@ -48,7 +48,7 @@ async function main() {
     
     const DeployerContract = new ethers.Contract(
         process.env.DEPLOYER_CONTRACT_ADDR as string,
-        DEPLOYER_ABI,
+        DEPLOYER.abi,
         wallet
     )
 
