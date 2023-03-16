@@ -69,7 +69,7 @@ contract answer46 {
         }
 
         threshold = 3;
-        owner = msg.sender;
+        owner = tx.origin;
     }
 
     /************************************************

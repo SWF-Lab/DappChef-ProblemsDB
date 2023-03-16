@@ -3,17 +3,47 @@ import path from "path";
 import { ethers } from "hardhat"
 import prompts from "prompts"
 import Ganache from "ganache-core";
+import DEPLOYER from "./DeployerABI.json"
 
 // $ yarn execute scripts/judgeGanache.ts
 
 async function main() {
 
+    let nonCompletedProblems: Array<number> = []
+
+    const problemNumber = await promptProblem()
+    const options = {  gasLimit: 80000000000000  }
+    const ganache = Ganache.provider(options as any);
+    const provider = new ethers.providers.Web3Provider(ganache as any);
+
+    if (problemNumber == "all") {
+        for (let i = 0; i < 100; i++) {
+            console.log(`-------------------------- ${i} --------------------------`)
+            try{
+                const res = await judge(i, provider)
+                if (res !== true) {
+                    nonCompletedProblems.push(i)
+                }
+            }
+            catch {
+                nonCompletedProblems.push(i)
+            }
+            
+        }
+    }
+    else {
+        await judge(problemNumber, provider)
+    }
+    console.log(nonCompletedProblems)
+}
+
+async function judge(problemNumber: number, provider: any) {
+
     /** ---------------------------------------------------------------------------
      * Setting up the basic ethers object 
      * --------------------------------------------------------------------------- */
+
     
-    const ganache = Ganache.provider({});
-    const provider = new ethers.providers.Web3Provider(ganache as any);
 
     const accounts = await provider.listAccounts();
 
@@ -28,14 +58,9 @@ async function main() {
     const wallet_8 = provider.getSigner(accounts[8]);
     const wallet_9 = provider.getSigner(accounts[9]);
 
-    // const wallet = new ethers.Wallet(process.env.ETHEREUM_PRIVATE_KEY as any, provider)
-
     /**  ---------------------------------------------------------------------------
      * Choose the judge problem and construct the answer contract instance 
      * --------------------------------------------------------------------------- */
-
-    const problemNumber = await promptProblem()
-
     const rawContractInstance = fs.readFileSync(path.join(__dirname, `../artifacts/problemVersion1/${problemNumber}/answer${problemNumber}.sol/answer${problemNumber}.json`))
     const contractInstance = JSON.parse(rawContractInstance.toString());
     const creationCode = contractInstance.bytecode
@@ -63,16 +88,30 @@ async function main() {
      * Judge the answer contract with the "problemSolution" in the problem json 
      * --------------------------------------------------------------------------- */
 
-    const AnswerContractFactory = new ethers.ContractFactory(
-        AnswerABI,
-        bytecode,
+    const DeployerFactory = new ethers.ContractFactory(
+        DEPLOYER.abi,
+        DEPLOYER.bytecode,
         wallet
     );
-    const undeployedAnswerContract = await AnswerContractFactory.deploy();
-    const AnswerContract = undeployedAnswerContract.connect(
+    const undeployedDeployerContract = await DeployerFactory.deploy();
+    const DeployerContract = undeployedDeployerContract.connect(
         wallet
     );
-    const _deployAddr = AnswerContract.address
+
+    console.log(`Trying to deploy problem ${problemNumber} with Deployer Contract:`)
+
+    const tx = await DeployerContract.deploy(bytecode, wallet.getAddress(), problemNumber)
+    const receipt = await tx.wait()
+    const event = receipt.events.find((e: any) => e.event === "Deploy")
+    const [_deployAddr, _solver, _problemNum] = event.args
+    console.log(`    Tx successful with hash: ${receipt.transactionHash}`)
+    console.log(`    Deployed contract address is ${_deployAddr}`)
+
+    /** ---------------------------------------------------------------------------
+     * Judge the answer contract with the "problemSolution" in the problem json 
+     * --------------------------------------------------------------------------- */
+
+    const AnswerContract = await ethers.getContractAt(AnswerABI, _deployAddr, wallet)
     console.log(`\nBegin the Judging...`)
 
     let pastTXInfo: any
@@ -187,6 +226,7 @@ async function main() {
     }
     console.log("\nAll Accepted!")
     console.log(`Total Used Gas: ${totalGas.toString()}`)
+    return true
 }
 
 async function promptProblem() {

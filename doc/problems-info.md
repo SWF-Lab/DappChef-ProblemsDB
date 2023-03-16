@@ -47,7 +47,7 @@
 | 26. |Beginner|⭐| Inheritance and Override the state variable |FoodChain ✅|
 | 27. |Beginner|⭐|Assembly|FoodChain✅|
 | 28. |Beginner|⭐|Bitwise Operators|FoodChain ✅|
-| 29. |Beginner|⭐|Delegatecall|FoodChain ✅|
+| 29. |Beginner|⭐|Delegatecall|FoodChain |
 | 30. |Beginner|⭐|Compare String|FoodChain ✅|
 | 31. |Beginner|⭐|Overflow|FoodChain ✅|
 | 32. |Beginner|⭐|Underflow|FoodChain ✅|
