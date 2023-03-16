@@ -39,7 +39,7 @@ interface IERC721Metadata is IERC721 {
     function tokenURI(uint256 tokenId) external view returns (string memory);
 }
 
-contract ERC721 is IERC721 {
+contract ERC721 is IERC721Metadata {
     string internal _name;
     string internal _symbol;
     string internal _baseUri;
