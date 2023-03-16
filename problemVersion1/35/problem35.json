@@ -1,0 +1,24 @@
+{
+    "problemNumber": 35,
+    "problemVersion": 1,
+    "description": "String Concat - Basic",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "stringConcat(string,string,string)",
+            "callData": ["I", "LOVE", "BLOCKCHAIN"],
+            "expectReturn": [["I LOVE BLOCKCHAIN"]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/35"
+}
