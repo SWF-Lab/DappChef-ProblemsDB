@@ -1,0 +1,34 @@
+{
+    "problemNumber": 37,
+    "problemVersion": 1,
+    "description": "ERC721Metadata",
+    "constructorCallData": [["string", "Non-Fruitless Token"], ["string","NFT"], ["string","ipfs://<CID>/"]],
+    "problemSolution": [
+        {
+            "methodName": "getTokenName()",
+            "callData": [],
+            "expectReturn": [["Non-Fruitless Token"]]
+        },
+        {
+            "methodName": "getTokenSymbol()",
+            "callData": [],
+            "expectReturn": [["NFT"]]
+        },
+        {
+            "methodName": "getTokenUri(uint256)",
+            "callData": [1324891073891],
+            "expectReturn": [["ipfs://<CID>/1324891073891.json"]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Token"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/37"
+}
