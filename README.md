@@ -149,6 +149,7 @@ Use the Judge Script to test your problem in Goerli.
 > Make sure the problem contract **has been compiled** (`$ yarn compile`), and the private key in the `.env` is as your image.
 
 ```
+$ yarn execute scripts/judgeGanache.ts
 $ yarn execute scripts/judgeGoerli.ts --network goerli
 >
 yarn run v1.22.18
