@@ -79,7 +79,10 @@ contract answer57 {
 
     function borrow(uint256 amount) external {
         require(borrowedToken.balanceOf(address(this)) >= amount, "Not enough tokens to borrow");
-        require(deposits[msg.sender] * collateralPrice * borrowRatio / 100 > borrowedPrice * amount, "Not enough collateral");
+        require(
+          deposits[msg.sender] * collateralPrice * borrowRatio / 100 > borrowedPrice * amount, 
+          "Not enough collateral"
+        );
         borrows[msg.sender] += amount;
         borrowedToken.transfer(msg.sender, amount);
     }
@@ -117,7 +120,4 @@ contract answer57 {
     function getBorrowedTokenBalanceOf() external view returns (uint256) {
       return borrowedToken.balanceOf(msg.sender);
     }
-
-
-
 }
