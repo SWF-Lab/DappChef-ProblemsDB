@@ -1,0 +1,54 @@
+{
+  "problemNumber": 57,
+  "problemVersion": 1,
+  "description": "Lending",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "depositCollateral(uint256)",
+        "callData": [1000],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%borrow(uint256)",
+        "callData": [900],
+        "expectReturn": ["Not enough collateral"]
+      },
+      {
+        "methodName": "borrow(uint256)",
+        "callData": [500],
+        "expectReturn": []
+      },
+      {
+        "methodName": "setPrice(uint256,uint256)",
+        "callData": [100, 10],
+        "expectReturn": []
+      },
+      {
+        "methodName": "liquidate(address)",
+        "callData": ["MSG_SENDER"],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getCollateralBalanceOf()",
+        "callData": [],
+        "expectReturn": [50]
+      },
+      {
+        "methodName": "getBorrowedTokenBalanceOf()",
+        "callData": [],
+        "expectReturn": [500]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 2
+      },
+      {
+          "trait_type": "class",
+          "value": "DeFi"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/57"
+}

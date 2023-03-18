@@ -1,0 +1,44 @@
+{
+    "problemNumber": 81,
+    "problemVersion": 1,
+    "description": "Escrow",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "%releaseAmount",
+            "callData": [],
+            "expectReturn": ["not approved"]
+        },
+        {
+          "methodName": "approveByBuyer()",
+          "callData": [],
+          "expectReturn": []
+        },
+        {
+          "methodName": "approveByArbiter()",
+          "callData": [],
+          "expectReturn": []
+        },
+        {
+          "methodName": "%refundAmount()",
+          "callData": [],
+          "expectReturn": ["has already approved"]
+        },
+        {
+          "methodName": "releaseAmount()",
+          "callData": [],
+          "expectReturn": []
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Design_Pattern"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/81"
+}

@@ -30,11 +30,12 @@ async function main() {
             }
             
         }
+        console.log(nonCompletedProblems)
     }
     else {
         await judge(problemNumber, provider)
     }
-    console.log(nonCompletedProblems)
+    
 }
 
 async function judge(problemNumber: number, provider: any) {
