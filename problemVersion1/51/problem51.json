@@ -4,7 +4,31 @@
     "description": "Dutch Auction",
     "constructorCallData": [],
     "problemSolution": [
-
+      {
+        "methodName": "getPrice()",
+        "callData": [],
+        "expectReturn": [1000]
+      },
+      {
+        "methodName": "addNowTime(uint256)",
+        "callData": [10],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getPrice()",
+        "callData": [],
+        "expectReturn": [900]
+      },
+      {
+        "methodName": "$buy()",
+        "callData": ["900",[]],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%buy()",
+        "callData": [],
+        "expectReturn": ["The auction had ended"]
+      }
     ],
     "attributes": [
         {

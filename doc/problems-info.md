@@ -75,10 +75,10 @@
 | 54. |Design_Pattern|⭐⭐| Multi DelegateCall |Dino ✅|
 | 55. |Design_Pattern|⭐⭐|EIP-712 |Dino ✅|
 | 56. |Design_Pattern|⭐⭐|  Proxy |Dino ✅|
-| 57. |DeFi|⭐⭐| Lending |Dino|
-| 58. |DeFi|⭐⭐| Swap |Dino|
-| 59. |DeFi|⭐⭐| Option |Dino|
-| 60. |DeFi|⭐⭐| Stake |Dino|
+| 57. |DeFi|⭐⭐| Lending |Dino ✅|
+| 58. |DeFi|⭐⭐| Swap |Dino ✅ |
+| 59. |DeFi|⭐⭐| Option |Dino ✅|
+| 60. |DeFi|⭐⭐| Stake |Dino ✅|
 | 61. |DeFi|⭐⭐| Leverage  |Dino|
 | 62. |Token|⭐⭐| Dynamic NFT (ERC721) |FoodChain|
 | 63. |Token|⭐⭐| Dynamic NFT (ERC1155) |FoodChain|
@@ -97,13 +97,13 @@
 | 76. |Cryptography|⭐⭐||Dino|
 | 77. |Cryptography|⭐⭐||Dino|
 | 78. |Cryptography|⭐⭐||Dino|
-| 79. |Design_Pattern|⭐⭐||Dino|
-| 80. |Design_Pattern|⭐⭐||Dino|
-| 81. |Design_Pattern|⭐⭐||Dino|
+| 79. |Design_Pattern|⭐⭐| Upgradable Contract |Dino ✅|
+| 80. |Design_Pattern|⭐⭐|Factory|Dino ✅|
+| 81. |Design_Pattern|⭐⭐| Escrow|Dino ✅|
 | 82. |Design_Pattern|⭐⭐||Dino|
-| 83. |DeFi|⭐⭐||Dino|
-| 84. |DeFi|⭐⭐||Dino|
-| 85. |DeFi|⭐⭐||Dino|
+| 83. |DeFi|⭐⭐| Simple Staking |Dino ✅|
+| 84. |DeFi|⭐⭐| Advanced Staking |Dino ✅|
+| 85. |DeFi|⭐⭐| Leverage|Dino ✅|
 | 86. |Design_Pattern|⭐⭐⭐||Dino|
 | 87. |Cryptography|⭐⭐⭐||Dino|
 | 88. |Gas_Optim|⭐⭐⭐||Dino|
@@ -114,10 +114,10 @@
 | 93. |Company|⭐⭐⭐|EIP3668 CCIP READ|Mur**|
 | 94. |Company|⭐⭐⭐|Aave Flashloan|Mur**|
 | 95. |DSA|⭐⭐⭐|Floating Point Division|Mur** ✅|
-| 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur**|
+| 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur** ✅|
 | 97. |Scalability|⭐⭐⭐|Send Message to Layer2 - Optimism|Mur**|
-| 98. |Scalability|⭐⭐⭐|Off-Chain Storage|Mur**|
-| 99. |EVM|⭐⭐⭐|Stack too deep|Mur**|
+| 98. |Scalability|⭐⭐⭐|Big Data Storage|Mur** ✅|
+| 99. |EVM|⭐⭐⭐|EOA (Externally Owned Account) Checks|Mur** ✅|
 | 100. |EVM|⭐⭐⭐|Precompiled Contract|Mur** ✅|
 
 ### problemVersion2

@@ -26,10 +26,11 @@ contract answer17 is IERC20 {
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
     uint256 private _totalSupply = 100;
-    address public user = 0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac;
+    address public owner;
 
     constructor() {
-      _balances[user] = _totalSupply;
+      owner = tx.origin;
+      _balances[owner] = _totalSupply;
     }
     function totalSupply() external view returns (uint256) {
       return _totalSupply;
@@ -46,18 +47,18 @@ contract answer17 is IERC20 {
         return true;
     }
 
-    function allowance(address owner, address spender) public view returns (uint256){
-      return _allowances[owner][spender];
+    function allowance(address _owner, address spender) public view returns (uint256){
+      return _allowances[_owner][spender];
     }
   
     function approve(address spender, uint256 amount) external returns (bool){
-        address owner = msg.sender;
-        _approve(owner, spender, amount);
+        address _owner = msg.sender;
+        _approve(_owner, spender, amount);
         return true;
     }
 
-    function _approve(address owner, address spender, uint256 amount) internal virtual {
-        require(owner != address(0), "ERC20: approve from the zero address");
+    function _approve(address _owner, address spender, uint256 amount) internal virtual {
+        require(_owner != address(0), "ERC20: approve from the zero address");
         require(spender != address(0), "ERC20: approve to the zero address");
 
         _allowances[owner][spender] = amount;
@@ -70,12 +71,12 @@ contract answer17 is IERC20 {
         return true;
     }
 
-    function _spendAllowance(address owner, address spender, uint256 amount) internal virtual {
-        uint256 currentAllowance = _allowances[owner][spender];
+    function _spendAllowance(address _owner, address spender, uint256 amount) internal virtual {
+        uint256 currentAllowance = _allowances[_owner][spender];
         if (currentAllowance != type(uint256).max) {
             require(currentAllowance >= amount, "ERC20: insufficient allowance");
             unchecked {
-                _approve(owner, spender, currentAllowance - amount);
+                _approve(_owner, spender, currentAllowance - amount);
             }
         }
     }

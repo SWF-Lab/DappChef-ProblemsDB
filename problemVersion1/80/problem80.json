@@ -1,0 +1,34 @@
+{
+    "problemNumber": 80,
+    "problemVersion": 1,
+    "description": "Factory",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "createToken(string,string,uint256)",
+            "callData": ["aaa","ABC",100],
+            "expectReturn": []
+        },
+        {
+          "methodName": "%createToken(string,string,uint256)",
+          "callData": ["aaa","ABC",100],
+          "expectReturn": ["Symbol already used"]
+        },
+        {
+          "methodName": "checkAns(string)",
+          "callData": ["ABC"],
+          "expectReturn": [true]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Design_Pattern"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/80"
+}

@@ -24,9 +24,10 @@ contract answer16 is IERC20 {
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
     uint256 private _totalSupply = 100;
-    address public owner = 0xf8601B6E1f265De57a691Ff64Ddc5e5f2cad17Ac;
+    address public owner;
 
     constructor() {
+      owner = tx.origin;
       _balances[owner] = _totalSupply;
     }
     function totalSupply() external view returns (uint256) {

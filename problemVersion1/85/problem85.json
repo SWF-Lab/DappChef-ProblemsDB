@@ -1,0 +1,70 @@
+{
+  "problemNumber": 85,
+  "problemVersion": 1,
+  "description": "Leverage",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "open(uint256)",
+        "callData": [10000],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getERC20BalanceOf()",
+        "callData": [],
+        "expectReturn": [500]
+      },
+      {
+        "methodName": "setPrice(uint256)",
+        "callData": [90],
+        "expectReturn": []
+      },
+      {
+        "methodName": "close()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getStableBalanceOf()",
+        "callData": [],
+        "expectReturn": [5000]
+      },
+
+      {
+        "methodName": "setPrice(uint256)",
+        "callData": [100],
+        "expectReturn": []
+      },
+      {
+        "methodName": "open(uint256)",
+        "callData": [5000],
+        "expectReturn": []
+      },
+      {
+        "methodName": "setPrice(uint256)",
+        "callData": [80],
+        "expectReturn": []
+      },
+      {
+        "methodName": "liquidate(address)",
+        "callData": ["MSG_SENDER"],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getStableBalanceOf()",
+        "callData": [],
+        "expectReturn": [0]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 2
+      },
+      {
+          "trait_type": "class",
+          "value": "DeFi"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/85"
+}

@@ -1,0 +1,49 @@
+{
+  "problemNumber": 84,
+  "problemVersion": 1,
+  "description": "Advanced Staking",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "stake(uint256)",
+        "callData": [50],
+        "expectReturn": []
+      },
+      {
+        "methodName": "addTime()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "claimRewards()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getRewardBalanceOf()",
+        "callData": [],
+        "expectReturn": [1]
+      },
+      {
+        "methodName": "slash(address)",
+        "callData": ["MSG_SENDER"],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getStakingBalanceOf()",
+        "callData": [],
+        "expectReturn": [62]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 2
+      },
+      {
+          "trait_type": "class",
+          "value": "DeFi"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/84"
+}
