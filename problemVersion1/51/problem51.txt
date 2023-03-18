@@ -5,7 +5,7 @@ pragma solidity ^0.8.17;
 
 //TODO: complete this dutch auction
 contract answer51 {
-    uint private constant DURATION = ;
+    uint private constant DURATION = 15;
 
     address payable public immutable seller;
     uint public immutable startingPrice;
