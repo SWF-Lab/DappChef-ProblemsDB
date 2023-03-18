@@ -1,0 +1,82 @@
+{
+    "problemNumber": 99,
+    "problemVersion": 1,
+    "description": "EOA (Externally Owned Account) Checks",
+    "constructorCallData": [["uint256", "74557"]],
+    "problemSolution": [
+        {
+            "methodName": "_isContractAt(address)",
+            "callData": [
+                "MSG_SENDER"
+            ],
+            "expectReturn": [
+                "false"
+            ]
+        },
+        {
+            "methodName": "judge_isContractAt(address,uint256)",
+            "callData": [
+                "MSG_SENDER", "744555"
+            ],
+            "expectReturn": [
+                "false"
+            ]
+        },
+        {
+            "methodName": "judge_isContractAt(address,uint256)",
+            "callData": [
+                "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec",
+                "744555"
+            ],
+            "expectReturn": [
+                "false"
+            ]
+        },
+        {
+            "methodName": "judge_isContractAt(address,uint256)",
+            "callData": [
+                "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec",
+                "74557"
+            ],
+            "expectReturn": [
+                "true"
+            ]
+        },
+        {
+            "methodName": "_isContractCall()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#Calling(bool,address)",
+            "callData": [],
+            "expectReturn": [
+                [
+                    "false"
+                ],
+                []
+            ]
+        },
+        {
+            "methodName": "judge_isContractCall(uint256)",
+            "callData": ["74557"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#Calling(bool,address)",
+            "callData": [],
+            "expectReturn": [["true"],[]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 3
+        },
+        {
+            "trait_type": "class",
+            "value": "EVM"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/99"
+}

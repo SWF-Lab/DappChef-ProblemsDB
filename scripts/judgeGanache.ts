@@ -17,7 +17,7 @@ async function main() {
     const provider = new ethers.providers.Web3Provider(ganache as any);
 
     if (problemNumber == "all") {
-        for (let i = 0; i < 100; i++) {
+        for (let i = 0; i <= 100; i++) {
             console.log(`-------------------------- ${i} --------------------------`)
             try{
                 const res = await judge(i, provider)
@@ -35,7 +35,6 @@ async function main() {
     else {
         await judge(problemNumber, provider)
     }
-    
 }
 
 async function judge(problemNumber: number, provider: any) {

@@ -1,0 +1,67 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract answer99 {
+    mapping(uint => Account) public accounts;
+    event Calling(bool indexed answer, address caller);
+    constructor (uint _id) {
+        accounts[_id] = new Account(address(msg.sender));
+    }
+
+    function _isContractAt(address _addr) public view returns (bool) {
+        return _addr.code.length != 0;
+    }
+
+    function _isContractCall() public returns(bool){
+        bool answer = tx.origin != msg.sender;
+        emit Calling(answer, address(msg.sender));
+        return answer;
+    }
+
+    /************************************************
+     *  accountsOp for Testing
+     ***********************************************/
+
+    function judge_isContractAt(address _addr, uint256 _id) public view returns (bool) {
+        if( _addr == 0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec){
+            return _isContractAt(address(accounts[_id]));
+        }
+        else{
+            return _isContractAt(_addr);
+        }
+    }
+
+    function judge_isContractCall(uint256 _id) public {
+        accounts[_id].execute(
+            address(this),
+            abi.encodeWithSelector(
+                this._isContractCall.selector,
+                msg.sender
+            )
+        );
+    }
+}
+
+contract Account {
+    address payable public owner;
+
+    constructor(address _owner) {
+        owner = payable(_owner);
+    }
+
+    function transfer(address _target, uint _amount) external {
+        require(msg.sender == owner, "caller is not owner");
+        payable(_target).transfer(_amount);
+    }
+
+    function getBalance() external view returns (uint) {
+        return address(this).balance;
+    }
+
+    function execute(address _target, bytes memory _data) external payable {
+        (bool success, ) = _target.call{value: msg.value}(_data);
+        require(success, "failed");
+    }
+
+    receive() external payable {}
+}
