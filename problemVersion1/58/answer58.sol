@@ -53,7 +53,7 @@ contract answer58 {
       token2 = address(token2Contract);
     }
 
-    function exchange1to2(uint256 amount1) external {
+    function exchange1for2(uint256 amount1) external {
         require(amount1 > 0, "amount1 < 0");
         require(reserves[token1][token2] > 0 && reserves[token2][token1] > 0, "Invalid token pair");
 
