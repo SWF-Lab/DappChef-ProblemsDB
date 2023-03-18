@@ -1,0 +1,79 @@
+{
+  "problemNumber": 58,
+  "problemVersion": 1,
+  "description": "Swap",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "init()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "addReserves1(uint256)",
+        "callData": [100],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getReserves1()",
+        "callData": [],
+        "expectReturn": [100]
+      },
+      {
+        "methodName": "addReserves2(uint256)",
+        "callData": [50],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getReserves2()",
+        "callData": [],
+        "expectReturn": [50]
+      },
+      {
+        "methodName": "%removeReserves1(uint256)",
+        "callData": [1000],
+        "expectReturn": ["Insufficient deposits"]
+      },
+      {
+        "methodName": "%removeReserves2(uint256)",
+        "callData": [1000],
+        "expectReturn": ["Insufficient deposits"]
+      },
+      {
+        "methodName": "exchange1for2(uint256)",
+        "callData": [50],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getToken1Balance(address)",
+        "callData": ["MSG_SENDER"],
+        "expectReturn": [150]
+      },
+      {
+        "methodName": "getToken2Balance(address)",
+        "callData": ["MSG_SENDER"],
+        "expectReturn": [75]
+      },
+      {
+        "methodName": "getReserves1()",
+        "callData": [],
+        "expectReturn": [150]
+      },
+      {
+        "methodName": "getReserves2()",
+        "callData": [],
+        "expectReturn": [25]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 2
+      },
+      {
+          "trait_type": "class",
+          "value": "DeFi"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/58"
+}

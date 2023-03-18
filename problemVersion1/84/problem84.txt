@@ -1,0 +1,181 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+contract StakingToken {
+  uint256 public totalSupply = 100; 
+  mapping(address => uint256) public balanceOf;
+
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
+
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
+  }
+}
+
+contract RewardToken {
+  uint256 public totalSupply = 1000000; 
+  mapping(address => uint256) public balanceOf;
+
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
+
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
+  }
+}
+
+// This is an advanced staking contract ! We added slash and delegate functions.
+// We are only focusing slashing.
+contract answer84 {
+    StakingToken public stakingToken;
+    RewardToken public rewardToken;
+
+    address public owner;
+    uint256 public totalStaked;
+    uint256 public totalRewards = 100;
+    uint256 public rewardRate = 1;
+    uint256 public lastUpdateTime;
+    uint256 public rewardPerTokenStored = 1;
+    uint256 public nowTime = 16848340;
+    mapping(address => uint256) public stakedBalance;
+    mapping(address => uint256) public rewardPerTokenPaid;
+    mapping(address => uint256) public rewardsEarned;
+    mapping(address => address) public delegate;
+    mapping(address => uint256) public delegationVotes;
+    mapping(address => bool) public slashed;
+    uint256 public slashPercentage = 50;
+    uint256 public slashPenalty = 50;
+
+   constructor() {
+        stakingToken = new StakingToken(tx.origin);
+        rewardToken = new RewardToken(address(this));
+        lastUpdateTime = nowTime;
+        owner = address(tx.origin);
+    }
+
+    modifier onlyOwner() {
+      require(msg.sender == owner);
+      _;
+    }
+
+    function stake(uint256 _amount) external {
+        require(_amount > 0, "Staking amount must be greater than 0");
+        updateReward(msg.sender);
+        stakedBalance[msg.sender] += _amount;
+        totalStaked += _amount;
+        stakingToken.transferFrom(msg.sender, address(this), _amount);
+    }
+
+    function unstake(uint256 _amount) external {
+        require(_amount > 0 && stakedBalance[msg.sender] >= _amount, "Invalid unstake amount");
+        updateReward(msg.sender);
+        stakedBalance[msg.sender] -= _amount;
+        totalStaked -= _amount;
+        stakingToken.transfer(msg.sender, _amount);
+    }
+
+    function claimRewards() external {
+        updateReward(msg.sender);
+        uint256 rewards = rewardsEarned[msg.sender];
+        rewardsEarned[msg.sender] = 0;
+        totalRewards -= rewards;
+        rewardToken.transfer(msg.sender, rewards);
+    }
+
+    function delegateStake(address _delegate) external {
+        require(_delegate != address(0) && _delegate != msg.sender, "Invalid delegate");
+        updateReward(msg.sender);
+        address currentDelegate = delegate[msg.sender];
+        if (currentDelegate != address(0)) {
+            delegationVotes[currentDelegate] -= stakedBalance[msg.sender];
+        }
+        delegationVotes[_delegate] += stakedBalance[msg.sender];
+        delegate[msg.sender] = _delegate;
+    }
+
+    function voteDelegation(address[] memory _delegates) external onlyOwner {
+        uint256 numDelegates = _delegates.length;
+        for (uint256 i = 0; i < numDelegates; i++) {
+            address delegateAddr = _delegates[i];
+            require(delegateAddr != address(0), "Invalid delegate");
+            delegationVotes[delegateAddr] = 0;
+        }
+    }
+
+    function setRewardRate(uint256 _rewardRate) external onlyOwner {
+        updateRewardPerToken();
+        rewardRate = _rewardRate;
+    }
+
+    function setSlashPercentage(uint256 _slashPercentage) external onlyOwner {
+        slashPercentage = _slashPercentage;
+    }
+
+    function setSlashPenalty(uint256 _slashPenalty) external onlyOwner {
+        slashPenalty = _slashPenalty;
+    }
+
+    // TODOs are here
+    function slash(address _staker) external onlyOwner {
+        require(!slashed[_staker], "Already slashed");
+
+        // TODO1 : fill in the blanks
+        uint256 amountToSlash = 
+
+        require(amountToSlash > 0, "Amount to slash must be greater than 0");
+        slashed[_staker] = 
+        totalStaked -= 
+        stakedBalance[_staker] -= 
+        totalRewards -=                       / 1e18;
+
+
+        stakingToken.transfer(owner, amountToSlash * slashPenalty / 100);
+    }
+
+    function updateReward(address _account) internal {
+        updateRewardPerToken();
+        rewardsEarned[_account] += 
+        (stakedBalance[_account] * (rewardPerTokenStored - rewardPerTokenPaid[_account])) / 1e18;
+        rewardPerTokenPaid[_account] = rewardPerTokenStored;
+    }
+
+    function updateRewardPerToken() internal {
+        if (totalStaked == 0) {
+            lastUpdateTime = nowTime;
+            return;
+        }
+        uint256 rewardPerSecond = rewardRate ;
+        uint256 timeDelta = nowTime - lastUpdateTime;
+
+        // TODO2: finish calculate the `rewardAccumulated`
+        uint256 rewardAccumulated =                 * 1e18;
+        rewardPerTokenStored += rewardAccumulated / totalStaked;
+        lastUpdateTime = nowTime;
+    }
+
+
+
+    function addTime() external {
+      nowTime += 1;
+    }
+    function getRewardBalanceOf() external view returns (uint256) {
+      return rewardToken.balanceOf(msg.sender);
+    }
+    function getStakingBalanceOf() external view returns (uint256) {
+      return stakingToken.balanceOf(msg.sender);
+    }
+
+}

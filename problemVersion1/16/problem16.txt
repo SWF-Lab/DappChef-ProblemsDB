@@ -25,10 +25,10 @@ contract answer16 is IERC20 {
     mapping(address => uint256) private _balances;
     mapping(address => mapping(address => uint256)) private _allowances;
     uint256 private _totalSupply = 100;
-    // TODO: set the owner address to be your address.
-    address public owner = 
+    address public owner;
 
     constructor() {
+      owner = tx.origin;
       _balances[owner] = _totalSupply;
     }
 

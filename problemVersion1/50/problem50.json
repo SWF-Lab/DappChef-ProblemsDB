@@ -4,7 +4,36 @@
     "description": "English Auction",
     "constructorCallData": [],
     "problemSolution": [
-
+      {
+        "methodName": "start()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "$bid()",
+        "callData": ["2000",[]],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%bid()",
+        "callData": [],
+        "expectReturn": ["Your amount is lower than the highest bid."]
+      },
+      {
+        "methodName": "setTimeToEnd()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "end()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%withdraw()",
+        "callData": [],
+        "expectReturn": ["Highest bidder cannot withdraw."]
+      }
     ],
     "attributes": [
         {

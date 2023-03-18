@@ -15,12 +15,11 @@ contract answer50 {
 
 
     address public winner;
-    uint256 public highestBid;
+    uint256 public highestBid = 1000;
     mapping(address => uint256) public bids;
 
-    constructor(uint256 _startingBid) {
-      seller = payable(msg.sender);
-      highestBid = _startingBid;
+    constructor() {
+      seller = payable(tx.origin);
     }
 
     function start() external {
@@ -48,7 +47,7 @@ contract answer50 {
     }
 
     function withdraw() external {
-        require(msg.sender != winner, "Highest bidder cannot withdraw.");
+        require(msg.sender == winner, "Highest bidder cannot withdraw.");
 
         uint256 bal = bids[msg.sender];
         bids[msg.sender] = 0;

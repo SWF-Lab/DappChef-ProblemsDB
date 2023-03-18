@@ -1,0 +1,69 @@
+{
+  "problemNumber": 83,
+  "problemVersion": 1,
+  "description": "Simple Staking",
+  "constructorCallData": [],
+  "problemSolution": [
+      {
+        "methodName": "stake(uint256)",
+        "callData": [10],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getStakingBalanceOf()",
+        "callData": [],
+        "expectReturn": [90]
+      },
+      {
+        "methodName": "addTime()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "stake(uint256)",
+        "callData": [10],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getRewardBalanceOf()",
+        "callData": [],
+        "expectReturn": [10]
+      },
+      {
+        "methodName": "addTime()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "stake(uint256)",
+        "callData": [10],
+        "expectReturn": []
+      },
+      {
+        "methodName": "addTime()",
+        "callData": [],
+        "expectReturn": []
+      },
+      {
+        "methodName": "unstake(uint256)",
+        "callData": [20],
+        "expectReturn": []
+      },
+      {
+        "methodName": "getRewardBalanceOf()",
+        "callData": [],
+        "expectReturn": [60]
+      }
+  ],
+  "attributes": [
+      {
+          "trait_type": "difficulty",
+          "value": 2
+      },
+      {
+          "trait_type": "class",
+          "value": "DeFi"
+      }
+  ],
+  "image": "ipfs://<ipfsPrefix>/83"
+}
