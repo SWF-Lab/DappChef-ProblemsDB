@@ -18,8 +18,11 @@ contract answer51 {
     uint256 public nowTime = 1677679389;
 
     
-    constructor(uint _startingPrice, uint _discountRate) {
-      //TODO 1: set the `seller`, `startingPrice`, `startAt`, `expiresAt`, `discountRate`
+    constructor() {
+      discountRate = 10;
+      startingPrice = 1000;
+
+      //TODO 1: set the `seller`, `startAt`, `expiresAt`
       // please use `nowTime` to replace any block.timestamp
 
 

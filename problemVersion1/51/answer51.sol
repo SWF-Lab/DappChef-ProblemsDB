@@ -2,7 +2,7 @@
 pragma solidity ^0.8.17;
 
 contract answer51 {
-    uint private constant DURATION = 1 days;
+    uint private constant DURATION = 15;
 
     address payable public immutable seller;
     uint public immutable startingPrice;
@@ -14,14 +14,14 @@ contract answer51 {
     // mock of block.timestamp
     uint256 public nowTime = 1677679389;
 
-    constructor(uint _startingPrice, uint _discountRate) {
-        seller = payable(msg.sender);
-        startingPrice = _startingPrice;
+    constructor() {
+        seller = payable(tx.origin);
+        startingPrice = 1000;
         startAt = nowTime;
         expiresAt = nowTime + DURATION;
-        discountRate = _discountRate;
+        discountRate = 10;
 
-        require(_startingPrice >= _discountRate * DURATION, "starting price < min");
+        require(startingPrice >= discountRate * DURATION, "starting price < min");
     }
 
     function getPrice() public view returns (uint) {
