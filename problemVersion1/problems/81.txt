@@ -1,0 +1,63 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+pragma solidity ^0.8.0;
+
+contract EscowedToken {
+  uint256 public totalSupply = 100; 
+  mapping(address => uint256) public balanceOf;
+
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
+
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
+  }
+}
+
+// This is an escow contract ! Facilitates the exchange of goods or services between a buyer, seller, and an arbiter.
+contract answer81 {
+    address public buyer;
+    address public seller;
+    address public arbiter;
+    uint public amount;
+    bool public approvedByBuyer;
+    bool public approvedByArbiter;
+    EscowedToken escowed;
+    
+    constructor() {
+        escowed = new EscowedToken(tx.origin);
+        buyer = tx.origin;
+        seller = tx.origin;
+        arbiter = tx.origin;
+        amount = 50;
+        escowed.transferFrom(tx.origin, address(this), 50);
+    }
+    
+    // TODOs: Complete the functions below, think of the requirements needs to be satisfied.
+    function approveByBuyer() public {
+
+
+    }
+    
+    function approveByArbiter() public {
+
+
+    }
+    
+    function releaseAmount() public {
+
+
+    }
+    
+    function refundAmount() public {
+
+
+    }
+}
