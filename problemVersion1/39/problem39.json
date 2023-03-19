@@ -1,0 +1,29 @@
+{
+    "problemNumber": 39,
+    "problemVersion": 1,
+    "description": "ERC1155Receiver",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "checkSafeTransferFrom()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "checkSafeBatchTransferFrom(uint256[],uint256[])",
+            "callData": [[0], [1]],
+            "expectReturn": []
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Token"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/39"
+}

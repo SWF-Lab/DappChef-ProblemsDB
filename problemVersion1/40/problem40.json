@@ -1,0 +1,24 @@
+{
+    "problemNumber": 40,
+    "problemVersion": 1,
+    "description": "ERC1155Metadata",
+    "constructorCallData": [["string", "ipfs://<CID>/"]],
+    "problemSolution": [
+        {
+            "methodName": "uri(uint256)",
+            "callData": [142390138],
+            "expectReturn": ["ipfs://<CID>/142390138.json"]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Token"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/40"
+}

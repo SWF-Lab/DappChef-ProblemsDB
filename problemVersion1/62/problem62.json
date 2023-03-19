@@ -1,0 +1,49 @@
+{
+    "problemNumber": 62,
+    "problemVersion": 1,
+    "description": "Dynamic NFT - ERC721",
+    "constructorCallData": [["string[3]", ["ipfs://<stage0>/","ipfs://<stage1>/","ipfs://<stage2>/"]]],
+    "problemSolution": [
+        {
+            "methodName": "checkOwner(uint256,uint256)",
+            "callData": [0, 0],
+            "expectReturn": [[true]]
+        },
+        {
+            "methodName": "getTokenUri(uint256)",
+            "callData": [0],
+            "expectReturn": [["ipfs://<stage0>/0.json"]]
+        },
+        {
+            "methodName": "transferToken(uint256,uint256,uint256)",
+            "callData": [0, 1, 0],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getTokenUri(uint256)",
+            "callData": [0],
+            "expectReturn": [["ipfs://<stage1>/0.json"]]
+        },
+        {
+            "methodName": "safeTransferToken(uint256,uint256,uint256)",
+            "callData": [1, 0, 0],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getTokenUri(uint256)",
+            "callData": [0],
+            "expectReturn": [["ipfs://<stage2>/0.json"]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Token"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/62"
+}

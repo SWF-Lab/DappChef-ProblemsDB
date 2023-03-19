@@ -1,0 +1,29 @@
+{
+    "problemNumber": 29,
+    "problemVersion": 1,
+    "description": "Delegate Call",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "delegateCallTest(uint256)",
+            "callData": [123478917598],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getValues",
+            "callData": [],
+            "expectReturn": [[123478917598, "MSG_SENDER", true]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Beginner"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/29"
+}

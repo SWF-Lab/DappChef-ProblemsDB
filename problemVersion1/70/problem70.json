@@ -1,0 +1,103 @@
+{
+    "problemNumber": 70,
+    "problemVersion": 1,
+    "description": "Vote on Blockchain",
+    "constructorCallData": [
+        ["uint256", 2],
+        ["string", "What do you want for dinner?"],
+        ["string[]", ["McDonald", "KFC", "Fried Rice", "Noodles"]]
+    ],
+    "problemSolution": [
+        {
+            "methodName": "voteFromOperators(uint256,string)",
+            "callData": [0, "KFC"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#NewVote(string)",
+            "callData": [],
+            "expectReturn": [[], ["KFC"]]
+        },
+        {
+            "methodName": "%voteFromOperators(uint256,string)",
+            "callData": [0, "McDonald"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "voteFromOperators(uint256,string)",
+            "callData": [1, "KFC"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#NewVote(string)",
+            "callData": [],
+            "expectReturn": [[], ["KFC"]]
+        },
+        {
+            "methodName": "voteFromOperators(uint256,string)",
+            "callData": [2, "McDonald"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#NewVote(string)",
+            "callData": [],
+            "expectReturn": [[], ["McDonald"]]
+        },
+        {
+            "methodName": "voteFromOperators(uint256,string)",
+            "callData": [3, "McDonald"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#NewVote(string)",
+            "callData": [],
+            "expectReturn": [[], ["McDonald"]]
+        },
+        {
+            "methodName": "voteFromOperators(uint256,string)",
+            "callData": [4, "McDonald"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#NewVote(string)",
+            "callData": [],
+            "expectReturn": [[], ["McDonald"]]
+        },
+        {
+            "methodName": "voteFromOperators(uint256,string)",
+            "callData": [5, "Fried Rice"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#NewVote(string)",
+            "callData": [],
+            "expectReturn": [[], ["Fried Rice"]]
+        },
+        {
+            "methodName": "voteFromOperators(uint256,string)",
+            "callData": [6, "Noodles"],
+            "expectReturn": []
+        },
+        {
+            "methodName": "#NewVote(string)",
+            "callData": [],
+            "expectReturn": [[], ["Noodles"]]
+        },
+        {
+            "methodName": "tally(string[])",
+            "callData": [["McDonald", "KFC", "Fried Rice", "Noodles"]],
+            "expectReturn": [["McDonald"]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Design_Pattern"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/70"
+}

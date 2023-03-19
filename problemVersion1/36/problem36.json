@@ -1,0 +1,24 @@
+{
+    "problemNumber": 36,
+    "problemVersion": 1,
+    "description": "ERC721Receiver",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "checkSafeTransferFrom()",
+            "callData": [],
+            "expectReturn": []
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 1
+        },
+        {
+            "trait_type": "class",
+            "value": "Token"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/36"
+}
