@@ -9,6 +9,6 @@ contract answer6 {
     }
 
     receive() external payable {
-      emit Log("recieve", msg.value);
+      emit Log("receive", msg.value);
     }
 }
