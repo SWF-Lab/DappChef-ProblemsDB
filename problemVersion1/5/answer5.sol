@@ -4,7 +4,7 @@ contract answer5 {
     address public owner;
 
     constructor() {
-        owner = tx.origin;
+        owner = msg.sender;
     }
 
     modifier onlyOwner() {

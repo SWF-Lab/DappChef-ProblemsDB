@@ -48,7 +48,7 @@ contract answer70 {
     
 
     constructor (uint256 _weight, string memory _name, string[] memory _choices) { 
-        chairPerson = tx.origin;
+        chairPerson = msg.sender;
         startTime = block.timestamp;
 
         // update choices and proposal

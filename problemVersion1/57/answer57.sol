@@ -58,7 +58,7 @@ contract answer57 {
 
     constructor() {
       borrowedToken = new BorrowedERC20(address(this));
-      collateralToken = new CollateralERC20(tx.origin);
+      collateralToken = new CollateralERC20(msg.sender);
     }
 
 

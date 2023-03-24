@@ -54,7 +54,7 @@ contract answer85 {
     mapping(address => Position) public positions;
 
     constructor() {
-      stableCoin = new StableCoin(tx.origin);
+      stableCoin = new StableCoin(msg.sender);
       erc20 = new LeveragedToken(address(this));
     }
 

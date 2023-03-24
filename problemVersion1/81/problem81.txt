@@ -32,12 +32,12 @@ contract answer81 {
     EscowedToken escowed;
     
     constructor() {
-        escowed = new EscowedToken(tx.origin);
-        buyer = tx.origin;
-        seller = tx.origin;
-        arbiter = tx.origin;
+        escowed = new EscowedToken(msg.sender);
+        buyer = msg.sender;
+        seller = msg.sender;
+        arbiter = msg.sender;
         amount = 50;
-        escowed.transferFrom(tx.origin, address(this), 50);
+        escowed.transferFrom(msg.sender, address(this), 50);
     }
     
     // TODOs: Complete the functions below, think of the requirements needs to be satisfied.

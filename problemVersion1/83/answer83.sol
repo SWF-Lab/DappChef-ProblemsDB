@@ -47,7 +47,7 @@ contract answer83 {
     mapping(address => uint256) public stakedTimestamp;
 
     constructor() {
-        stakingToken = new StakingToken(tx.origin);
+        stakingToken = new StakingToken(msg.sender);
         rewardToken = new RewardToken(address(this));
     }
 

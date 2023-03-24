@@ -60,10 +60,10 @@ contract answer84 {
     uint256 public slashPenalty = 50;
 
    constructor() {
-        stakingToken = new StakingToken(tx.origin);
+        stakingToken = new StakingToken(msg.sender);
         rewardToken = new RewardToken(address(this));
         lastUpdateTime = nowTime;
-        owner = address(tx.origin);
+        owner = address(msg.sender);
     }
 
     modifier onlyOwner() {

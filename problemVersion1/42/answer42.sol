@@ -9,7 +9,7 @@ contract answer42 {
     address owner;
 
     constructor() {
-        owner = tx.origin;
+        owner = msg.sender;
     }
 
     function royaltyInfo(uint256 salePrice)

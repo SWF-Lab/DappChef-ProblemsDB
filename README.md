@@ -96,19 +96,6 @@ function get_a() public view returns(address){
 ]
 ```
 
-4. 請注意佈署過程是 EOA(User) -> Deployer -> AnswerContract，所以**佈署的時候** `msg.sender` 會是 Deployer Contract。所以如果你有 `owner` 設定在 `constructor` 裡面，要讓解題者的 `address` 被設定為 `owner`，必須用 `tx.origin` 不可用 `msg.sender`。
-```solidity
-// 錯誤出法
-constructor() {
-    owner = msg.sender;
-}
-
-// 正確出法
-constructor() {
-    owner = tx.origin;
-}
-```
-
 ### Start the Journey
 
 1. Clone the repo
