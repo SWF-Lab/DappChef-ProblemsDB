@@ -6,8 +6,7 @@ contract answer33 {
     function assemblyCheckZeroAddr(address toCheck) public pure returns (bool success) {
         assembly {
             if iszero(toCheck) {
-                // TODO: you should finish this function with the same utility of 
-                // `require(toCheck != address(0));`
+                // TODO: you should finish this function check out if the address `toCheck` is a zero address or not. 
             }
         }
         return true;
