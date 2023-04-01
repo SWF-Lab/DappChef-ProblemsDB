@@ -9,7 +9,8 @@ contract answer23 {
     bytes32 public result;
     
     function hashInOrder() public {
-        //TODO: you should use ONE keccak256 function to hash the above constant variables in order (UINT -> INT -> CALLER ...), and assign the value to result.
+        // TODO: you should use ONE keccak256 function to hash the above constant variables in order (UINT -> INT -> CALLER ...), and assign the value to result.
+        // hint: abi.encodePacked
     }
 
     function get_result() public view returns(bytes32) {
