@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// this is the contract that you should inherit
 contract Greeting {
     string constant private GREETING = "Hello, My Name is Coco";  
     function returnGreeting(string memory _input) public virtual pure returns(string memory) {
@@ -10,8 +11,8 @@ contract Greeting {
 
 // TODO: you should inherit Greeting and complete the following function.
 contract answer25 {
-    // TODO: you should inherit and override returnGreeting from Greeting and convert the return value into the parameter: _input.
+    // TODO: you should inherit and override `returnGreeting()` from Greeting and convert the return value into the parameter: `_input`.
     function returnGreeting() {
-        // TODO: complete this function.
+
     }
 }
