@@ -6,11 +6,12 @@ contract answer68 {
         // TODO: complete the function with the regulated format:
         // ex: input: [0x5B38Da6a701c568545dCfcB03FcB875f56beddC4, 388, bananas]
         // ouput: "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4 has 388 bananas."
-        return string.concat();
+        return string.concat(/* write something here*/);
     }
 }
 
-library String { // 
+library String { 
+    // TODO: you should use the library to complete the function above.
     bytes16 private constant _SYMBOLS = "0123456789abcdef";
     uint8 private constant _ADDRESS_LENGTH = 20;
     function log10(uint256 value) internal pure returns (uint256) {
