@@ -8,6 +8,26 @@
             "methodName": "overflow(uint8)",
             "callData": [255],
             "expectReturn": [[233]]
+        },
+        {
+            "methodName": "overflow(uint8)",
+            "callData": [13],
+            "expectReturn": [[247]]
+        },
+        {
+            "methodName": "overflow(uint8)",
+            "callData": [18],
+            "expectReturn": [[252]]
+        },
+        {
+            "methodName": "overflow(uint8)",
+            "callData": [1],
+            "expectReturn": [[235]]
+        },
+        {
+            "methodName": "overflow(uint8)",
+            "callData": [254],
+            "expectReturn": [[232]]
         }
     ],
     "attributes": [
