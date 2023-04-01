@@ -39,7 +39,8 @@ contract answer67 {
 
     function toString(uint256 value) internal pure returns (string memory) {
         unchecked {
-            // TODO: you should complete this function to convert a `uint256` into `string`.  
+            // TODO: you should complete this function to convert a `uint256` into `string`.
+            // 👍 hint: openzeppelin String
         }
     }
 
