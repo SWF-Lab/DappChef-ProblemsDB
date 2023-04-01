@@ -3,7 +3,7 @@ pragma solidity ^0.8.17;
 
 contract answer27 {
     // TODO: given a bytes32, please use assembly to get the bytes 0-16, 17-26, 27-32 and assign them to a, b, c respectively. 
-
+    // hint: you can check "ercRecover" in openzepplin if you want!
     function getBytes() public pure returns (bytes16 a, bytes10 b, bytes6 c) {
         bytes memory hash = abi.encodePacked(getHash());
 
