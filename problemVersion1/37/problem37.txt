@@ -75,7 +75,7 @@ contract ERC721 is IERC721Metadata {
     }
     function tokenURI(uint256 tokenId) external view returns (string memory) {
         // TODO: complete this function to implement ERC721Metadata
-        // ex: input: 256252, _baseUri = "ipfs://w2ofj3ojgro3dj3ovmo356", output: "ipfs://w2ofj3ojgro3dj3ovmo356.256252.json" 
+        // ex: input: 256252, _baseUri = "ipfs://w2ofj3ojgro3dj3ovmo356/", output: "ipfs://w2ofj3ojgro3dj3ovmo356/256252.json" 
     }
 } 
 
