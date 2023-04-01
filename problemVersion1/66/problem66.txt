@@ -2,10 +2,12 @@
 pragma solidity ^0.8.17;
 
 // TODO: implement the SafeMath library, which will be used in `operating` function.
+// hint: SafeMath implementation in openzeppelin utils
 library SafeMath {
     
 }
 
+// 👍 DO NOT alter this function for correctly judging
 contract answer66 {
     function operating(uint256 x, uint256 y, uint256 z, uint256 u) public pure returns(uint256) { 
         uint256 tmp; 
