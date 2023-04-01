@@ -2,6 +2,11 @@
 // ref: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC1155/ERC1155.sol
 pragma solidity ^0.8.17;
 
+// Please check out and find the TODOs in contract ERC1155 and answer39!
+// There are 4 TODOs to complete this problem.
+// 👍 For convenience, functions are not implemented in the `ERC1155`. 
+// 👍 If you still want to finish the contract, it won't change the judging result.
+
 interface IERC165 {
     function supportsInterface(bytes4 interfaceID) external view returns (bool);
 }
@@ -30,17 +35,11 @@ contract ERC1155 is IERC1155 {
     function safeTransferFrom(address _from, address _to, uint256 _id, uint256 _value, bytes calldata _data) external {
         // TODO: please implement the ERC1155Receiver here to check if to is a contract that implemented onERC1155Received() 
         // hint: you just have to write the require() to complete this problem
-        require(
-            _to.code.length == 0 || IERC1155TokenReceiver(_to).onERC1155Received(_from, _from, _id, _value, "") == IERC1155TokenReceiver.onERC1155Received.selector
-        );
     }
 
     function safeBatchTransferFrom(address _from, address _to, uint256[] calldata _ids, uint256[] calldata _values, bytes calldata _data) external {
         // TODO: please implement the ERC1155Receiver here to check if to is a contract that implemented onERC1155BatchReceived()
         // hint: you just have to write the require() to complete this problem
-        require(
-            _to.code.length == 0 || IERC1155TokenReceiver(_to).onERC1155BatchReceived(_from, _from, _ids, _values, "") == IERC1155TokenReceiver.onERC1155BatchReceived.selector
-        );
     }
     function balanceOf(address _owner, uint256 _id) external view returns (uint256) {}
     function balanceOfBatch(address[] calldata _owners, uint256[] calldata _ids) external view returns (uint256[] memory) {}
@@ -79,7 +78,6 @@ contract answer39 is IERC1155TokenReceiver {
         bytes calldata _data
     ) external returns(bytes4) {
         // TODO: please implement the ERC1155Receiver here to check if to is a contract that implemented onERC1155Received()
-        return (this.onERC1155Received.selector);
     }
 
     function onERC1155BatchReceived(
@@ -90,6 +88,5 @@ contract answer39 is IERC1155TokenReceiver {
         bytes calldata _data
     ) external returns(bytes4) {
         // TODO: please implement the ERC1155BatchReceiver here to check if to is a contract that implemented onERC1155BatchReceived()
-        return (this.onERC1155BatchReceived.selector);
     }
 }
