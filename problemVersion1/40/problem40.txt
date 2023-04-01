@@ -2,6 +2,10 @@
 // ref: https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC1155/ERC1155.sol
 pragma solidity ^0.8.17;
 
+// First, take a glance in `answer40`. You should complete the constructor to change the value of  `baseUri`.
+// Second, complete the function implementation in IERC1155Metadata_URI
+// hint: you can use the String library offered below.
+
 interface IERC165 {
     function supportsInterface(bytes4 interfaceID) external view returns (bool);
 }
