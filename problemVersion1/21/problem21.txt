@@ -25,7 +25,6 @@ contract answer21 {
     ) 
     {  
         //TODO: you should write the statements to change the values of global variables declared in the contract.
-        return ( a, b, c, d, e, f, g);
     }
 
     function get_a() public view returns(address) {
