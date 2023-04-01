@@ -4,8 +4,8 @@ pragma solidity ^0.8.17;
 // First, take a glance in `answer37`. You should complete the constructor to change the value of  `_baseUri`.
 // Second, complete the three functions implementation in IERC721Metadata, including `name()`, `symbol()` and `tokenURI()`. 
 
-// hint: you can check out ERC721Metadata/ IERC721Metadata in openzepplin github
-
+// hint1: you can check out ERC721Metadata/ IERC721Metadata in openzepplin github
+// hint2: you can use the String library offered below.
 
 interface IERC165 {
     function supportsInterface(bytes4 interfaceID) external view returns (bool);
