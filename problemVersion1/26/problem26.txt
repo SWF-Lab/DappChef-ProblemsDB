@@ -10,7 +10,7 @@ contract Greeting {
     }
 }
 
-// TODO: you should inherit Greeting and override the state variable, `name`, converting it into a input value in the constructor.
+// TODO: you should inherit Greeting and override the state variable, `name`, converting it into a input value (`_name`) in the constructor.
 contract answer26 {
     constructor(string memory _name) {
 
