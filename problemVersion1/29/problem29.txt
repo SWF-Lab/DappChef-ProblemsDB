@@ -10,6 +10,7 @@ contract answer29 {
     function delegateCallTest(uint _num) public payable {
         (bool success, ) = address(test).delegatecall(
             // TODO: complete this function to delegatecall the function in `Test`
+            // hint: function selector & delegatecall
         );
         require(success);
     }
