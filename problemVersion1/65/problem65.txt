@@ -113,7 +113,7 @@ contract ERC20 is IERC20 {
 
 }
 
-// TODO: write two function that works like a ERC20 faucet
+// This contract should work as a faucet contract.
 contract answer65 {
     uint256 constant public faucetAmount = 5 * (10 **10);
     uint256 constant public waitTime = 1 days;
@@ -136,11 +136,11 @@ contract answer65 {
         return(faucetContract.balanceOf(msg.sender));
     }
 
-    // TODO: complete this contract that work like a faucet
+    // TODO: complete these two functions
     
     function requestTokens() public {
         require(allowedToWithdraw(msg.sender));
-        // TODO: this will transfer faucetAmount of token to `msg.sender`, and remember to reset the time
+        // TODO: this function will transfer faucetAmount of token to `msg.sender`, and remember to reset the time ( `lastAccessTime` )
     }
 
     function allowedToWithdraw(address _address) public view returns(bool) {
