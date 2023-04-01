@@ -1,6 +1,11 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// Please check out and find the TODOs in contract ERC721 and answer36!
+// There are 3 TODOs to complete this problem.
+// 👍 For convenience, functions are not implemented in the `ERC721`. 
+// 👍 If you still want to finish the contract, it won't change the judging result.
+
 interface IERC165 {
     function supportsInterface(bytes4 interfaceID) external view returns (bool);
 }
@@ -47,7 +52,7 @@ contract ERC721 is IERC721 {
     function balanceOf(address owner) external view returns (uint balance) {}
     function ownerOf(uint tokenId) external view returns (address owner) {}
     function safeTransferFrom(address from, address to, uint tokenId) external view {
-        // TODO: please implement the ERC1155Receiver here to check if to is a contract that implemented onERC1155Received() 
+        // TODO1: you should check if to is a contract that implemented onERC721Received() 
         // hint: you just have to write the `require()` to complete this problem
     }
     function safeTransferFrom(
@@ -56,12 +61,8 @@ contract ERC721 is IERC721 {
         uint tokenId,
         bytes calldata data
     ) external {
-        require(
-            to.code.length == 0 || 
-                IERC721Receiver(to).onERC721Received(msg.sender, from, tokenId, "") ==
-                IERC721Receiver.onERC721Received.selector,
-            "unsafe recipient"
-        );
+        // TODO2: you should check if to is a contract that implemented onERC721Received() 
+        // hint: you just have to write the `require()` to complete this problem
     }
 
     function transferFrom(address from, address to, uint tokenId) external {}
@@ -86,5 +87,5 @@ contract answer36 is IERC721Receiver {
         );
     }
 
-    // TODO: implement the interface IERC721Receiver and make the contract `answer36` ERC721-token-receivible.
+    // TODO3: implement the interface IERC721Receiver and make the contract `answer36` ERC721-token-receivible.
 }
