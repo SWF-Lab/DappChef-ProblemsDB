@@ -6,8 +6,23 @@
     "problemSolution": [
         {
             "methodName": "underflow(int8)",
+            "callData": [125],
+            "expectReturn": [[3]]
+        },
+        {
+            "methodName": "underflow(int8)",
+            "callData": [10],
+            "expectReturn": [[-112]]
+        },
+        {
+            "methodName": "underflow(int8)",
             "callData": [-35],
             "expectReturn": [[99]]
+        },
+        {
+            "methodName": "underflow(int8)",
+            "callData": [-45],
+            "expectReturn": [[89]]
         }
     ],
     "attributes": [
