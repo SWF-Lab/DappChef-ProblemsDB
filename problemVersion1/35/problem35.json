@@ -8,6 +8,16 @@
             "methodName": "stringConcat(string,string,string)",
             "callData": ["I", "LOVE", "BLOCKCHAIN"],
             "expectReturn": [["I LOVE BLOCKCHAIN"]]
+        },
+        {
+            "methodName": "stringConcat(string,string,string)",
+            "callData": ["I", "am", "fine"],
+            "expectReturn": [["I am fine"]]
+        },
+        {
+            "methodName": "stringConcat(string,string,string)",
+            "callData": ["How", "are", "you?"],
+            "expectReturn": [["How are you?"]]
         }
     ],
     "attributes": [
