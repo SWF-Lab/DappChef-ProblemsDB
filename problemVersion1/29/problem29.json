@@ -13,6 +13,16 @@
             "methodName": "getValues",
             "callData": [],
             "expectReturn": [[123478917598, "MSG_SENDER", true]]
+        },
+        {
+            "methodName": "delegateCallTest(uint256)",
+            "callData": [100000000],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getValues",
+            "callData": [],
+            "expectReturn": [[100000000, "MSG_SENDER", true]]
         }
     ],
     "attributes": [
