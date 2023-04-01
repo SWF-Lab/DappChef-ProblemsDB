@@ -13,6 +13,21 @@
             "methodName": "compareStrings(string,string)",
             "callData": [ "WUZZUP", "WHAZUP"],
             "expectReturn": [[false]]
+        },
+        {
+            "methodName": "compareStrings(string,string)",
+            "callData": [ "WHAZUP ", "WHAZUP"],
+            "expectReturn": [[false]]
+        },
+        {
+            "methodName": "compareStrings(string,string)",
+            "callData": [ " WHAZUP", "WHAZUP"],
+            "expectReturn": [[false]]
+        },
+        {
+            "methodName": "compareStrings(string,string)",
+            "callData": [ "whazup", "WHAZUP"],
+            "expectReturn": [[false]]
         }
     ],
     "attributes": [
