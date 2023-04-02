@@ -2,14 +2,19 @@
 pragma solidity ^0.8.17;
 
 contract answer13 {
-  // TODO: Define a struct named `Food`, 
-  // The first variable is a string named `name`, and the second is a uint256 named `price`.
+  // TODO 1: Define a struct named `Food`, 
+  // This struct includes a string named `name`, and a uint256 named `price`.
 
-  // TODO: Declare a Food array named `foods`
 
-  // TODO: Declare a function named `createFood()`, it should let user createNewFood. 
-  // That is, it should take a string and a uint256 as param, create a `Food`, and push it into the array `foods`.
+  // TODO 2: Declare a Food array named `foods`
 
+
+  // TODO 3: Declare a function named `createFood()` 
+  //         It should take a string and a uint256 as param, create a `Food`, and push it into the array `foods`.
+
+
+
+  // --------------Below are judging functions-------------------
 
   function checkAns() external view returns (string memory, uint256) {
     return (foods[0].name, foods[0].price);

@@ -1,8 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-//This is multiCall, we want to write a function which can execute multiple calls where user inputs there call datas.
-
+// This is multiCall, we want to write a function which can execute multiple calls in one transaction.
 
 contract Test {
     function test1() external pure returns (uint256) {
@@ -26,7 +25,7 @@ contract answer53 {
   address[] public targets = new address[](2);
 
   // For judge system reasons, 
-  // we pretent that users inputs `datas` as calldata, and `targets` as targets address, their owns. 
+  // we pretent that users inputs `datas` as calldata, and `targets` as targets address, they are both arrays. 
   function multiCall() external view returns (bytes[] memory) {
     require(datas.length == targets.length, "Length not equal");
     bytes[] memory results = new bytes[](datas.length);
@@ -34,11 +33,14 @@ contract answer53 {
     // TODO: execute the calldatas from the address, for this problem, the call amount is specified as 2. 
     // Store the results in `results`.
 
+    
+
 
     return results;
   }
 
 
+  // ------- Below are judging functions-------------
 
   function deployTest() external {
     testContract = new Test();

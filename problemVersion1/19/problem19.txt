@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// ERC721! We are going to write our own ERC721 contract.
 interface IERC165 {
     function supportsInterface(bytes4 interfaceID) external view returns (bool);
 }
@@ -26,17 +27,17 @@ contract ERC721 is IERC721 {
       interfaceId == type(IERC165).interfaceId;
   }
 
-  // TODO: write a `_mint` internal function taking an address and an id
+  // TODO 1: write a `_mint` internal function taking an address and an id
   // It should revert with "mint to zero address" message if so
   // It should revert with "already minted" message if so
   // it should emit Transfer
 
 
-  // TODO: write an `ownerOf` external function.
+  // TODO 2: write a `ownerOf` external function.
   // It should revert with "token doesn't exist" if so
 
 
-  // TODO: write an `balanceOf` external function.
+  // TODO 3: write a `balanceOf` external function.
   // It should revert with "owner = zero address" if someone query for zero address
 
 
@@ -48,6 +49,6 @@ contract answer19 is ERC721 {
   function mint(address to, uint256 id) external {
     _mint(to, id);
   }
-
+  
 }
 

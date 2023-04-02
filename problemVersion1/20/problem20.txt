@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// Cont'd
+// If you haven't done part 1, it is recommended to do it first.
 interface IERC165 {
     function supportsInterface(bytes4 interfaceID) external view returns (bool);
 }
@@ -88,17 +90,19 @@ contract ERC721 is IERC721 {
             spender == _approvals[id]);
   }
 
-  // write a function named `transferFrom`
+  // TODO 1: write a function named `transferFrom`
   // it should transfer token if all requirement are satisfied
   // it should revert with "transfer to zero address" message if so
   // it should fire event `Transfer`
 
 
 
-  // write a function named `_burn` taking one uint256 as param
+  // TODO 2:  write a function named `_burn` taking one uint256 as param
   // It should burn token
   // it should revert with "not minted" if so
   // it should emit `Transfer` as it transfer token to zero address
+
+
 
 
 }

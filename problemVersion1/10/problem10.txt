@@ -1,7 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+
 // The system will deploy `Called` for you
+// The interface you are going to write will be use to call contract `Called`.
 contract Called {
   bool public called = false;
 
@@ -13,7 +15,9 @@ contract Called {
   }
 }
 
-// TODO: write an interface named `ICalled`, implement the two functions in contract `Called`. 
+// TODO 1: write an interface named `ICalled`, implement the two functions which is in contract `Called`. 
+
+
 
 
 contract answer10 {
@@ -24,10 +28,14 @@ contract answer10 {
   }
 
   function setCalled() external {
-    // TODO: finish this function by using `ICalled` to call `setCalled()` in contract `Called`. 
+    // TODO 2: Finish this function by using `ICalled` to call `setCalled()` in contract `Called`. 
+
 
   }
 
+
+  // --------------Below are judging functions-------------------
+  
   function checkAns() external view returns (bool) {
     return ICalled(address(calledContract)).getCalled();
   }

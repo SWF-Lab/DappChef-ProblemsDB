@@ -31,12 +31,12 @@ contract ProxyContract {
 contract answer56 {
   Called called = new Called();
   ProxyContract proxy = new ProxyContract(address(called));
-  Called proxified = Called(address(proxy));
+  Called proxied = Called(address(proxy));
 
   function test() external {
-    proxified.setMessage("hi");
+    proxied.setMessage("hi");
   }
   function getAns() external view returns (string memory) {
-    return proxified.message();
+    return proxied.message();
   }
 }

@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-// Dutch Auction introduction:  A Dutch auction is a type of auction where the auctioneer begins with a high asking price for the item being sold and gradually lowers the price until a bidder accepts the current price. The first bidder to accept the current price wins the auction and pays the final price.
+// Dutch Auction introduction:  
+// A Dutch auction is a type of auction where the auctioneer begins with a high asking price for the item being sold and gradually lowers the price until a bidder accepts the current price. The first bidder to accept the current price wins the auction and pays the final price.
 
-//TODO: complete this dutch auction
+//TODO: complete this dutch auction contract
 contract answer51 {
     uint private constant DURATION = 15;
 
@@ -14,7 +15,7 @@ contract answer51 {
     uint public immutable discountRate;
     bool public ended = false;
 
-    // mock of block.timestamp
+    // this is a mock of block.timestamp
     uint256 public nowTime = 1677679389;
 
     
@@ -30,7 +31,7 @@ contract answer51 {
     }
 
     function getPrice() public view returns (uint) {
-        //TODO 2: calculate the price and return it
+        //TODO 2: calculate the current price and return it.
 
 
     }
@@ -49,7 +50,10 @@ contract answer51 {
         ended = true;
     }
 
-    //functions for judging
+
+
+    //-------- Below are judging functions ------------
+
     function addNowTime(uint256 addTime) external {
       nowTime += addTime;
     }

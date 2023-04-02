@@ -2,7 +2,8 @@
 pragma solidity ^0.8.17;
 
 // Cont'd
-// Finish the ERC20
+// If you haven't done the part 1, it is recommended first
+// Finish the ERC20 contract
 interface IERC20 {
   event Transfer(address indexed from, address indexed to, uint256 value);
   
@@ -49,7 +50,8 @@ contract answer17 is IERC20 {
 
     //========= All the Todos are below here ==========
 
-    // TODO: Finish the function `allowance`, it should return the allowance from owner to spender.
+    // TODO 1: Finish the function `allowance`, it should return the allowance from owner to spender.
+
 
 
 
@@ -63,19 +65,21 @@ contract answer17 is IERC20 {
         require(_owner != address(0), "ERC20: approve from the zero address");
         require(spender != address(0), "ERC20: approve to the zero address");
 
-        // TODO: set the allowance from `owner` to `sender` to be `amount`
+        // TODO 2: set the allowance from `owner` to `sender` to be `amount`
 
-        // TODO: fire the event `Approval`
+        // TODO 3: fire the event `Approval`
 
 
     }
   
-    // TODO: Finish function `transferFrom`
+    // TODO 4: Finish function `transferFrom`
     // It should call `_spendAllowance()` and `_transfer()`, try to pass in the correct param !
 
 
 
-    // ========== All todos are done ! Good job =======
+
+
+  // --------------Below are judging functions-------------------
 
     function _spendAllowance(address _owner, address spender, uint256 amount) internal virtual {
         uint256 currentAllowance = _allowances[owner][spender];

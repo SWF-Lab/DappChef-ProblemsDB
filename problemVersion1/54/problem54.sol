@@ -6,14 +6,24 @@ contract answer54 {
   bytes[] public answers = new bytes[](2);
 
   //TODO: Write a function named `delegateCall` taking a bytes calldata array.
-  // This bytes array will be inputs like ["0x6b59084d", "0x66e41cb7"] as function selectors.
+  // This bytes array will be input like 
+  // ["0x6b59084d", "0x66e41cb7"] 
+  // as function selectors.
   // You shoud delegateCall each functions inputed, and record the reply from `delegatecall` in `answers`. 
 
 
 
 
 
+
+
+
+
   // In fact, ["0x6b59084d", "0x66e41cb7"] is the selector of test1 and test2 below. It will be the test sample.
+
+
+  // ------- Below are judging functions-------------
+  
   function test1() external returns (uint256) {
     emit Log(msg.sender);
     return 1;

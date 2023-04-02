@@ -22,10 +22,6 @@ contract answer18 is IERC165, IAnother {
 
     function aFunction() external returns (bool) {}
     function bFunction() external returns (bool) {}
-
-    function getIAnotherId() external pure returns(bytes4) {
-      return this.aFunction.selector ^ this.bFunction.selector;
-    }
 }
 
 

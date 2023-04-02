@@ -1,6 +1,9 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// This is an DeFi Option contract ! Please make sure you know what is an Option.
+// In this Problem, we are going to deal with CALL options.
+
 contract MockERC20 {
   uint256 public totalSupply = 100; 
   mapping(address => uint256) public balanceOf;
@@ -37,8 +40,6 @@ contract StableCoin {
   }
 }
 
-// This is an DeFi Option contract ! Please make sure you know what is an Option.
-// In this Problem, we are going to deal with CALL options.
 contract answer59 {
     enum OptionType { 
         CALL, 
@@ -83,7 +84,10 @@ contract answer59 {
         require(amount > 0, "Invalid amount");
 
         // TODO1: finish declaring a option
-        options[optionId_] = 
+        options[optionId_] = Option(
+
+
+        )
 
         optionId_ ++;
         return optionId_ - 1;
@@ -125,6 +129,10 @@ contract answer59 {
     function cancelOption(uint256 _optionId) external {
       Option memory option = options[_optionId];
       // TODO5: finish the requirements
+      // This function should only be called by writer, and of course, shouldn't be expired or exercised.
+      // hint: there should be three requires
+
+      
 
 
       erc20.transfer(msg.sender, option.amount);
@@ -132,7 +140,7 @@ contract answer59 {
     }
 
 
-    //=========utils====================
+    //------------Below are judging functions----------
     function addTime() external {
       nowTime += 1;
     }

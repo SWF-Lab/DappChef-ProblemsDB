@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+
+
 contract answer55 {
     bytes32 answer;
 
@@ -11,7 +13,7 @@ contract answer55 {
             keccak256("EIP712Domain(string name,string version,uint256 chainId,address verifyingContract)"),
             keccak256(bytes("answer55")),
             keccak256(bytes("1.0.0")),
-            block.chainid,
+            5,
             0xd9145CCE52D386f254917e481eB44e9943F39138 //this should be address(this)
         ));
 

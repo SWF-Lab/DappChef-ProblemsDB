@@ -1,11 +1,13 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// Ref: https://github.com/dragonfly-xyz/useful-solidity-patterns/tree/main/patterns/eip712-signed-messages
+
 contract answer55 {
     bytes32 answer;
 
     // This is an EIP712 based contract, please complete the part to get the EIP712 hash.
-    // This hash should pass the requirement below if the signature is valid
+    // This hash can be use as below and should pass
     // require(signer == ecrecover(getHash(value, sender), v, r, s))
     function getHash(uint256 value, address sender) public returns (bytes32) {
 
@@ -14,9 +16,9 @@ contract answer55 {
 
 
 
-
+            5,
             0xd9145CCE52D386f254917e481eB44e9943F39138 
-            //the last arg should be address(this), but for judging reasons, please leave this for us.
+            //the last two arg should be block.chainid and address(this), but for judging reasons, please leave this for us.
         ));
 
         //TODO 2: complete the calculation of structHash
@@ -30,6 +32,10 @@ contract answer55 {
         
         return answer;
     }
+
+
+
+   //-------- Below are judging functions ------------
 
     function getAns() external view returns(bytes32) {
       return answer;

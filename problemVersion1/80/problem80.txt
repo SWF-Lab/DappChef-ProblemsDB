@@ -33,12 +33,15 @@ contract answer80 {
     mapping(string => address) symbols;
 
     function createToken(string memory _name, string memory _symbol, uint256 _totalSupply) public {
-        // TODO: complete this function, think of the requirements to be satisfied
+        // TODO: complete this function
+        // It should deploy new contract, be sure not to use the same symbol
     
     
+
     
     }
 
+    //-----------Below are judging functions----------
     function checkAns(string memory _symbol) external view returns (bool) {
       return tokens[0] == symbols[_symbol] ? true : false;
     }
