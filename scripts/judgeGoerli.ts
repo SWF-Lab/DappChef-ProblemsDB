@@ -57,16 +57,26 @@ async function main() {
     const tx = await DeployerContract.deploy(bytecode, wallet.address, problemNumber)
     const receipt = await tx.wait()
     const event = receipt.events.find((e: any) => e.event === "Deploy")
-    const [_deployAddr, _solver, _problemNum] = event.args
+    const [deployAddr, _solver, _problemNum] = event.args
     console.log(`    Tx successful with hash: ${receipt.transactionHash}`)
-    console.log(`    Deployed contract address is ${_deployAddr}`)
+    console.log(`    Deployed contract address is ${deployAddr}`)
 
     /** ---------------------------------------------------------------------------
      * Judge the answer contract with the "problemSolution" in the problem json 
      * --------------------------------------------------------------------------- */
 
-    const AnswerContract = await ethers.getContractAt(AnswerABI, _deployAddr, wallet)
     console.log(`\nBegin the Judging...`)
+
+    const AnswerContractFactory = new ethers.ContractFactory(
+        AnswerABI,
+        bytecode,
+        wallet
+    );
+    const undeployedDeployerContract = await AnswerContractFactory.deploy(...JudgeInfo.constructorCallData.map((e: any) => e[1]));
+    const AnswerContract = undeployedDeployerContract.connect(
+        wallet
+    );
+    const _deployAddr = AnswerContract.address
 
     let pastTXInfo: any
     let totalGas = ethers.BigNumber.from("0")

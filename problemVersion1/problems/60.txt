@@ -1,0 +1,137 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract MockERC20 {
+  uint256 public totalSupply = 100; 
+  mapping(address => uint256) public balanceOf;
+
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
+
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
+  }
+}
+
+contract StableCoin {
+  uint256 public totalSupply = 100; 
+  mapping(address => uint256) public balanceOf;
+
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
+
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
+  }
+}
+
+// This is a Put Option ! Be sure you know what is put option
+// Make sure you finished the Call option problem
+// In this problem, you are going to write functions similiar to that, but the logic is quite different.
+contract answer60 {
+    enum OptionType { 
+        CALL, 
+        PUT 
+    }
+    
+    enum OptionState {
+        Open,
+        Bought,
+        Cancelled,
+        Exercised
+    }
+
+    struct Option {
+        address writer;
+        address owner;
+        uint256 price;
+        uint256 amount;
+        uint256 strikePrice;
+        uint256 expiration;
+        OptionType optionType;
+        OptionState optionState;
+    }
+
+    mapping (uint256 => Option) public options;
+    uint256 private optionId_ = 0;
+    uint256 public nowTime = 16848341;
+    MockERC20 public erc20;
+    StableCoin public stableCoin;
+
+    function init() external {
+      erc20 = new MockERC20(msg.sender);
+      stableCoin = new StableCoin(msg.sender);
+    }
+
+    // TODO1: finish `createPutOption` function
+    function createPutOption(uint256 amount, uint256 price, uint256 strikePrice, uint256 expiration) 
+        external 
+        returns (uint256)
+    {
+        
+
+
+    }
+
+    // TODO2: finish `buyPutOption` function
+    function buyPutOption(uint256 _optionId) external {
+      Option memory option = options[_optionId];
+      require(option.optionType == OptionType.PUT, "NOT A PUT");
+
+
+
+
+    }
+
+    // TODO3: finish `exercisePutOption` function
+    function exercisePutOption(uint256 _optionId, uint256 amount) external {
+      Option memory option = options[_optionId];
+      require(msg.sender == option.owner, "not buyer");
+      require(option.optionState == OptionState.Bought, "not bought");
+      require(option.expiration <= nowTime, "hasnt expire");
+
+      require(option.amount >= amount, "not enough amount");
+      uint256 totalPrice = 
+      stableCoin.transferFrom(    );
+      erc20.transferFrom(     );
+
+      uint256 lastStableCoin = 
+      erc20.transferFrom(address(this), option.writer, lastStableCoin);
+
+      options[_optionId].optionState = OptionState.Exercised; 
+    }
+    
+    // TODO4: finish `cancelOption` function
+    function cancelOption(uint256 _optionId) external {
+      Option memory option = options[_optionId];
+      require(msg.sender == option.writer, "not writer");
+      require(option.expiration < nowTime, "hasnt expired");
+      require(option.optionState == OptionState.Bought, "not bought or exercised");
+      stableCoin.transfer(                           );
+
+      options[_optionId].optionState = OptionState.Cancelled; 
+    }
+
+    //==========utils===========================
+    function addTime() external {
+      nowTime += 1;
+    }
+    function getERC20BalanceOf(address addr) external view returns (uint256) {
+      return erc20.balanceOf(addr);
+    }
+    function getStableCoinBalanceOf(address addr) external view returns (uint256) {
+      return stableCoin.balanceOf(addr);
+    }
+}

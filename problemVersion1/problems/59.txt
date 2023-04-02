@@ -1,0 +1,145 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract MockERC20 {
+  uint256 public totalSupply = 100; 
+  mapping(address => uint256) public balanceOf;
+
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
+
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
+  }
+}
+
+contract StableCoin {
+  uint256 public totalSupply = 100; 
+  mapping(address => uint256) public balanceOf;
+
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
+
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
+  }
+}
+
+// This is an DeFi Option contract ! Please make sure you know what is an Option.
+// In this Problem, we are going to deal with CALL options.
+contract answer59 {
+    enum OptionType { 
+        CALL, 
+        PUT 
+    }
+    
+    enum OptionState {
+        Open,
+        Bought,
+        Cancelled,
+        Exercised
+    }
+
+    struct Option {
+        address writer;
+        address owner;
+        uint256 price;
+        uint256 amount;
+        uint256 strikePrice;
+        uint256 expiration;
+        OptionType optionType;
+        OptionState optionState;
+    }
+
+    mapping (uint256 => Option) public options;
+    uint256 private optionId_ = 0;
+    uint256 public nowTime = 16848341;
+    MockERC20 public erc20;
+    StableCoin public stableCoin;
+
+    function init() external {
+      erc20 = new MockERC20(msg.sender);
+      stableCoin = new StableCoin(msg.sender);
+    }
+
+    
+    function createCallOption(uint256 amount, uint256 price, uint256 strikePrice, uint256 expiration) 
+        external 
+        returns (uint256)
+    {
+        require(expiration > nowTime, "Option has expired");
+        require(amount > 0, "Invalid amount");
+
+        // TODO1: finish declaring a option
+        options[optionId_] = 
+
+        optionId_ ++;
+        return optionId_ - 1;
+    }
+
+    function buyCallOption(uint256 _optionId) external {
+      Option memory option = options[_optionId];
+      require(option.optionType == OptionType.CALL, "NOT A CALL");
+
+      // TODO2: finish transferFrom
+      erc20.transferFrom(        ,          ,      );
+      stableCoin.transferFrom(        ,        ,      );
+
+      // TODO3: set options owner and optionState
+      
+
+    }
+
+    function exerciseCallOption(uint256 _optionId, uint256 amount) external {
+      Option memory option = options[_optionId];
+
+      require(msg.sender == option.owner, "not buyer");
+      require(option.optionState == OptionState.Bought, "not bought");
+      require(option.expiration <= nowTime, "hasnt expire");
+      require(option.amount >= amount, "not enough amount");
+
+      // TODO4: fill in the blanks
+      uint256 totalPrice = 
+      stableCoin.transferFrom(    ,    ,    );
+      erc20.transferFrom(    ,    ,    );
+
+      uint256 lastAmount = option.amount - amount;
+      erc20.transferFrom(    ,    ,    ,);
+
+      options[_optionId].optionState =         ; 
+
+    }
+    
+    function cancelOption(uint256 _optionId) external {
+      Option memory option = options[_optionId];
+      // TODO5: finish the requirements
+
+
+      erc20.transfer(msg.sender, option.amount);
+      options[_optionId].optionState = OptionState.Cancelled; 
+    }
+
+
+    //=========utils====================
+    function addTime() external {
+      nowTime += 1;
+    }
+    function getERC20BalanceOf(address addr) external view returns (uint256) {
+      return erc20.balanceOf(addr);
+    }
+    function getStableCoinBalanceOf(address addr) external view returns (uint256) {
+      return stableCoin.balanceOf(addr);
+    }
+}

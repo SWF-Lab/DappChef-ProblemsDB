@@ -22,7 +22,7 @@
       {
         "methodName": "#Log(string,uint256)",
         "callData": [],
-        "expectReturn": [[],["recieve", 100000000000]]
+        "expectReturn": [[],["receive", 100000000000]]
       }
   ],
   "attributes": [

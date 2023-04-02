@@ -1,0 +1,59 @@
+{
+    "problemNumber": 65,
+    "problemVersion": 1,
+    "description": "Faucet - ERC20",
+    "constructorCallData": [["uint256", "100000000000"]],
+    "problemSolution": [
+        {
+            "methodName": "getFaucetBalance()",
+            "callData": [],
+            "expectReturn": [[100000000000]]
+        },  
+        {
+            "methodName": "getBalanceOf()",
+            "callData": [],
+            "expectReturn": [[0]]
+        },
+        {
+            "methodName": "getLastAccessTime()",
+            "callData": [],
+            "expectReturn": [[true]]
+        },
+        {
+            "methodName": "allowedToWithdraw(address)",
+            "callData": ["MSG_SENDER"],
+            "expectReturn": [[true]]
+        },
+        {
+            "methodName": "requestTokens()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "%requestTokens()",
+            "callData": [],
+            "expectReturn": []
+        },
+        {
+            "methodName": "getFaucetBalance()",
+            "callData": [],
+            "expectReturn": [[50000000000]]
+        },  
+        {
+            "methodName": "getBalanceOf()",
+            "callData": [],
+            "expectReturn": [[50000000000]]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 2
+        },
+        {
+            "trait_type": "class",
+            "value": "Design_Pattern"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/65"
+}

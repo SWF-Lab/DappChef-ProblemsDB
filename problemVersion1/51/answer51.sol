@@ -15,7 +15,7 @@ contract answer51 {
     uint256 public nowTime = 1677679389;
 
     constructor() {
-        seller = payable(tx.origin);
+        seller = payable(msg.sender);
         startingPrice = 1000;
         startAt = nowTime;
         expiresAt = nowTime + DURATION;

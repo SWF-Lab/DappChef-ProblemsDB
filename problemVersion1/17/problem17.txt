@@ -29,7 +29,7 @@ contract answer17 is IERC20 {
     address public owner;
 
     constructor() {
-      owner = tx.origin;
+      owner = msg.sender;
       _balances[owner] = _totalSupply;
     }
     function totalSupply() external view returns (uint256) {

@@ -38,7 +38,7 @@
 | 17. |Token|⭐| Build ERC20 part 2 |Dino ✅|
 | 18. |Token|⭐| ERC721- part 1 ERC165|Dino ✅|
 | 19. |Token|⭐|ERC721 -part 2 build|Dino ✅|
-| 20. |Token|⭐|ERC721 -part3 build|Dino|
+| 20. |Token|⭐|ERC721 -part3 build|Dino ✅|
 | 21. |Beginner|⭐|Change Values of Global Variables|FoodChain✅|
 | 22. |Beginner|⭐| Immutable and Constant |FoodChain ✅|
 | 23. |Beginner|⭐| Hash In Order |FoodChain ✅| 
@@ -47,18 +47,18 @@
 | 26. |Beginner|⭐| Inheritance and Override the state variable |FoodChain ✅|
 | 27. |Beginner|⭐|Assembly|FoodChain✅|
 | 28. |Beginner|⭐|Bitwise Operators|FoodChain ✅|
-| 29. |Beginner|⭐|Delegatecall|FoodChain |
+| 29. |Beginner|⭐|Delegatecall|FoodChain ✅|
 | 30. |Beginner|⭐|Compare String|FoodChain ✅|
 | 31. |Beginner|⭐|Overflow|FoodChain ✅|
 | 32. |Beginner|⭐|Underflow|FoodChain ✅|
 | 33. |Beginner|⭐|Assembly Check Zero Address|FoodChain ✅|
 | 34. |Beginner|⭐||FoodChain|
-| 35. |Beginner|⭐||FoodChain|
-| 36. |Token|⭐||FoodChain|
-| 37. |Token|⭐||FoodChain|
+| 35. |Beginner|⭐|String Concat - Basic|FoodChain✅|
+| 36. |Token|⭐| ERC721 onReciever|FoodChain✅|
+| 37. |Token|⭐|ERC721 Metadata|FoodChain✅|
 | 38. |Token|⭐||FoodChain|
-| 39. |Token|⭐||FoodChain|
-| 40. |Token|⭐||FoodChain|
+| 39. |Token|⭐|ERC1155 onReciever|FoodChain✅|
+| 40. |Token|⭐|ERC1155 Metadata|FoodChain✅|
 | 41. |Company|⭐⭐|Signature && EIP-1271|Mur** ✅|
 | 42. |Company|⭐⭐|SupportsInterface (ERC-165) & RoyaltyInfo (ERC-2981) |Mur** ✅|
 | 43. |Company|⭐⭐|ERC-5646 Token FigerPrint |Mur** ✅|
@@ -69,26 +69,26 @@
 | 48. |DSA|⭐⭐| Merkle Tree |Mur** ✅|
 | 49. |DeFi|⭐⭐|Simple Staking DeFi Protocol|Mur** ✅|
 | 50. |Design_Pattern|⭐⭐|English Auction|Dino|
-| 51. |Design_Pattern|⭐⭐|Dutch Auction|Dino|
+| 51. |Design_Pattern|⭐⭐|Dutch Auction|Dino ✅|
 | 52. |Design_Pattern|⭐⭐|Reentrancy|Dino ✅|
 | 53. |Design_Pattern|⭐⭐|MultiCall|Dino ✅|
 | 54. |Design_Pattern|⭐⭐| Multi DelegateCall |Dino ✅|
-| 55. |Design_Pattern|⭐⭐|EIP-712 |Dino ✅|
+| 55. |Design_Pattern|⭐⭐|EIP-712 |Dino |
 | 56. |Design_Pattern|⭐⭐|  Proxy |Dino ✅|
-| 57. |DeFi|⭐⭐| Lending |Dino|
-| 58. |DeFi|⭐⭐| Swap |Dino|
-| 59. |DeFi|⭐⭐| Option |Dino|
-| 60. |DeFi|⭐⭐| Stake |Dino|
+| 57. |DeFi|⭐⭐| Lending |Dino ✅|
+| 58. |DeFi|⭐⭐| Swap |Dino ✅ |
+| 59. |DeFi|⭐⭐| Option |Dino ✅|
+| 60. |DeFi|⭐⭐| Stake |Dino ✅|
 | 61. |DeFi|⭐⭐| Leverage  |Dino|
-| 62. |Token|⭐⭐| Dynamic NFT (ERC721) |FoodChain|
+| 62. |Token|⭐⭐| Dynamic NFT (ERC721) |FoodChain✅|
 | 63. |Token|⭐⭐| Dynamic NFT (ERC1155) |FoodChain|
 | 64. | DSA |⭐⭐| Prime |FoodChain ✅|
 | 65. |Design_Pattern|⭐⭐|Faucet - ERC20|FoodChain ✅|
 | 66. |Design_Pattern|⭐⭐|SafeMath|FoodChain ✅|
 | 67. |Design_Pattern|⭐⭐|From Uint256 to String|FoodChain ✅|
-| 68. |Design_Pattern|⭐⭐||FoodChain|
+| 68. |Design_Pattern|⭐⭐|String Concat - Advanced|FoodChain✅|
 | 69. |Design_Pattern|⭐⭐| Linked List |FoodChain|
-| 70. |Design_Pattern|⭐⭐||FoodChain|
+| 70. |Design_Pattern|⭐⭐| Vote on blockchain |FoodChain✅|
 | 71. |Cryptography|⭐⭐||FoodChain|
 | 72. |DeFi|⭐⭐||FoodChain|
 | 73. |DeFi|⭐⭐||FoodChain|
@@ -97,13 +97,13 @@
 | 76. |Cryptography|⭐⭐||Dino|
 | 77. |Cryptography|⭐⭐||Dino|
 | 78. |Cryptography|⭐⭐||Dino|
-| 79. |Design_Pattern|⭐⭐||Dino|
-| 80. |Design_Pattern|⭐⭐||Dino|
-| 81. |Design_Pattern|⭐⭐||Dino|
+| 79. |Design_Pattern|⭐⭐| Upgradable Contract |Dino ✅|
+| 80. |Design_Pattern|⭐⭐|Factory|Dino ✅|
+| 81. |Design_Pattern|⭐⭐| Escrow|Dino ✅|
 | 82. |Design_Pattern|⭐⭐||Dino|
-| 83. |DeFi|⭐⭐||Dino|
-| 84. |DeFi|⭐⭐||Dino|
-| 85. |DeFi|⭐⭐||Dino|
+| 83. |DeFi|⭐⭐| Simple Staking |Dino ✅|
+| 84. |DeFi|⭐⭐| Advanced Staking |Dino ✅|
+| 85. |DeFi|⭐⭐| Leverage|Dino ✅|
 | 86. |Design_Pattern|⭐⭐⭐||Dino|
 | 87. |Cryptography|⭐⭐⭐||Dino|
 | 88. |Gas_Optim|⭐⭐⭐||Dino|

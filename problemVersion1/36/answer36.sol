@@ -1,0 +1,101 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.17;
+
+interface IERC165 {
+    function supportsInterface(bytes4 interfaceID) external view returns (bool);
+}
+
+interface IERC721 is IERC165 {
+    function balanceOf(address owner) external view returns (uint balance);
+
+    function ownerOf(uint tokenId) external view returns (address owner);
+
+    function safeTransferFrom(address from, address to, uint tokenId) external;
+
+    function safeTransferFrom(
+        address from,
+        address to,
+        uint tokenId,
+        bytes calldata data
+    ) external;
+
+    function transferFrom(address from, address to, uint tokenId) external;
+
+    function approve(address to, uint tokenId) external;
+
+    function getApproved(uint tokenId) external view returns (address operator);
+
+    function setApprovalForAll(address operator, bool _approved) external;
+
+    function isApprovedForAll(
+        address owner,
+        address operator
+    ) external view returns (bool);
+}
+
+// implement the interface IERC721Receiver and make the contract `answer36` ERC721-token-receivible.
+interface IERC721Receiver {
+    function onERC721Received(
+        address operator,
+        address from,
+        uint tokenId,
+        bytes calldata data
+    ) external view returns(bytes4);
+}
+
+contract ERC721 is IERC721 {
+    function supportsInterface(bytes4 interfaceID) external view returns (bool) {}
+    function balanceOf(address owner) external view returns (uint balance) {}
+    function ownerOf(uint tokenId) external view returns (address owner) {}
+    function safeTransferFrom(address from, address to, uint tokenId) external view {
+        require(
+            to.code.length == 0 || 
+                IERC721Receiver(to).onERC721Received(msg.sender, from, tokenId, "") ==
+                IERC721Receiver.onERC721Received.selector,
+            "unsafe recipient"
+        );
+    }
+    function safeTransferFrom(
+        address from,
+        address to,
+        uint tokenId,
+        bytes calldata data
+    ) external {
+        require(
+            to.code.length == 0 || 
+                IERC721Receiver(to).onERC721Received(msg.sender, from, tokenId, "") ==
+                IERC721Receiver.onERC721Received.selector,
+            "unsafe recipient"
+        );
+    }
+
+    function transferFrom(address from, address to, uint tokenId) external {}
+    function approve(address to, uint tokenId) external {}
+    function getApproved(uint tokenId) external view returns (address operator) {}
+    function setApprovalForAll(address operator, bool _approved) external {}
+    function isApprovedForAll(
+        address owner,
+        address operator
+    ) external view returns (bool) {}
+} 
+
+contract answer36 is IERC721Receiver {
+    ERC721 public tokenContract;
+    
+    function checkSafeTransferFrom() public {
+        tokenContract = new ERC721();
+        tokenContract.safeTransferFrom(
+            msg.sender,
+            address(this),
+            0
+        );
+    }
+    function onERC721Received(
+        address operator,
+        address from,
+        uint tokenId,
+        bytes calldata data
+    ) external pure returns(bytes4) {
+        return (this.onERC721Received.selector);
+    }
+}

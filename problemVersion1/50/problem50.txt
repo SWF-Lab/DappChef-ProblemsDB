@@ -18,7 +18,7 @@ contract answer50 {
     mapping(address => uint256) public bids;
 
     constructor() {
-      seller = payable(tx.origin);
+      seller = payable(msg.sender);
     }
 
     function start() external {

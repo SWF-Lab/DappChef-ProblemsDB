@@ -14,12 +14,11 @@ contract answer50 {
     bool public ended;
 
     address public winner;
-    uint256 public highestBid;
+    uint256 public highestBid = 1000;
     mapping(address => uint256) public bids;
 
-    constructor(uint256 _startingBid) {
+    constructor() {
       seller = payable(msg.sender);
-      highestBid = _startingBid;
     }
 
     function start() external {

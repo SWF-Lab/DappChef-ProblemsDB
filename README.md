@@ -96,19 +96,6 @@ function get_a() public view returns(address){
 ]
 ```
 
-4. 請注意佈署過程是 EOA(User) -> Deployer -> AnswerContract，所以**佈署的時候** `msg.sender` 會是 Deployer Contract。所以如果你有 `owner` 設定在 `constructor` 裡面，要讓解題者的 `address` 被設定為 `owner`，必須用 `tx.origin` 不可用 `msg.sender`。
-```solidity
-// 錯誤出法
-constructor() {
-    owner = msg.sender;
-}
-
-// 正確出法
-constructor() {
-    owner = tx.origin;
-}
-```
-
 ### Start the Journey
 
 1. Clone the repo
@@ -181,32 +168,33 @@ Done in 18.75s.
 ```
 $ yarn execute scripts/produceProblemsJSON.ts
 >
+storing file(s) from [object Object]
 PROBLEMS_CODE_IPFS_CID
 {
-  cid: 'bafybeiavkziqbnnvqa4hb76jc2zazc3acewecg2wo3avgmgq4xu2g4k4va',
+  cid: 'bafybeibrjtmdmpv4g2j7yibdhijlq3m6huq34jqfj3twglpyea6xk7pcz4',
   deals: [],
-  size: 73355,
+  size: 173575,
   pin: {
-    cid: 'bafybeiavkziqbnnvqa4hb76jc2zazc3acewecg2wo3avgmgq4xu2g4k4va',
-    created: 2023-03-03T16:31:59.559Z,
-    size: 73355,
+    cid: 'bafybeibrjtmdmpv4g2j7yibdhijlq3m6huq34jqfj3twglpyea6xk7pcz4',
+    created: 2023-03-19T05:14:07.137Z,
+    size: 173575,
     status: 'pinned'
   },
-  created: 2023-03-03T16:31:59.559Z
+  created: 2023-03-19T05:14:07.137Z
 }
 storing file(s) from [object Object]
 PROBLEMS_IPFS_CID
 {
-  cid: 'bafybeicd5v4rm7kb36elhs6ng5eivwtpvno7nsyogdbfop3uzb22ofvupy',
+  cid: 'bafybeiclx7jl4eqyesgvj6umcus7ihbfzlwlfvjm2rn3iej3rvtodebexm',
   deals: [],
-  size: 29542,
+  size: 57387,
   pin: {
-    cid: 'bafybeicd5v4rm7kb36elhs6ng5eivwtpvno7nsyogdbfop3uzb22ofvupy',
-    created: 2023-03-03T16:37:36.817Z,
-    size: 29542,
+    cid: 'bafybeiclx7jl4eqyesgvj6umcus7ihbfzlwlfvjm2rn3iej3rvtodebexm',
+    created: 2023-03-19T05:14:18.942Z,
+    size: 57387,
     status: 'pinned'
   },
-  created: 2023-03-03T16:37:36.817Z
+  created: 2023-03-19T05:14:18.942Z
 }
-Done in 22.07s.
+Done in 28.07s.
 ```
