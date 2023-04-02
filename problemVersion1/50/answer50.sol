@@ -47,7 +47,7 @@ contract answer50 {
     }
 
     function withdraw() external {
-        require(msg.sender == winner, "Highest bidder cannot withdraw.");
+        require(msg.sender != winner, "Highest bidder cannot withdraw.");
 
         uint256 bal = bids[msg.sender];
         bids[msg.sender] = 0;

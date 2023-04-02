@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// Ref: https://docs.openzeppelin.com/upgrades-plugins/1.x/proxies
+
 interface IVersioned {
     function getVersion() external view returns (uint256);
 }
@@ -36,18 +38,21 @@ contract answer79 is IVersioned {
     fallback() external  {
         address _impl = implementation;
 
-        // TODO1: please complete the code below so that others can call any functions in the proxied contract.
+        // TODO 1: please complete the code below so that others can call any functions in the proxied contract.
         assembly {
             
+
+
+
 
         }
     }
 
-    // TODO2: write a function named `upgradeImplementation` taking and adress as param
-    // It should let someone update the contract.
-    function upgradeImplementation(address newImplementation) public {
-        implementation = newImplementation;
-    }
+    // TODO 2: write a function named `upgradeImplementation` taking and adress as param
+    // It should let someone update the contract to the input address.
+
+
+
 
     function getVersion() external view override returns (uint256) {
         return IVersioned(implementation).getVersion();
@@ -57,9 +62,6 @@ contract answer79 is IVersioned {
       v2 = new MyContractV2();
       upgradeImplementation(address(v2));
     }
-
-
-
 }
 
 

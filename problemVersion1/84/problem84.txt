@@ -38,7 +38,7 @@ contract RewardToken {
 }
 
 // This is an advanced staking contract ! We added slash and delegate functions.
-// We are only focusing slashing.
+// We are only focusing on slashing.
 contract answer84 {
     StakingToken public stakingToken;
     RewardToken public rewardToken;
@@ -132,12 +132,12 @@ contract answer84 {
     function slash(address _staker) external onlyOwner {
         require(!slashed[_staker], "Already slashed");
 
-        // TODO1 : fill in the blanks
+        // TODO 1 : fill in the blanks
         uint256 amountToSlash = 
 
         require(amountToSlash > 0, "Amount to slash must be greater than 0");
-        slashed[_staker] = 
-        totalStaked -= 
+        slashed[_staker] = true;
+        totalStaked -= amountToSlash;
         stakedBalance[_staker] -= 
         totalRewards -=                       / 1e18;
 
@@ -160,7 +160,7 @@ contract answer84 {
         uint256 rewardPerSecond = rewardRate ;
         uint256 timeDelta = nowTime - lastUpdateTime;
 
-        // TODO2: finish calculate the `rewardAccumulated`
+        // TODO 2: finish calculate the `rewardAccumulated`
         uint256 rewardAccumulated =                 * 1e18;
         rewardPerTokenStored += rewardAccumulated / totalStaked;
         lastUpdateTime = nowTime;

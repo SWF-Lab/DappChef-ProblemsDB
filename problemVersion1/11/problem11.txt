@@ -23,11 +23,15 @@ contract answer11 {
     called = new Called();
   }
 
-  // TODO: Declare a function named `sendETHtoCalled`.
+  // TODO 1: Declare a function named `sendETHtoCalled`.
+
+  
   // This function should send 50000 wei to the contract `called` using method `call`
   // Assign the first return value to `success`.
   // Notice that there are multiple return values of method call. 
 
+
+  // --------------Below are judging functions-------------------
 
   function checkAns() external view returns(uint256) {
     require(success, "transfer not success");

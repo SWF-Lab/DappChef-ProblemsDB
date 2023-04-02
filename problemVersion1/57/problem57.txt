@@ -1,39 +1,142 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-// In this problem, we are going to write a proxy contract for `Called`
-contract Called {
-  string public message;
+// In this problem, we are going to write a lending contract.
+// CollateralERC20 contract is used to pretend as a collateral, to borrow BorrowedERC20
 
-  function setMessage(string memory _message) external {
-    message = _message;
+contract CollateralERC20 {
+  uint256 public totalSupply = 1000; 
+  mapping(address => uint256) public balanceOf;
+
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
+
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
   }
 }
 
+contract BorrowedERC20 {
+  uint256 public totalSupply = 1000; 
+  mapping(address => uint256) public balanceOf;
 
-contract ProxyContract {
-  address immutable called;
+  constructor(address owner) {
+    balanceOf[owner] = totalSupply;
+  }
 
-  //TODO 1: write a constructor and assign value to `called`
- 
-
-  //TODO 2: write a fallback function which should delegate call the proxified `Called` contract
-  
-
-
-
-
+  function transferFrom(address from, address to, uint256 amount) external {
+    balanceOf[from] -= amount;
+    balanceOf[to] += amount;
+    
+  }
+  function transfer(address to, uint256 amount) external {
+    balanceOf[msg.sender] -= amount;
+    balanceOf[to] += amount;
+  }
 }
 
-contract answer56 {
-  Called called = new Called();
-  ProxyContract proxy = new ProxyContract(address(called));
-  Called proxified = Called(address(proxy));
+// answer57 is a lending contract, please modify it.
+contract answer57 {
+    BorrowedERC20 public borrowedToken;
+    CollateralERC20 public collateralToken;
+    // borrowRatio means that you can only borrow the ratio of the value of your collateral 
+    uint256 borrowRatio = 80;
+    uint256 borrowedPrice = 100;
+    uint256 collateralPrice = 100;
+    mapping(address => address) public s_tokenToPriceFeed;
+    address[] public s_allowedTokens;
+    mapping(address => uint256) public deposits;
+    mapping(address => uint256) public borrows;
 
-  function test() external {
-    proxified.setMessage("hi");
-  }
-  function getAns() external view returns (string memory) {
-    return proxified.message();
-  }
+    // 5% Liquidation Reward
+    uint256 public constant LIQUIDATION_REWARD = 5;
+    // At 80% Loan to Value Ratio, the loan can be liquidated
+    uint256 public constant LIQUIDATION_THRESHOLD = 80;
+    uint256 public constant MIN_HEALH_FACTOR = 1e18;
+
+
+    constructor() {
+      borrowedToken = new BorrowedERC20(address(this));
+      collateralToken = new CollateralERC20(msg.sender);
+    }
+
+    // TODO1: this function is for borrower to deposit his collateral, you should modify `deposits` and transfer some token
+    function depositCollateral(uint256 amount) external {
+
+
+
+    }
+
+
+    function withdraw(uint256 amount) external {
+        require(deposits[msg.sender] >= amount, "Not enough funds");
+        
+        //TODO 2: Complete this requirement, it should require that, 
+        // The left collateral value be bigger that a amount.
+        // hint: you may need borrowRatio
+        require(
+          (
+            
+
+          , "Not enough collateral"
+        );
+        deposits[msg.sender] -= amount;
+        collateralToken.transfer(msg.sender, amount);
+    }
+
+    function borrow(uint256 amount) external {
+        require(borrowedToken.balanceOf(address(this)) >= amount, "Not enough tokens to borrow");
+
+        // TODO 3: Complete the requirement, it should require that the borrow value be less than an amount
+        require(
+
+
+          ,"Not enough collateral"
+        );
+        borrows[msg.sender] += amount;
+        borrowedToken.transfer(msg.sender, amount);
+    }
+
+    function repay(uint256 amount) external {
+        borrows[msg.sender] -= amount;
+        borrowedToken.transferFrom(msg.sender, address(this), amount);
+    }
+
+    function liquidate(address account) external {
+        
+      require(canBeLiquidated(account), "Account can't be liquidated!");
+      uint256 reward = deposits[account] * LIQUIDATION_REWARD / 100;
+      collateralToken.transfer(msg.sender, reward);
+      delete borrows[msg.sender];
+      delete deposits[msg.sender];
+
+    }
+
+    function canBeLiquidated(address _account) public view returns (bool) {
+      uint256 borrowedValue = borrows[_account] * borrowedPrice;
+      uint256 depositValue = deposits[_account] * collateralPrice;
+      uint256 liquidatedValue = borrowedValue * LIQUIDATION_THRESHOLD * MIN_HEALH_FACTOR / 100;
+      return depositValue * MIN_HEALH_FACTOR <= liquidatedValue ? true : false; 
+    }
+
+
+
+    //----------Below are judging functions-------------------
+    
+    function setPrice(uint256 _price1, uint256 _price2) external {
+      borrowedPrice = _price1;
+      collateralPrice = _price2;
+    }
+    function getCollateralBalanceOf() external view returns (uint256) {
+      return collateralToken.balanceOf(msg.sender);
+    }
+    function getBorrowedTokenBalanceOf() external view returns (uint256) {
+      return borrowedToken.balanceOf(msg.sender);
+    }
 }

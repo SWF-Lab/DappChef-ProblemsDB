@@ -38,6 +38,16 @@
         "methodName": "getStableCoinBalanceOf(address)",
         "callData": ["MSG_SENDER"],
         "expectReturn": [100]
+      },
+      {
+        "methodName": "createCallOption(uint256,uint256,uint256,uint256)",
+        "callData": [2,5,10,16848343],
+        "expectReturn": []
+      },
+      {
+        "methodName": "%cancelOption(uint256)",
+        "callData": [2],
+        "expectReturn": ["hasnt expired"]
       }
   ],
   "attributes": [

@@ -1,5 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+// This is a Put Option ! Be sure you know what is put option
+// Make sure you finished the Call option problem
+// In this problem, you are going to write functions similiar to that, but the logic is quite different.
 
 contract MockERC20 {
   uint256 public totalSupply = 100; 
@@ -37,9 +40,7 @@ contract StableCoin {
   }
 }
 
-// This is a Put Option ! Be sure you know what is put option
-// Make sure you finished the Call option problem
-// In this problem, you are going to write functions similiar to that, but the logic is quite different.
+
 contract answer60 {
     enum OptionType { 
         CALL, 
@@ -76,10 +77,12 @@ contract answer60 {
     }
 
     // TODO1: finish `createPutOption` function
+    // hint: It is like the Call option
     function createPutOption(uint256 amount, uint256 price, uint256 strikePrice, uint256 expiration) 
         external 
         returns (uint256)
     {
+
         
 
 
@@ -95,7 +98,7 @@ contract answer60 {
 
     }
 
-    // TODO3: finish `exercisePutOption` function
+    
     function exercisePutOption(uint256 _optionId, uint256 amount) external {
       Option memory option = options[_optionId];
       require(msg.sender == option.owner, "not buyer");
@@ -103,28 +106,30 @@ contract answer60 {
       require(option.expiration <= nowTime, "hasnt expire");
 
       require(option.amount >= amount, "not enough amount");
-      uint256 totalPrice = 
-      stableCoin.transferFrom(    );
-      erc20.transferFrom(     );
 
+      // TODO 3 (last): fill in the blanks
+      uint256 totalPrice = 
+      stableCoin.transferFrom(        );
+      erc20.transferFrom(         );
       uint256 lastStableCoin = 
+
+
       erc20.transferFrom(address(this), option.writer, lastStableCoin);
 
       options[_optionId].optionState = OptionState.Exercised; 
     }
     
-    // TODO4: finish `cancelOption` function
+
     function cancelOption(uint256 _optionId) external {
       Option memory option = options[_optionId];
       require(msg.sender == option.writer, "not writer");
       require(option.expiration < nowTime, "hasnt expired");
       require(option.optionState == OptionState.Bought, "not bought or exercised");
-      stableCoin.transfer(                           );
-
+      stableCoin.transfer(msg.sender, option.amount * option.strikePrice);
       options[_optionId].optionState = OptionState.Cancelled; 
     }
 
-    //==========utils===========================
+    //-----------Below are judging functions----------
     function addTime() external {
       nowTime += 1;
     }

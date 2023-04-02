@@ -1,9 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
-// Declare public state variables as command, then assign the default value of that type.
+// Declare public state variables, then assign the default value of that type.
+// In fact you do not to assign the default value cuz it's "default"
 contract answer1 {
-    // TODO: declare a uint variable named myUint
+    // TODO: declare a uint256 variable named myUint
     
     // TODO: declare a boolean variable named myBool
 
@@ -12,7 +13,11 @@ contract answer1 {
     // TODO: declare a string variable named myString
 
 
-    function getUint() public view returns (uint) {
+
+
+    // --------------Below are judging functions-------------------
+    
+    function getUint() public view returns (uint256) {
       return myUint;
     }
     function getBool() public view returns (bool) {

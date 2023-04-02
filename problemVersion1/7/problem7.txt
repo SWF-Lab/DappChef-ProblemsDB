@@ -1,8 +1,15 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17; 
+
+// Function overlaod! Same function name for different inputs.
 contract answer7 {
 
-    // TODO: Write functions named `add` to add two uint256 inputs or three uint256 inputs. 
-    // Users should be able to call `add(100,200)` and get 300, call `add(100, 200, 300)` to get 600.
+    // TODO: Write functions named `add`, 
+    //       which add two uint256 inputs or three uint256 as params. 
+    // Requirement: Users should be able to call `add(100,200)` 
+    //       and get 300, call `add(100, 200, 300)` to get 600.
+
+
+
 
 }

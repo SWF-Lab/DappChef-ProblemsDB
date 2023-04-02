@@ -59,12 +59,11 @@ contract answer85 {
       erc20 = new LeveragedToken(address(this));
     }
 
-    // When a person opens a leverage transaction, our contract calculates how much stableCoin he puts in,
-    // then transfer the amount of an erc20 token to him.
+    // When a person opens a leverage transaction, our contract calculates how much stableCoin he puts in, then transfer the amount of an erc20 token to him.
     function open(uint256 _collateral) external {
 
         // TODO1: calculate the amount that has to be transfered, 
-        // do not forget the leverageRatio, and the erc20price
+        // dont forget the leverageRatio, and the erc20price
         uint256 amount = 
         positions[msg.sender] = Position(_collateral, amount, erc20Price);
         stableCoin.transferFrom(msg.sender, address(this), _collateral);
@@ -90,13 +89,15 @@ contract answer85 {
         delete positions[msg.sender];
     }
 
+    // Liquidate function can be called by anyone.
+    // In fact we should encourage people to help liquidate by giving rewards. But for simple, we will skip that.
     function liquidate(address user) external {
         Position memory position = positions[user];
         require(position.collateral > 0, "No open position");
         uint openPrice = position.openPrice;
         
         //TODO3: determine whether the position can be liquidated
-        require(   , "The position is safe");
+        require(      , "The position is safe");
 
         //TODO4: if liquidated, the liquidated position should return the erc20, and we should delete this position.
         

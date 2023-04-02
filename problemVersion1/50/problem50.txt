@@ -1,6 +1,10 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.17;
 
+// Ref: https://solidity-by-example.org/app/english-auction/
+
+// This is an English auction contract!
+// An English Auction, also referred to as an open cry ascending auction, starts by an auctioneer announcing the suggested opening bid or reserve price for the item on sale. The buyers with interest in the item start placing bids on the item on sale, with the auctioneer accepting higher bids as they come. 
 contract answer50 {
     event Start();
     event Bid(address indexed bidder, uint256 amount);
@@ -22,13 +26,13 @@ contract answer50 {
     }
 
     function start() external {
-        //TODO 1: require not started and revert with "started",
+        //TODO 1: require not started and revert with error "started",
         //        require that only `seller` can call start
 
 
         started = true;
         nowTime = 0;
-        // This is only for judgement, in real case you have to use `block.timestamp`
+        // This is only for judgement, we mock the time using `nowTime`, in real case you have to use `block.timestamp`
         endTime = nowTime + 10;
 
         emit Start();
@@ -40,7 +44,8 @@ contract answer50 {
 
         // TODO 2: declare an uint256 named `newBid` and calculate a bidders new bid with msg.value. 
         // You should check if the new bid is biger that the current winner, 
-        // if not, revert with message "lower than the highest bid.""
+        // if not, revert with message "lower than the highest bid.
+
 
 
         // TODO 3: if all requirement are satisfied, modify `winner`, `highestBid` and `bids`, last emit `Bid`
@@ -65,7 +70,9 @@ contract answer50 {
 
     }
 
-    // DO NOT modify functions below, these are for judgements.
+
+    //-------- Below are judging functions ------------
+    
     function setTimeToEnd() external {
       nowTime = endTime;
     }

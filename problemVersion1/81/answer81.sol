@@ -3,7 +3,7 @@ pragma solidity ^0.8.17;
 
 pragma solidity ^0.8.0;
 
-contract EscowedToken {
+contract escrowedToken {
   uint256 public totalSupply = 100; 
   mapping(address => uint256) public balanceOf;
 
@@ -29,15 +29,15 @@ contract answer81 {
     uint public amount;
     bool public approvedByBuyer;
     bool public approvedByArbiter;
-    EscowedToken escowed;
+    escrowedToken escrowed;
     
     constructor() {
-        escowed = new EscowedToken(msg.sender);
+        escrowed = new escrowedToken(msg.sender);
         buyer = msg.sender;
         seller = msg.sender;
         arbiter = msg.sender;
         amount = 50;
-        escowed.transferFrom(msg.sender, address(this), 50);
+        escrowed.transferFrom(msg.sender, address(this), 50);
     }
     
     function approveByBuyer() public {
@@ -52,11 +52,11 @@ contract answer81 {
     
     function releaseAmount() public {
         require(approvedByBuyer && approvedByArbiter, "not approved");
-        escowed.transfer(buyer, amount);
+        escrowed.transfer(buyer, amount);
     }
     
     function refundAmount() public {
         require(!approvedByBuyer || !approvedByArbiter, "has already approved");
-        escowed.transfer(seller, amount);
+        escrowed.transfer(seller, amount);
     }
 }

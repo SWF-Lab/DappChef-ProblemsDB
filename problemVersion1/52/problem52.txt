@@ -1,13 +1,16 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// Ref: https://github.com/harendra-shakya/smart-contract-attack-vectors/blob/main/attack-vectors/Reentrancy.md
+
 // This is a vulnerable contract
 // We have a contract named problem52 which can steal ethers from this contract by calling `attack`.
 // modify VulnerableContract to prevent reentrancy from happening.
 contract VulnerableContract {
     mapping (address => uint) public balances;
     
-    //TODO: modify for preventing reentrancy
+    // TODO: modify for preventing reentrancy
+    // hint: write a modifier and use it for functions needed
 
 
 

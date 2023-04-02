@@ -34,18 +34,19 @@ contract Token2 {
   }
 }
 
-
+// The swap contract is here
 contract answer58 {
     Token1 public token1Contract;
     Token2 public token2Contract;
     address public token1;
     address public token2;
     
-    //`reserves` is a mapping that maps the reserves amount, for the reasons that many swap pairs may be added.
-    //for example: reserves[token1][token2] means the token1 reserves in the token1/2 pair.
+    // `reserves` is a mapping that maps the reserves amount, for the reasons that many swap pairs may be added.
+    // for example: reserves[token1][token2] means the token1 reserves in the token1/2 pair.
     mapping(address => mapping(address => uint256)) public reserves;
-    //`deposits` record the one who deposit tokens to this contract for liquidity. 
-    //We may want to give him some interest. For simple, we wont do that.
+
+    // `deposits` record the one who deposit tokens to this contract for liquidity. 
+    // We may want to give him some interest. To be simpler, we wont do that.
     mapping(address => mapping(address => mapping(address => uint256))) public deposits;
 
     // We make token1 and token2s totalSupply all yours!
@@ -59,7 +60,7 @@ contract answer58 {
     //============ TODOs are below this line =================
     function addReserves1(uint256 amount1) external {
         require(amount1 > 0, "Invalid reserve amount");
-        //TODO1: transfer token1 to this contract, don't forget to modify `reserves` and `deposits`
+        // TODO1: transfer token1 to this contract, don't forget to modify `reserves` and `deposits`
 
 
 
