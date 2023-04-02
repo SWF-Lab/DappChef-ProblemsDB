@@ -5,39 +5,89 @@
     "constructorCallData": [],
     "problemSolution": [
         {
+            "methodName": "bitmap(uint256)",
+            "callData": [
+                "0"
+            ],
+            "expectReturn": [
+                "1"
+            ]
+        },
+        {
+            "methodName": "bitmap(uint256)",
+            "callData": [
+                "4"
+            ],
+            "expectReturn": [
+                "16"
+            ]
+        },
+        {
+            "methodName": "empty()",
+            "callData": [],
+            "expectReturn": [
+                "0x0000000000000000000000000000000000000000000000000000000000000000"
+            ]
+        },
+        {
             "methodName": "compute(bytes32[],uint8,uint256,bytes32)",
             "callData": [
                 [],
                 "0",
                 "0",
-                "0"
+                "0x0000000000000000000000000000000000000000000000000000000000000000"
             ],
-            "expectReturn": ["0"]
+            "expectReturn": [
+                "0x0000000000000000000000000000000000000000000000000000000000000000"
+            ]
         },
         {
             "methodName": "validate(bytes32[],uint8,uint256,bytes32,bytes32)",
-            "callData": [[],"0","0","0","0"],
-            "expectReturn": ["true"]
+            "callData": [
+                [],
+                "0",
+                "0",
+                "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "expectReturn": [
+                "true"
+            ]
         },
         {
-            "methodName": "()",
-            "callData": [],
-            "expectReturn": []
+            "methodName": "compute(bytes32[],uint8,uint256,bytes32)",
+            "callData": [
+                [],
+                "0",
+                "0",
+                "0xb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6"
+            ],
+            "expectReturn": [
+                "0xbc7edc84e146560efa3d1fdbb8d2bf48c11dbada04192c8ebf7356673fc55cdf"
+            ]
         },
         {
-            "methodName": "()",
-            "callData": [],
-            "expectReturn": []
+            "methodName": "write(bytes32[],uint8,uint256,bytes32,bytes32,bytes32)",
+            "callData": [
+                [],
+                0,
+                0,
+                "0xb10e2d527612073b26eecdfd717e6a320cf44b4afac2b0732d9fcbe2b7fa0cf6",
+                "0x0000000000000000000000000000000000000000000000000000000000000000",
+                "0x0000000000000000000000000000000000000000000000000000000000000000"
+            ],
+            "expectReturn": [
+                "0xbc7edc84e146560efa3d1fdbb8d2bf48c11dbada04192c8ebf7356673fc55cdf"
+            ]
         },
         {
-            "methodName": "()",
-            "callData": [],
-            "expectReturn": []
-        },
-        {
-            "methodName": "()",
-            "callData": [],
-            "expectReturn": []
+            "methodName": "fillup(bytes32)",
+            "callData": [
+                "0x0000000000000000000000000000000000000000000000000000000000000001"
+            ],
+            "expectReturn": [
+                "0xf16508b878665d4616c13265ec4f734fa77daa8354f268f33ffa8b6922ee63d5"
+            ]
         }
     ],
     "attributes": [

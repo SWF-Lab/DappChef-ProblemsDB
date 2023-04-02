@@ -1,0 +1,51 @@
+{
+    "problemNumber": 98,
+    "problemVersion": 1,
+    "description": "Off-Chain Storage: NFT Auction House",
+    "constructorCallData": [],
+    "problemSolution": [
+        {
+            "methodName": "mint(string)",
+            "callData": [
+                "iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAklEQVR4nGKkkSsAAAEXSURBVO3WIQ7CMBQG4Np5HME2CAwKicfgMEhOAHfgCmiugOUAnAHNRcbCkmZ53Wv7miWl7f/ymy1t+L+k21Cn6y3rqOQNAEjdAIDUDQBI3eDvAIoZAABw9zOj17vRuHcBENyb60fSvlWfwPXREgBKBUgDQPEAW9L+hlyaO+TSu15aAwBr8jtCAKQGnLeLYTiYdACoBzDt2D90fzy7AOA7Qt5m5KQdtCIBoBIAV0gKMPcvm6YPAJUDOAm3jNsIQDAgoiIAAIxK9qtZl8B+DjYAlQNMpEffbOQAoX0AkMV+m7kHgGoBy3lD0u96Bc/nqLt4JQDkCyBvw/yegUIA9odJKpEWAKBUAPf3M/pwA1A5YKp+AAAAgCdfgXWDFWuL1n4AAAAASUVORK5CYII="
+            ],
+            "expectReturn": []
+        },
+        {
+            "methodName": "transferFrom(address,address,uint256)",
+            "callData": [
+                "MSG_SENDER", "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec", "0"
+            ],
+            "expectReturn": []
+        },
+        {
+            "methodName": "ownerOf(uint256)",
+            "callData": [
+                "0"
+            ],
+            "expectReturn": [
+                "0xB42faBF7BCAE8bc5E368716B568a6f8Fdf3F84ec"
+            ]
+        },
+        {
+            "methodName": "tokenURI(uint256)",
+            "callData": [
+                "0"
+            ],
+            "expectReturn": [
+                "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAIAAAAlC+aJAAAAAklEQVR4nGKkkSsAAAEXSURBVO3WIQ7CMBQG4Np5HME2CAwKicfgMEhOAHfgCmiugOUAnAHNRcbCkmZ53Wv7miWl7f/ymy1t+L+k21Cn6y3rqOQNAEjdAIDUDQBI3eDvAIoZAABw9zOj17vRuHcBENyb60fSvlWfwPXREgBKBUgDQPEAW9L+hlyaO+TSu15aAwBr8jtCAKQGnLeLYTiYdACoBzDt2D90fzy7AOA7Qt5m5KQdtCIBoBIAV0gKMPcvm6YPAJUDOAm3jNsIQDAgoiIAAIxK9qtZl8B+DjYAlQNMpEffbOQAoX0AkMV+m7kHgGoBy3lD0u96Bc/nqLt4JQDkCyBvw/yegUIA9odJKpEWAKBUAPf3M/pwA1A5YKp+AAAAgCdfgXWDFWuL1n4AAAAASUVORK5CYII="
+            ]
+        }
+    ],
+    "attributes": [
+        {
+            "trait_type": "difficulty",
+            "value": 3
+        },
+        {
+            "trait_type": "class",
+            "value": "Scalability"
+        }
+    ],
+    "image": "ipfs://<ipfsPrefix>/98"
+}

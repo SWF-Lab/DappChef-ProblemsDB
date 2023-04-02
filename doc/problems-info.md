@@ -114,10 +114,10 @@
 | 93. |Company|⭐⭐⭐|EIP3668 CCIP READ|Mur**|
 | 94. |Company|⭐⭐⭐|Aave Flashloan|Mur**|
 | 95. |DSA|⭐⭐⭐|Floating Point Division|Mur** ✅|
-| 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur**|
+| 96. |DSA|⭐⭐⭐|Sparse Merkle Tree|Mur** ✅|
 | 97. |Scalability|⭐⭐⭐|Send Message to Layer2 - Optimism|Mur**|
-| 98. |Scalability|⭐⭐⭐|Off-Chain Storage|Mur**|
-| 99. |EVM|⭐⭐⭐|Stack too deep|Mur**|
+| 98. |Scalability|⭐⭐⭐|Big Data Storage|Mur** ✅|
+| 99. |EVM|⭐⭐⭐|EOA (Externally Owned Account) Checks|Mur** ✅|
 | 100. |EVM|⭐⭐⭐|Precompiled Contract|Mur** ✅|
 
 ### problemVersion2
